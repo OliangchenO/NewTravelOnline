@@ -19,6 +19,7 @@ namespace TravelOnline.Users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Request.QueryString["action"].ToString().Equals("SendNotMemSMS"))
             {
                 SendNotMemSMS(MyDataBaseComm.StripSQLInjection(Request.Form["mobilePhone"].Trim()), MyDataBaseComm.StripSQLInjection(Request.Form["authcode"].Trim()), MyDataBaseComm.StripSQLInjection(Request.QueryString["flag"].Trim()));
