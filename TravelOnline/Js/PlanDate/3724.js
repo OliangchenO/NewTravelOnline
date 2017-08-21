@@ -1,0 +1,1 @@
+﻿var defaultStartDate = '2010-01-08';var defaultEndDate = '2010-01-29';var json = [{'planid': '0','date': '2010-01-08','price': '2660','content': '2660.00'},{'planid': '0','date': '2010-01-19','price': '2660','content': '2660.00'},{'planid': '0','date': '2010-01-22','price': '2180','content': '2180.00'},{'planid': '0','date': '2010-01-29','price': '2660','content': '2660.00'}];

@@ -1,0 +1,10 @@
+(function(){
+	var hotwords="<strong>热门搜索：</strong><a href='http://search.360buy.com/Search?keyword=%20E%C2%B7%BA%BDgps' target='_blank'>E路航gps</a><a href='http://search.360buy.com/Search?keyword=%B0%AE%D6%C6%D4%EC%CD%AF%D7%B0' target='_blank'>爱制造童装</a><a href='http://search.360buy.com/Search?keyword=%BA%A3%CC%A9%BF%CD%BB%A7%CD%E2' target='_blank'>海泰客户外</a><a href='http://search.360buy.com/Search?keyword=%BA%A3%C5%B8%B1%ED' target='_blank'>海鸥表</a><a href='http://search.360buy.com/Search?keyword=%D7%F4%B5%A4%C5%AB' target='_blank'>佐丹奴</a>";
+	var keywords="唐狮";
+	$("#hotwords").html(hotwords);
+	$("#key").val(keywords).bind("focus",function(){
+		if (this.value==keywords){this.value="";this.style.color="#333"}
+	}).bind("blur",function(){
+		if (this.value==""){this.value=keywords;this.style.color="#999"}
+	});
+})();

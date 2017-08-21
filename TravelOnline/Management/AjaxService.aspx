@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" validateRequest="false" AutoEventWireup="true" CodeBehind="AjaxService.aspx.cs" Inherits="TravelOnline.Management.AjaxService" %>

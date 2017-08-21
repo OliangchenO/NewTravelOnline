@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagement" xmlns:types="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagementTypes/" xmlns:ns="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="ThirdPartyManagement" targetNamespace="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagement" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagement">
+      <xs:import schemaLocation="http://221.133.245.13:7070/CIOD_ESB/webservices/ThirdPartyManagement?xsd=ThirdPartyManagement.xsd" namespace="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagementTypes/" />
+      <xs:complexType name="sendTravelBizRequestType">
+        <xs:complexContent mixed="false">
+          <xs:extension base="types:sendTravelBizType" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="sendTravelBizResponseType">
+        <xs:complexContent mixed="false">
+          <xs:extension base="types:ReturnType" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="queryGOTApolicyInfoRequestType">
+        <xs:complexContent mixed="false">
+          <xs:extension base="types:queryGOTApolicyInfoType" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="queryGOTApolicyInfoResponseType">
+        <xs:complexContent mixed="false">
+          <xs:extension base="types:queryGOTApolicyInfoReturnType" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="sendTravelBizRequest" type="tns:sendTravelBizRequestType" />
+      <xs:element name="sendTravelBizResponse" type="tns:sendTravelBizResponseType" />
+      <xs:element name="queryGOTApolicyInfoRequest" type="tns:queryGOTApolicyInfoRequestType" />
+      <xs:element name="queryGOTApolicyInfoResponse" type="tns:queryGOTApolicyInfoResponseType" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="queryGOTApolicyInfoRequest">
+    <wsdl:part name="queryGOTApolicyInfoRequest" element="tns:queryGOTApolicyInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="sendTravelBizResponse">
+    <wsdl:part name="sendTravelBizResponse" element="tns:sendTravelBizResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendTravelBizRequest">
+    <wsdl:part name="sendTravelBizRequest" element="tns:sendTravelBizRequest" />
+  </wsdl:message>
+  <wsdl:message name="queryGOTApolicyInfoResponse">
+    <wsdl:part name="queryGOTApolicyInfoResponse" element="tns:queryGOTApolicyInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ThirdPartyManagementPort">
+    <wsdl:operation name="sendTravelBiz">
+      <wsdl:input message="tns:sendTravelBizRequest" />
+      <wsdl:output message="tns:sendTravelBizResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryGOTApolicyInfo">
+      <wsdl:input message="tns:queryGOTApolicyInfoRequest" />
+      <wsdl:output message="tns:queryGOTApolicyInfoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ThirdPartyManagementBinding" type="tns:ThirdPartyManagementPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sendTravelBiz">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/http" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGOTApolicyInfo">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/http" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

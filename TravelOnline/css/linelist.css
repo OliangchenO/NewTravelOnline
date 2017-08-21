@@ -1,0 +1,130 @@
+.left_part{margin-top:0px;float:left;width:180px;}
+.right_part{margin-top:0px;margin-left:10px;float:left;width:750px;overflow:hidden;}
+.left_Recommend{margin-bottom: 10px;background-color:#fff;width:178px;border:1px solid #DDDDDD;border-width:1px 1px 1px 1px;position:relative;z-index:20;}
+.right_Recommend {width:748px;margin-bottom: 10px;background-color:#ffffff;border:1px solid #DDDDDD;border-width:1px 1px 1px 1px;position:relative;z-index:20;}
+.right_Recommend_title {padding-left:10px;color:#666666; LINE-HEIGHT: 30px;font-size: 14px; font-weight: bold;background-color:#F7F7F7;height:30px;}
+
+.infos li, .tels li {font-size: 13px;list-style-type:none;padding:6px 10px;border-top:1px dotted #ccc;overflow:hidden;height:22px;line-height:22px;}
+.tels li {font-size: 12px;}
+.tels li span {COLOR: #398510;}
+.tels .email {height:40px;}
+
+.news {border:1px solid #DDD}
+.news H2 {margin:15px 20px;FONT-SIZE: 20px;BORDER-BOTTOM: #01AA07 2px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 10px; LINE-HEIGHT: 24px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: "microsoft yahei"; MARGIN-BOTTOM: 10px; HEIGHT: 24px; PADDING-TOP: 10px}
+.news ul{padding:8px;padding:5px 20px;}
+.news li{font-size: 13px;padding:3px 0;height:30px;line-height:30px;overflow:hidden;zoom:1;}
+.news li div{float:left;margin-right:5px;}
+.news li span{float:right;margin-left:5px;color:#999;}
+.news li .line{float:none;height:10px;overflow:hidden;border-top:1px dotted #ccc;margin-top:15px;}
+.news .summary {TEXT-ALIGN: center;margin-bottom:20px;}
+.news H3 {margin:15px 20px;FONT-SIZE: 18px;BORDER-BOTTOM: #ebebeb 1px solid;TEXT-ALIGN: center; PADDING-BOTTOM: 10px; LINE-HEIGHT: 24px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: "microsoft yahei"; MARGIN-BOTTOM: 10px; HEIGHT: 24px; PADDING-TOP: 10px}
+.news .content{FONT-SIZE: 14px;padding:8px;padding:5px 20px;LINE-HEIGHT: 2em;}
+.news_bak P{text-indent: 2em;}
+.news .mtc {margin-BOTTOM: 10px;COLOR: #398510; FONT-SIZE: 15px;BORDER-BOTTOM: #ebebeb 1px solid;PADDING-BOTTOM: 5px; LINE-HEIGHT: 28px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 25px; PADDING-TOP: 20px}
+.news a {color: #F89406;}
+
+.Recommend_box{padding-top:0px;}
+.Recommend_title{padding-left:10px;color:#666666; LINE-HEIGHT: 30px;font-size: 14px; font-weight: bold;background-color:#F7F7F7;height:30px;}
+.Recommend_list {overflow:hidden;}
+.Recommend_list li{list-style-type:none;float:left;width:180px;padding:6px 5px;border-top:1px dotted #ccc;overflow:hidden;height:22px;line-height:22px;}
+.Recommend_list .p-name{float:left;width:156px;height:22px;overflow:hidden;}
+.Recommend_list .fore{border-top:1px dotted #ccc;padding:10px 5px 10px;height:85px;border-top:0;}
+.Recommend_list .fore .p-img{float:left;margin-right:5px;}
+.Recommend_list .fore .p-name{margin-left:20px;margin-top:5px;float:left;width:150px;height:3em;line-height:1.5em;}
+.Recommend_list .fore .p-price{font-size: 16px;FONT-WEIGHT: bold; FONT-FAMILY: Arial Unicode MS;COLOR: #f60;float:left;height:28px;line-height:28px;}
+.Recommend_list .fore .p-price em{font-style:normal;font-weight:normal;font-size:10px;padding-left:2px;*vertical-align:1px;}
+.Recommend_list .fore1 .fno,
+.Recommend_list .fore2 .fno,
+.Recommend_list .fore3 .fno{border:1px solid #01AA07;color:#01AA07;}
+.Recommend_list .fno{float:left;width:16px;height:16px;border:1px solid #cdcdcd;border-radius:10px;margin:2px 3px 0 0;text-align:center;font:normal 12px/16px arial;color:#cdcdcd;}
+
+        
+#select{overflow:hidden;}
+#select dl{border-top: 1px dotted #DDD;padding-top:5px;padding-bottom:5px;}
+#select dd{padding-left:88px;line-height:0px;position:relative;_position:static;font-size:0;overflow:hidden;_zoom:1;}
+#select dd a {padding-left:5px;padding-right:5px;display:inline-block;font-size:12px;line-height:22px;height:22px;margin-right:10px;}
+#select dd a:hover, #select dd a.curr:link, #select dd a.curr:visited {background: #01AA07;color: white;text-decoration: none;}
+#select dt{padding-left:8px;font-weight:bold;color: #038307;position:absolute;font-weight:bold;width:70px;z-index:2;margin-top:0px;padding-top:0px;text-align:right;}
+
+/*线路列表*/
+#linelist{width:750px;margin-bottom: 10px;background-color:#ffffff;position:relative;z-index:20;overflow:hidden;}
+#linelist dl{height:80px;border-bottom: 1px dotted #DDD;margin-top:15px;padding-bottom:20px;color:#666;}
+#linelist dt{position:absolute;width:120px;z-index:2;text-align:left;}
+#linelist dd{padding-left:120px;height:80px;position:relative;_position:static;overflow:hidden;_zoom:1;}
+#linelist dt img {border: 1px solid #CDCDCD;padding:1px;WIDTH: 100px;height: 76px;}
+#linelist .line {width:630px;height: 80px;}
+#linelist .linename {FLOAT: left;width:490px;height: 80px;}
+#linelist .lineprice {padding-left:5px;FLOAT: right;width:130px;height: 80px;border-left:1px solid #DDDDDD;}
+#linelist .p-name {height: 40px;line-height: 40px;overflow:hidden;}
+#linelist .p-name a {font-size:15px;line-height:12px;height:12px;margin-right:10px;overflow:hidden;}
+#linelist .p-name A:link {FONT-SIZE: 15px;COLOR: #029608}
+#linelist .p-name A:visited {COLOR: #029608}
+#linelist .p-feature {height: 20px;line-height: 20px;overflow:hidden;}
+#linelist .pd {margin-left:5px;FONT-SIZE: 12px; LINE-HEIGHT: 25px; HEIGHT: 25px; OVERFLOW: hidden}
+#linelist .p-price {HEIGHT: 28px; LINE-HEIGHT: 26px;FONT-SIZE: 18px; FONT-WEIGHT: bold; FONT-FAMILY: Arial Unicode MS;COLOR: #f60}
+#linelist dd dfn{font-size:18px;COLOR: #f60;font-weight:normal;vertical-align:3px;padding-right:1px;}
+#linelist dd em{font-style:normal;font-weight:normal;font-size:12px;padding-left:2px;*vertical-align:1px;}
+.pictags {PADDING-BOTTOM: 5px;PADDING-Left: 5px;PADDING-RIGHT: 2px;}
+        
+.onsale_product{border:0px solid #ffffff;border-width:0px 0px 0px 0px;}
+.onsale_product .product_zoomfix{ width:244px;border:0px solid #ffffff;}
+.onsale_product .product{ padding:15px 25px;border:0px solid #ffffff;border-width:0px 0px 0px 0px;}
+.onsale_product .product:hover{padding:13px 23px 16px 23px;}
+.onsale_product{height:386px;width:1170px;}
+        
+#filter .up b,
+#filter .down b,
+#store-selector .close,
+#store-selector .text b,
+#filter .instock b,
+#filter .type b{background-image:url(/img/20130603A.png);background-repeat:no-repeat;}
+#filter{border:1px solid #ddd;margin-bottom:20px;background:#F7F7F7;box-shadow:0 1px 1px rgba(0,0,0,0.02);}
+#filter .fore1{overflow:hidden;height:26px;padding:5px 8px;border-bottom:1px solid #E7E3E7;zoom:1;}
+#filter .fore2{padding:3px 8px;zoom:1;}
+#filter dl,
+#filter dt,
+#filter dd{float:left;line-height:26px;zoom:1;}
+#filter .total{float:right;height:22px;padding:2px 15px 2px 0;border-right:1px solid #E7E3E7;line-height:22px;font-family:verdana;color:#E4393C;}
+#filter .pagin{float:right;height:22px;padding:2px 0;border-left:1px solid #fff;}
+#filter .order dd{height:24px;border:1px solid #CECBCE;background-position:0 -73px;background-repeat:repeat-x;background-color:#fff;margin-right:5px;line-height:24px;overflow:hidden;zoom:1;}
+#filter .up,
+#filter .down{position:relative;}
+#filter .order a{display:block;padding:0 10px;}
+#filter .order b{display:none;position:absolute;top:6px;right:8px;width:9px;height:11px;overflow:hidden;font-size:0px;}
+#filter .order .curr{border:1px solid #01AA07;background:#01AA07;font-weight:bold;}
+#filter .order .curr a:link,
+#filter .order .curr a:visited{color:#fff;}
+#filter .up a,
+#filter .down a{padding-right:20px;}
+#filter .order .up b,
+#filter .order .down b{display:block;}
+#filter .order .up b{background-position:0 -12px;}
+#filter .order .down b{background-position:0 0;}
+
+
+.pagin .text, .pagin .current {font-family: verdana;}
+.pagin .text, .pagin .current {border: 0;padding: 4px 11px;}
+.pagin a, .pagin span {
+float: left;
+height: 20px;
+padding: 3px 10px;
+border: 1px solid #CCC;
+margin-left: 2px;
+font-family: arial;
+line-height: 20px;
+font-size: 12px;
+overflow: hidden;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+.pagin-m .prev, .pagin-m .next, .pagin-m .prev-disabled, .pagin-m .next-disabled {
+padding-top: 3px;
+height: 14px;
+line-height: 14px;
+border-radius: 3px;
+background: white;
+}
+.pagin .prev-disabled, .pagin .next-disabled {color: #CCC;cursor: default;}
+.pagin .text i {font-style: normal;font-weight: bold;color: #E4393C;}
+
+

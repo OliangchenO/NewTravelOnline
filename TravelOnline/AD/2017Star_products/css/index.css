@@ -1,0 +1,44 @@
+.wrap {width: 100%; position: relative;}
+.bg08 .mr0 {margin: 0;}
+.content {width: 100%; background: url('../images/bg.jpg') top center no-repeat; z-index: 10;}
+.content-box {width: 1200px; margin: 0 auto; line-height: 0;}
+.bg01 {width: 1200px; height: 690px; background: url('../images/p_01.jpg') no-repeat;}
+.bg02 {width: 1200px; height: 270px; background: url('../images/p_02.jpg') no-repeat;}
+.bg03 {width: 1200px; height: 1128px; background: url('../images/p_03.jpg') no-repeat;}
+.bg a {display: block; height: 260px;}
+
+
+.pic {overflow:hidden; width:1200px; height:415px; position:relative;}
+.pic div,.pic ul {display: inline-block;}
+.pic .action {width: 1118px; height: 415px; overflow: hidden;}
+.pic ul{position:absolute;}
+.pic ul li{height:415px; overflow:hidden;}
+.pic ul li.current{display:block;}
+
+.pic .l,.pic .r { width: 42px; height: 466px; margin-top: -28px; background: url('../taobao/left.jpg') no-repeat; cursor: pointer;}
+.pic .r {width: 42px; height: 466px; background: url('../taobao/right.jpg') no-repeat; cursor: pointer; position: absolute; left: 1157px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

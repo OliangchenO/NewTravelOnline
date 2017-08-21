@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="icbc_payresult.aspx.cs" Inherits="TravelOnline.PayMent.icbc_payresult" %>

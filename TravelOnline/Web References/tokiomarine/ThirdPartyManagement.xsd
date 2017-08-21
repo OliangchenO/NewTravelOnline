@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagementTypes/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagementTypes/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="sendTravelBizType">
+    <xs:annotation>
+      <xs:documentation>[CT001|R000|sendTravelBizType ] GOTA??????????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="RequestRelated" type="tns:RequestRelatedType">
+        <xs:annotation>
+          <xs:documentation>[PT033|R000|RequestRelated@[CT004|R000|RequestRelatedType ] GOTA???????????????????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Reference" type="tns:ReferenceType">
+        <xs:annotation>
+          <xs:documentation>[PT034|R000|Reference@[CT005|R000|ReferenceType ] GOTA????????????????????????????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="PolicyBasicInfo" type="tns:PolicyBasicInfoType">
+        <xs:annotation>
+          <xs:documentation>[PT035|R000|PolicyBasicInfo@[CT006|R000|PolicyBasicInfoType ] ?????????????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="InsuredList" type="tns:InsuredListType">
+        <xs:annotation>
+          <xs:documentation>[PT036|R000|InsuredList@[CT007|R000|InsuredListType ] GOTA???????????????????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequestRelatedType">
+    <xs:annotation>
+      <xs:documentation>[CT004|R000|RequestRelatedType ] GOTA????????????????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="RequestType" type="tns:ST001_RequestType">
+        <xs:annotation>
+          <xs:documentation>[PT001|R000|RequestType@[ST001|R000|RequestType@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="User" type="tns:ST002_User">
+        <xs:annotation>
+          <xs:documentation>[PT002|R000|User@[ST002|R000|User@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Password" type="tns:ST003_Password">
+        <xs:annotation>
+          <xs:documentation>[PT003|R000|Password@[ST003|R000|Password@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReferenceType">
+    <xs:annotation>
+      <xs:documentation>[CT005|R000|ReferenceType ] GOTA?????????????????????????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="referID" type="tns:ST004_referID">
+        <xs:annotation>
+          <xs:documentation>[PT004|R000|referID@[ST004|R000|referID@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="referNO" type="tns:ST005_referNO">
+        <xs:annotation>
+          <xs:documentation>[PT005|R000|referNO@[ST005|R000|referNO@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="referMessage" type="tns:ST006_referMessage">
+        <xs:annotation>
+          <xs:documentation>[PT006|R000|referMessage@[ST006|R000|referMessage@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PolicyBasicInfoType">
+    <xs:annotation>
+      <xs:documentation>[CT006|R000|PolicyBasicInfoType ] ??????????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="policyNO" type="tns:ST007_policyNO">
+        <xs:annotation>
+          <xs:documentation>[PT007|R000|policyNO@[ST007|R000|policyNO@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="applicationNO" type="tns:ST008_applicationNO">
+        <xs:annotation>
+          <xs:documentation>[PT008|R000|applicationNO@[ST008|R000|applicationNO@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="effectiveDate" type="tns:ST009_effectiveDate">
+        <xs:annotation>
+          <xs:documentation>[PT009|R000|effectiveDate@[ST009|R000|effectiveDate@dateTime ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="expireDate" type="tns:ST010_expireDate">
+        <xs:annotation>
+          <xs:documentation>[PT010|R000|expireDate@[ST010|R000|expireDate@dateTime ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="productCode" type="tns:ST011_productCode">
+        <xs:annotation>
+          <xs:documentation>[PT011|R000|productCode@[ST011|R000|productCode@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="currency" type="tns:ST012_currency">
+        <xs:annotation>
+          <xs:documentation>[PT012|R000|currency@[ST012|R000|currency@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="premium" type="tns:ST013_premium">
+        <xs:annotation>
+          <xs:documentation>[PT013|R000|premium@[ST013|R000|premium@double ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="suminsured" type="tns:ST014_suminsured">
+        <xs:annotation>
+          <xs:documentation>[PT014|R000|suminsured@[ST014|R000|suminsured@double ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="issueDate" type="tns:ST015_issueDate">
+        <xs:annotation>
+          <xs:documentation>[PT015|R000|issueDate@[ST015|R000|issueDate@dateTime ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="inputDate" type="tns:ST016_inputDate">
+        <xs:annotation>
+          <xs:documentation>[PT016|R000|inputDate@[ST016|R000|inputDate@dateTime ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsuredListType">
+    <xs:annotation>
+      <xs:documentation>[CT007|R000|InsuredListType ] GOTA????????????????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Insured" type="tns:InsuredType">
+        <xs:annotation>
+          <xs:documentation>[PT037|R000|Insured@[CT008|R000|InsuredType ] GOTA?????????????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsuredType">
+    <xs:annotation>
+      <xs:documentation>[CT008|R000|InsuredType ] GOTA??????????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="groupNo" type="tns:ST017_groupNo">
+        <xs:annotation>
+          <xs:documentation>[PT017|R000|groupNo@[ST017|R000|groupNo@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="policyHolderFlag" type="tns:ST018_policyHolderFlag">
+        <xs:annotation>
+          <xs:documentation>[PT018|R000|policyHolderFlag@[ST018|R000|policyHolderFlag@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="tns:ST019_name">
+        <xs:annotation>
+          <xs:documentation>[PT019|R000|name@[ST019|R000|name@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="idType" type="tns:ST020_idType">
+        <xs:annotation>
+          <xs:documentation>[PT020|R000|idType@[ST020|R000|idType@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="idNumber" type="tns:ST021_idNumber">
+        <xs:annotation>
+          <xs:documentation>[PT021|R000|idNumber@[ST021|R000|idNumber@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="birthday" type="tns:ST022_birthday">
+        <xs:annotation>
+          <xs:documentation>[PT022|R000|birthday@[ST022|R000|birthday@dateTime ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="gender" type="tns:ST023_gender">
+        <xs:annotation>
+          <xs:documentation>[PT023|R000|gender@[ST023|R000|gender@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="address" type="tns:ST024_address">
+        <xs:annotation>
+          <xs:documentation>[PT024|R000|address@[ST024|R000|address@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="insuredRelation" type="tns:ST025_insuredRelation">
+        <xs:annotation>
+          <xs:documentation>[PT025|R000|insuredRelation@[ST025|R000|insuredRelation@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="postcode" type="tns:ST026_postcode">
+        <xs:annotation>
+          <xs:documentation>[PT026|R000|postcode@[ST026|R000|postcode@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="planCode" type="tns:ST027_planCode">
+        <xs:annotation>
+          <xs:documentation>[PT027|R000|planCode@[ST027|R000|planCode@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="PremiumPerPeople" type="tns:ST028_PremiumPerPeople">
+        <xs:annotation>
+          <xs:documentation>[PT028|R000|PremiumPerPeople@[ST028|R000|PremiumPerPeople@double ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="MainDestination" type="tns:ST029_MainDestination">
+        <xs:annotation>
+          <xs:documentation>[PT029|R000|MainDestination@[ST029|R000|MainDestination@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="TravelPurpose" type="tns:ST030_TravelPurpose">
+        <xs:annotation>
+          <xs:documentation>[PT030|R000|TravelPurpose@[ST030|R000|TravelPurpose@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="TravelDurationStart" type="tns:ST031_TravelDurationStart">
+        <xs:annotation>
+          <xs:documentation>[PT031|R000|TravelDurationStart@[ST031|R000|TravelDurationStart@dateTime ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="TravelDurationEnd" type="tns:ST032_TravelDurationEnd">
+        <xs:annotation>
+          <xs:documentation>[PT032|R000|TravelDurationEnd@[ST032|R000|TravelDurationEnd@dateTime ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReturnType">
+    <xs:annotation>
+      <xs:documentation>[CT009|R000|ReturnType ] ????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="RequestType" type="tns:ST033_ResponseType">
+        <xs:annotation>
+          <xs:documentation>[PT038|R000|RequestType@[ST033|R000|ResponseType@string ]  ] ???????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ST034_ResponseCode">
+        <xs:annotation>
+          <xs:documentation>[PT039|R000|ResponseCode@[ST034|R000|ResponseCode@string ]  ] ??????????????????(1?????????0??????)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="BusinessNo" type="tns:ST035_BusinessNo">
+        <xs:annotation>
+          <xs:documentation>[PT040|R000|BusinessNo@[ST035|R000|BusinessNo@string ]  ] ??????????????????????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="tns:ST036_ErrorCode">
+        <xs:annotation>
+          <xs:documentation>[PT041|R000|ErrorCode@[ST036|R000|ErrorCode@string ]  ] ????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="ErrorMessage" type="tns:ST037_ErrorMessage">
+        <xs:annotation>
+          <xs:documentation>[PT042|R000|ErrorMessage@[ST037|R000|ErrorMessage@string ]  ] ????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryGOTApolicyInfoType">
+    <xs:annotation>
+      <xs:documentation>[CT103|R000|queryGOTApolicyInfoType ] ??????/??????????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="RequestRelated" type="tns:RequestRelatedType">
+        <xs:annotation>
+          <xs:documentation>[PT043|R000|RequestRelated@[CT004|R000|RequestRelatedType ] GOTA???????????????????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Reference" type="tns:ReferenceType">
+        <xs:annotation>
+          <xs:documentation>[PT044|R000|Reference@[CT005|R000|ReferenceType ] GOTA????????????????????????????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="policyNO" type="tns:ST007_policyNO">
+        <xs:annotation>
+          <xs:documentation>[PT045|R000|policyNO@[ST007|R000|policyNO@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryGOTApolicyInfoReturnType">
+    <xs:annotation>
+      <xs:documentation>[CT104|R000|queryGOTApolicyInfoReturnType ] ??????/????????????????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="RequestType" type="tns:ST033_ResponseType">
+        <xs:annotation>
+          <xs:documentation>[PT046|R000|RequestType@[ST033|R000|ResponseType@string ]  ] ???????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ST034_ResponseCode">
+        <xs:annotation>
+          <xs:documentation>[PT047|R000|ResponseCode@[ST034|R000|ResponseCode@string ]  ] ??????????????????(1?????????0??????)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Policy" type="tns:PolicyType">
+        <xs:annotation>
+          <xs:documentation>[PT051|R000|Policy@[CT110|R000|PolicyType ] ???????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="tns:ST036_ErrorCode">
+        <xs:annotation>
+          <xs:documentation>[PT052|R000|ErrorCode@[ST036|R000|ErrorCode@string ]  ] ????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="ErrorMessage" type="tns:ST037_ErrorMessage">
+        <xs:annotation>
+          <xs:documentation>[PT053|R000|ErrorMessage@[ST037|R000|ErrorMessage@string ]  ] ????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PolicyType">
+    <xs:annotation>
+      <xs:documentation>[CT110|R000|PolicyType ] ????????????</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PolicyBasicInfo" type="tns:PolicyBasicInfoType">
+        <xs:annotation>
+          <xs:documentation>[PT048|R000|PolicyBasicInfo@[CT006|R000|PolicyBasicInfoType ] ?????????????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="InsuredList" type="tns:InsuredListType">
+        <xs:annotation>
+          <xs:documentation>[PT049|R000|InsuredList@[CT007|R000|InsuredListType ] GOTA???????????????????????? ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="policyStatus" type="tns:ST038_policyStatus">
+        <xs:annotation>
+          <xs:documentation>[PT050|R000|policyStatus@[ST038|R000|policyStatus@string ]  ] </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ST001_RequestType">
+    <xs:annotation>
+      <xs:documentation>[ST001|R000|RequestType@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST002_User">
+    <xs:annotation>
+      <xs:documentation>[ST002|R000|User@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST003_Password">
+    <xs:annotation>
+      <xs:documentation>[ST003|R000|Password@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST004_referID">
+    <xs:annotation>
+      <xs:documentation>[ST004|R000|referID@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST005_referNO">
+    <xs:annotation>
+      <xs:documentation>[ST005|R000|referNO@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST006_referMessage">
+    <xs:annotation>
+      <xs:documentation>[ST006|R000|referMessage@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST007_policyNO">
+    <xs:annotation>
+      <xs:documentation>[ST007|R000|policyNO@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST008_applicationNO">
+    <xs:annotation>
+      <xs:documentation>[ST008|R000|applicationNO@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST009_effectiveDate">
+    <xs:annotation>
+      <xs:documentation>[ST009|R000|effectiveDate@dateTime ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime" />
+  </xs:simpleType>
+  <xs:simpleType name="ST010_expireDate">
+    <xs:annotation>
+      <xs:documentation>[ST010|R000|expireDate@dateTime ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime" />
+  </xs:simpleType>
+  <xs:simpleType name="ST011_productCode">
+    <xs:annotation>
+      <xs:documentation>[ST011|R000|productCode@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST012_currency">
+    <xs:annotation>
+      <xs:documentation>[ST012|R000|currency@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST013_premium">
+    <xs:annotation>
+      <xs:documentation>[ST013|R000|premium@double ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double" />
+  </xs:simpleType>
+  <xs:simpleType name="ST014_suminsured">
+    <xs:annotation>
+      <xs:documentation>[ST014|R000|suminsured@double ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double" />
+  </xs:simpleType>
+  <xs:simpleType name="ST015_issueDate">
+    <xs:annotation>
+      <xs:documentation>[ST015|R000|issueDate@dateTime ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime" />
+  </xs:simpleType>
+  <xs:simpleType name="ST016_inputDate">
+    <xs:annotation>
+      <xs:documentation>[ST016|R000|inputDate@dateTime ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime" />
+  </xs:simpleType>
+  <xs:simpleType name="ST017_groupNo">
+    <xs:annotation>
+      <xs:documentation>[ST017|R000|groupNo@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST018_policyHolderFlag">
+    <xs:annotation>
+      <xs:documentation>[ST018|R000|policyHolderFlag@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST019_name">
+    <xs:annotation>
+      <xs:documentation>[ST019|R000|name@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST020_idType">
+    <xs:annotation>
+      <xs:documentation>[ST020|R000|idType@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST021_idNumber">
+    <xs:annotation>
+      <xs:documentation>[ST021|R000|idNumber@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST022_birthday">
+    <xs:annotation>
+      <xs:documentation>[ST022|R000|birthday@dateTime ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime" />
+  </xs:simpleType>
+  <xs:simpleType name="ST023_gender">
+    <xs:annotation>
+      <xs:documentation>[ST023|R000|gender@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST024_address">
+    <xs:annotation>
+      <xs:documentation>[ST024|R000|address@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST025_insuredRelation">
+    <xs:annotation>
+      <xs:documentation>[ST025|R000|insuredRelation@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST026_postcode">
+    <xs:annotation>
+      <xs:documentation>[ST026|R000|postcode@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST027_planCode">
+    <xs:annotation>
+      <xs:documentation>[ST027|R000|planCode@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST028_PremiumPerPeople">
+    <xs:annotation>
+      <xs:documentation>[ST028|R000|PremiumPerPeople@double ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double" />
+  </xs:simpleType>
+  <xs:simpleType name="ST029_MainDestination">
+    <xs:annotation>
+      <xs:documentation>[ST029|R000|MainDestination@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST030_TravelPurpose">
+    <xs:annotation>
+      <xs:documentation>[ST030|R000|TravelPurpose@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST031_TravelDurationStart">
+    <xs:annotation>
+      <xs:documentation>[ST031|R000|TravelDurationStart@dateTime ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime" />
+  </xs:simpleType>
+  <xs:simpleType name="ST032_TravelDurationEnd">
+    <xs:annotation>
+      <xs:documentation>[ST032|R000|TravelDurationEnd@dateTime ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime" />
+  </xs:simpleType>
+  <xs:simpleType name="ST033_ResponseType">
+    <xs:annotation>
+      <xs:documentation>[ST033|R000|ResponseType@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST034_ResponseCode">
+    <xs:annotation>
+      <xs:documentation>[ST034|R000|ResponseCode@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST035_BusinessNo">
+    <xs:annotation>
+      <xs:documentation>[ST035|R000|BusinessNo@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST036_ErrorCode">
+    <xs:annotation>
+      <xs:documentation>[ST036|R000|ErrorCode@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST037_ErrorMessage">
+    <xs:annotation>
+      <xs:documentation>[ST037|R000|ErrorMessage@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="600" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST038_policyStatus">
+    <xs:annotation>
+      <xs:documentation>[ST038|R000|policyStatus@string ] </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

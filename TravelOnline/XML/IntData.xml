@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InitData>
+ <Data id="SeriesType" name="船队系列"></Data>
+ <Data id="RoomType" name="舱房类型"></Data>
+ <Data id="Summary" name="目的地概况"></Data>
+ <Data id="Traffic" name="交通概况"></Data>
+</InitData>

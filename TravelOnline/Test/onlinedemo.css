@@ -1,0 +1,36 @@
+TABLE {
+	BORDER-SPACING: 2px; BORDER-COLLAPSE: separate
+}
+INPUT {
+	MARGIN: 3px 3px 3px 4px
+}
+.edui-for-customstyle .edui-listitem-label {
+	LINE-HEIGHT: 38px
+}
+.bg {
+	BACKGROUND-COLOR: #fff
+}
+.btn {
+	POSITION: relative; TEXT-ALIGN: center; MARGIN-TOP: 15px; WIDTH: 67px; DISPLAY: block; BACKGROUND: url(../ipanel/images/ct-submitbg.png) no-repeat; HEIGHT: 28px; COLOR: white; FONT-SIZE: 14px; CURSOR: pointer; PADDING-TOP: 5px; LEFT: 790px
+}
+#content .section {
+	PADDING-BOTTOM: 25px; MARGIN: 0px auto; WIDTH: 860px
+}
+.section H3 {
+	BORDER-BOTTOM: #aba6a2 1px dotted; MARGIN: 10px 0px; COLOR: #0e3e5e; FONT-SIZE: 18px; FONT-WEIGHT: bolder
+}
+.section H4 {
+	BORDER-BOTTOM: #aba6a2 1px dotted; MARGIN: 10px 0px; COLOR: #0e3e5e; FONT-SIZE: 14px; FONT-WEIGHT: bolder
+}
+.section .details {
+	MARGIN-TOP: 5px
+}
+.section .details INPUT {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; COLOR: #3e3e3e; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+.section .details LI {
+	FLOAT: left; MARGIN-LEFT: 15px
+}
+.section .details LI A {
+	COLOR: #3e3e3e; CURSOR: pointer
+}

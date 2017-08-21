@@ -1,0 +1,50 @@
+html{margin: 0; padding: 0; font: 12px/1.5em  Arial, Helvetica, Verdana, sans-serif; background: #fff; color: #333;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, img, pre, code, form, fieldset, legend, input, textarea, select, p, blockquote, th, td, em, button { margin:0; padding:0;}
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img, input{ border: none; }
+address, caption, cite, code, dfn, em, strong, th, var, i { font-style: normal; font-weight: normal; }
+li { list-style: none; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%;}
+q:before, q:after { content: ''; }
+select, input, button { outline: 0;}
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+a { color: #000; text-decoration: none; }
+a:hover { color: #f60;}
+a:visited {outline: none;}
+.clearfix:after { clear: both; content: ""; display: block; height: 0; visibility: hidden; }
+.cfb{clear:both;}
+.clearfix { display: inline-block; }
+.clear{ clear:both}
+* html .clearfix { }
+.clearfix { display: block; }
+.ffArial20 { font: 20px 'arial'; }
+.ffYahei14 { font: 14px 'Microsoft Yahei'; }
+.ffYahei16 { font: 16px 'Microsoft Yahei'; }
+.ffYahei18 { font: 18px 'Microsoft Yahei'; }
+.ffYahei20 { font: 20px 'Microsoft Yahei'; }
+/*html5*/
+article, aside, dialog, footer, header, section, footer, nav, figure, menu { margin: 0; padding: 0; display: block; }
+/*class*/
+.fl {float: left;}
+.rl {float: right;}
+.fb { font-weight: bold; }
+.tl { text-align: left; }
+.tr { text-align: right; }
+.tc { text-align: center; }
+.cp { cursor: pointer; }
+.no-mrr { margin-right: 0; }
+.no-mrb { margin-bottom: 0; }
+.f12 { font-size: 12px; }
+.f14 { font-size: 14px; }
+.f16 { line-height: 17px; font-size: 16px; }
+.f18 { line-height: 19px; font-size: 18px; }
+.f20 { line-height: 21px; font-size: 20px; }
+.relative-box { position: relative; }
+.absolute-box { position: absolute; }
+.colorFFF { color: #fff; }
+.color666 { color: #666; }
+.colorf60 { color: #f60; }
+.colorf00 { color: #f00; }
+.color67c1fc { color: #67c1fc; }
+.hide{ display:none}

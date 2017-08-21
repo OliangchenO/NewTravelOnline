@@ -1,0 +1,339 @@
+.btn-img1 {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; OVERFLOW: hidden; BORDER-LEFT-WIDTH: 0px; CURSOR: pointer; PADDING-TOP: 0px
+}
+.btn-link {
+	TEXT-ALIGN: center; DISPLAY: block; OVERFLOW: hidden
+}
+.btn-entry {
+	WIDTH: 87px; BACKGROUND: url(/images/bg_regist.jpg) no-repeat -155px -150px; HEIGHT: 35px; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+
+#entry {
+	MARGIN-BOTTOM: 10px
+}
+#entry .mt {
+	BACKGROUND: url(/images/tit_regist.jpg) #d1d1d1 repeat-x 0px -34px; HEIGHT: 33px
+}
+#entry .mt H2 {
+	LINE-HEIGHT: 33px; PADDING-LEFT: 15px; BACKGROUND: url(/images/tit_regist.jpg) no-repeat 0px 0px; FLOAT: left; HEIGHT: 33px
+}
+#entry .mt SPAN {
+	TEXT-ALIGN: right; LINE-HEIGHT: 33px; FLOAT: right; HEIGHT: 33px
+}
+#entry .mt B {
+	WIDTH: 10px; BACKGROUND: url(/images/tit_regist.jpg) no-repeat 0px -68px; FLOAT: right; HEIGHT: 33px
+}
+#entry .mc {
+	BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: #d1d1d1 1px solid; PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BORDER-TOP: #d1d1d1 0px solid; BORDER-RIGHT: #d1d1d1 1px solid; PADDING-TOP: 40px
+}
+#entry .form {
+	WIDTH: 600px; FLOAT: left; OVERFLOW: hidden;MARGIN-BOTTOM: 15px
+}
+#entry .item {
+	LINE-HEIGHT: 26px; HEIGHT: 55px; PADDING-TOP: 5px
+}
+#entry #autoentry {
+	HEIGHT: 40px
+}
+#entry .item A:link {
+	TEXT-DECORATION: underline
+}
+#entry .item A:visited {
+	TEXT-DECORATION: underline
+}
+#entry .label {
+	TEXT-ALIGN: right; WIDTH: 150px; FONT-SIZE: 14px
+}
+#entry .text {
+	BORDER-BOTTOM: #bbb 1px solid; BORDER-LEFT: #bbb 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 3px; WIDTH: 240px; PADDING-RIGHT: 3px; FONT-FAMILY: arial,"ËÎÌו"; HEIGHT: 16px; FONT-SIZE: 14px; BORDER-TOP: #bbb 1px solid; BORDER-RIGHT: #bbb 1px solid; PADDING-TOP: 4px
+}
+#entry .text_a {
+	BORDER-BOTTOM: #bbb 1px solid; BORDER-LEFT: #bbb 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 3px; WIDTH: 180px; PADDING-RIGHT: 3px; FONT-FAMILY: arial,"ËÎÌו"; HEIGHT: 16px; FONT-SIZE: 14px; BORDER-TOP: #bbb 1px solid; BORDER-RIGHT: #bbb 1px solid; PADDING-TOP: 4px
+}
+#entry .text-1 {
+	WIDTH: 100px
+}
+#entry .blank {
+	MARGIN: 2px 5px 0px; WIDTH: 16px; HEIGHT: 16px
+}
+#entry .mar {
+	MARGIN-RIGHT: 10px
+}
+#entry .img IMG {
+	MARGIN: 0px 5px; HEIGHT: 30px
+}
+#entry .succeed {
+	BACKGROUND: url(/images/pwdstrength.gif) no-repeat -105px 0px
+}
+#entry .highlight1a {
+	BORDER-BOTTOM: #ffcc66 2px solid; BORDER-LEFT: #ffcc66 2px solid; PADDING-BOTTOM: 3px; OUTLINE-STYLE: solid; OUTLINE-COLOR: #ffdc97; PADDING-LEFT: 2px; OUTLINE-WIDTH: 2px; PADDING-RIGHT: 2px; BORDER-TOP: #ffcc66 2px solid; BORDER-RIGHT: #ffcc66 2px solid; PADDING-TOP: 3px
+}
+#entry .highlight1 {
+	BORDER-BOTTOM: #ffcc66 1px solid; BORDER-LEFT: #ffcc66 1px solid; OUTLINE-STYLE: solid; OUTLINE-COLOR: #ffdc97; OUTLINE-WIDTH: 1px; BORDER-TOP: #ffcc66 1px solid; BORDER-RIGHT: #ffcc66 1px solid
+}
+#entry .highlight2 {
+	BORDER-BOTTOM: #f00 1px solid; BORDER-LEFT: #f00 1px solid; OUTLINE-STYLE: solid; OUTLINE-COLOR: #ffc1c1; OUTLINE-WIDTH: 1px; COLOR: #f00; BORDER-TOP: #f00 1px solid; BORDER-RIGHT: #f00 1px solid
+}
+#entry .pwdbg {
+	BACKGROUND: #fff8eb
+}
+#entry .focus {
+	LINE-HEIGHT: 20px; COLOR: #999
+}
+#entry SELECT {
+	MARGIN-TOP: 5px
+}
+#entry .null {
+	LINE-HEIGHT: 20px; COLOR: red
+}
+#entry .error {
+	LINE-HEIGHT: 20px; COLOR: red
+}
+#entry .checkbox {
+	MARGIN-TOP: 2px
+}
+#entry .extra {
+	PADDING-LEFT: 94px
+}
+#entry .extra .btns {
+	POSITION: relative; PADDING-BOTTOM: 5px; LINE-HEIGHT: 14px; PADDING-LEFT: 23px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 14px; OVERFLOW: hidden; MARGIN-RIGHT: 4px; PADDING-TOP: 5px
+}
+#entry .extra .btns S {
+	BACKGROUND-IMAGE: url(/images/icon_cooperation.jpg); POSITION: absolute; WIDTH: 23px; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; HEIGHT: 23px; TOP: 0px; LEFT: 0px
+}
+#entry .extra .btns A:link {
+	PADDING-RIGHT: 6px; COLOR: #005aa0; BORDER-RIGHT: #dbdbdb 1px solid; TEXT-DECORATION: none
+}
+#entry .extra .btns A:visited {
+	PADDING-RIGHT: 6px; COLOR: #005aa0; BORDER-RIGHT: #dbdbdb 1px solid; TEXT-DECORATION: none
+}
+#entry .extra .qq S {
+	BACKGROUND-POSITION: 0px 0px
+}
+#entry .extra .alipay S {
+	BACKGROUND-POSITION: -23px 0px
+}
+#entry .extra .renren S {
+	BACKGROUND-POSITION: -46px 0px
+}
+#entry .extra .net163 S {
+	BACKGROUND-POSITION: -69px 0px
+}
+#entry .extra .kaixing001 S {
+	BACKGROUND-POSITION: -92px 0px
+}
+#entry .extra .sina S {
+	BACKGROUND-POSITION: -115px 0px
+}
+#entry .extra .alipay A:link {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none
+}
+#entry .extra .alipay A:visited {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none
+}
+#entry .extra .more {
+	PADDING-LEFT: 5px
+}
+#entry .extra .more A:link {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none
+}
+#entry .extra .more A:visited {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none
+}
+#guide {
+	BORDER-LEFT: #e7e7e7 1px solid; PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; WIDTH: 300px; PADDING-RIGHT: 0px; FLOAT: right; HEIGHT: 160px; PADDING-TOP: 60px
+}
+#guide .content {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #666; PADDING-TOP: 10px
+}
+#guide .btn-personal {
+	LINE-HEIGHT: 35px; MARGIN: 20px auto; WIDTH: 137px; BACKGROUND: url(/images/bg_regist.jpg) no-repeat 0px -185px; HEIGHT: 35px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#guide .btn-personal:hover {
+	TEXT-DECORATION: none
+}
+#guide .btns {
+	TEXT-ALIGN: center; BORDER-TOP: #ccc 1px dotted; PADDING-TOP: 10px
+}
+#guide .btns A:link {
+	MARGIN: 0px 5px; COLOR: #005aa0
+}
+#guide .btns A:visited {
+	MARGIN: 0px 5px; COLOR: #005aa0
+}
+
+#regist {
+	MARGIN-BOTTOM: 15px
+}
+#regist .mt {
+	BACKGROUND: url(/images/tit_regist.jpg) repeat-x 0px -34px; HEIGHT: 33px
+}
+#regist .mt H2 {
+	LINE-HEIGHT: 33px; PADDING-LEFT: 15px; BACKGROUND: url(/images/tit_regist.jpg) no-repeat 0px 0px; FLOAT: left; HEIGHT: 33px
+}
+#regist .mt SPAN {
+	TEXT-ALIGN: right; LINE-HEIGHT: 33px; FLOAT: right; HEIGHT: 33px
+}
+#regist .mt B {
+	WIDTH: 10px; BACKGROUND: url(/images/tit_regist.jpg) no-repeat 0px -68px; FLOAT: right; HEIGHT: 33px
+}
+#regist .mc {
+	BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: #d1d1d1 1px solid; PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BORDER-TOP: #d1d1d1 0px solid; BORDER-RIGHT: #d1d1d1 1px solid; PADDING-TOP: 15px
+}
+#regist .tab {
+	BORDER-BOTTOM: #ffcc66 1px solid; PADDING-LEFT: 300px; MARGIN-BOTTOM: 25px; HEIGHT: 29px; OVERFLOW: visible
+}
+#regist .tab LI {
+	TEXT-ALIGN: center; LINE-HEIGHT: 27px; WIDTH: 102px; HEIGHT: 27px; COLOR: #f79100; FONT-SIZE: 14px; PADDING-TOP: 3px
+}
+#regist .tab .curr {
+	Z-INDEX: 10; POSITION: relative; BACKGROUND: url(/images/bg_regist.jpg) no-repeat 0px -83px; COLOR: #a0410a; FONT-WEIGHT: bold
+}
+#regist .tab .line {
+	BACKGROUND: url(/images/bg_shortcut_line.jpg) no-repeat right 7px
+}
+#regist .tab A:link {
+	LINE-HEIGHT: 23px; MARGIN: 0px auto; WIDTH: 74px; DISPLAY: block; HEIGHT: 23px; OVERFLOW: hidden
+}
+#regist .tab A:visited {
+	LINE-HEIGHT: 23px; MARGIN: 0px auto; WIDTH: 74px; DISPLAY: block; HEIGHT: 23px; OVERFLOW: hidden
+}
+#regist .tab A:hover {
+	BACKGROUND: url(/images/bg_regist.jpg) no-repeat -167px 0px; COLOR: #fff; TEXT-DECORATION: none
+}
+#regist .tab A:active {
+	BACKGROUND: url(/images/bg_regist.jpg) no-repeat -167px 0px; COLOR: #fff; TEXT-DECORATION: none
+}
+* HTML #regist .tab {
+	OVERFLOW: hidden
+}
+#regist .item {
+	LINE-HEIGHT: 26px; HEIGHT: 55px; PADDING-TOP: 5px
+}
+#regist .item A:link {
+	TEXT-DECORATION: underline
+}
+#regist .item A:visited {
+	TEXT-DECORATION: underline
+}
+#regist .label {
+	TEXT-ALIGN: right; WIDTH: 300px; FONT-SIZE: 14px
+}
+#regist .text {
+	BORDER-BOTTOM: #bbb 1px solid; BORDER-LEFT: #bbb 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 3px; WIDTH: 240px; PADDING-RIGHT: 3px; FONT-FAMILY: arial,"ËÎÌו"; HEIGHT: 16px; FONT-SIZE: 14px; BORDER-TOP: #bbb 1px solid; BORDER-RIGHT: #bbb 1px solid; PADDING-TOP: 4px
+}
+#regist .text-1 {
+	WIDTH: 100px
+}
+#regist .blank {
+	MARGIN: 2px 5px 0px; WIDTH: 16px; HEIGHT: 16px
+}
+#regist .img IMG {
+	MARGIN: 0px 5px; HEIGHT: 26px
+}
+#regist .succeed {
+	BACKGROUND: url(/images/pwdstrength.gif) no-repeat -105px 0px
+}
+#regist .btn-regist {
+	WIDTH: 166px; BACKGROUND: url(/images/bg_regist.jpg) no-repeat 0px 0px; HEIGHT: 32px; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#regist .highlight1 {
+	BORDER-BOTTOM: #ffcc66 1px solid; BORDER-LEFT: #ffcc66 1px solid; OUTLINE-STYLE: solid; OUTLINE-COLOR: #ffdc97; OUTLINE-WIDTH: 1px; BORDER-TOP: #ffcc66 1px solid; BORDER-RIGHT: #ffcc66 1px solid
+}
+#regist .highlight2 {
+	BORDER-BOTTOM: #f00 1px solid; BORDER-LEFT: #f00 1px solid; OUTLINE-STYLE: solid; OUTLINE-COLOR: #ffc1c1; OUTLINE-WIDTH: 1px; COLOR: #f00; BORDER-TOP: #f00 1px solid; BORDER-RIGHT: #f00 1px solid
+}
+#regist .pwdbg {
+	BACKGROUND: #fff8eb
+}
+#regist .focus {
+	LINE-HEIGHT: 20px; COLOR: #999
+}
+#regist .null {
+	LINE-HEIGHT: 20px; COLOR: red
+}
+#regist .error {
+	LINE-HEIGHT: 20px; COLOR: red
+}
+#regist .checkbox {
+	MARGIN-TOP: 2px
+}
+#regist #referrer {
+	COLOR: #999; FONT-SIZE: 12px
+}
+#pwdstrength {
+	LINE-HEIGHT: 22px; PADDING-RIGHT: 10px; COLOR: #999
+}
+#pwdstrength B {
+	MARGIN-TOP: 3px; WIDTH: 104px; FLOAT: left; HEIGHT: 13px; OVERFLOW: hidden
+}
+.strengthA B {
+	BACKGROUND: url(/images/pwdstrength.gif) no-repeat 0px 0px
+}
+.strengthB B {
+	BACKGROUND: url(/images/pwdstrength.gif) no-repeat 0px -13px
+}
+.strengthC B {
+	BACKGROUND: url(/images/pwdstrength.gif) no-repeat 0px -26px
+}
+#protocol-con {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 8px; OVERFLOW-Y: scroll; MARGIN: 0px auto; PADDING-LEFT: 8px; WIDTH: 600px; PADDING-RIGHT: 8px; HEIGHT: 80px; COLOR: #666; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: 8px
+}
+
+#forget .mt {
+	BACKGROUND: url(/images/tit_regist.jpg) #d1d1d1 repeat-x 0px -34px; HEIGHT: 33px
+}
+#forget .mt H2 {
+	LINE-HEIGHT: 33px; PADDING-LEFT: 15px; BACKGROUND: url(/images/tit_regist.jpg) no-repeat 0px 0px; FLOAT: left; HEIGHT: 33px
+}
+#forget .mt SPAN {
+	TEXT-ALIGN: right; LINE-HEIGHT: 33px; FLOAT: right; HEIGHT: 33px
+}
+#forget .mt B {
+	WIDTH: 10px; BACKGROUND: url(/images/tit_regist.jpg) no-repeat 0px -68px; FLOAT: right; HEIGHT: 33px
+}
+#forget .mc {
+	MARGIN-BOTTOM: 15px;BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: #d1d1d1 1px solid; PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BORDER-TOP: #d1d1d1 0px solid; BORDER-RIGHT: #d1d1d1 1px solid; PADDING-TOP: 10px
+}
+#forget .success {
+	WIDTH: 550px; FLOAT: left; OVERFLOW: hidden; MARGIN-BOTTOM: 15px;
+}
+#forget .fa {
+	WIDTH: 80px; FLOAT: left; MARGIN-LEFT: 0px; MARGIN-RIGHT: 10px
+}
+#forget .fl {
+	WIDTH: 450px; FLOAT: right; OVERFLOW: hidden; MARGIN-BOTTOM: 15px;PADDING-RIGHT: 10px
+}
+#forget .infos {
+	LINE-HEIGHT: 22px; COLOR: #c00;
+}
+#forget .btn-personal {
+	LINE-HEIGHT: 35px; MARGIN: 20px auto; WIDTH: 137px; BACKGROUND: url(/images/bg_regist.jpg) no-repeat 0px -185px; HEIGHT: 35px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#forget .btn-personal:hover {
+	TEXT-DECORATION: none
+}
+#guide-1 {
+	BORDER-LEFT: #e7e7e7 1px solid; PADDING-BOTTOM: 20px; WIDTH: 380px; PADDING-RIGHT: 0px; FLOAT: right; HEIGHT: 120px; PADDING-TOP: 0px
+}
+#guide-1 .content {
+	WIDTH: 290px; FLOAT: right; OVERFLOW: hidden; MARGIN-BOTTOM: 15px;
+}
+#guide-1 .fb {
+	WIDTH: 40px; HEIGHT: 80px; LINE-HEIGHT: 80px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px;
+}
+#guide-1 .btn-personal {
+	LINE-HEIGHT: 35px; MARGIN: 20px auto; WIDTH: 137px; BACKGROUND: url(/images/bg_regist.jpg) no-repeat 0px -185px; HEIGHT: 35px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#guide-1 .btn-personal:hover {
+	TEXT-DECORATION: none
+}
+#guide-1 .btns {
+	TEXT-ALIGN: center; BORDER-TOP: #ccc 1px dotted; PADDING-TOP: 10px
+}
+#guide-1 .btns A:link {
+	MARGIN: 0px 5px; COLOR: #005aa0
+}
+#guide-1 .btns A:visited {
+	MARGIN: 0px 5px; COLOR: #005aa0
+}

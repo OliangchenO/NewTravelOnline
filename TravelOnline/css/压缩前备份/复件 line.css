@@ -1,0 +1,921 @@
+.left_part{margin-top:0px;float:left;width:180px;}
+.right_part{margin-top:0px;margin-left:10px;float:right;width:980px;overflow:hidden;}
+.left_Recommend{margin-bottom: 10px;background-color:#fff;width:178px;border:1px solid #D3D3D3;border-width:1px 1px 1px 1px;position:relative;z-index:20;}
+.right_intro{margin-bottom: 10px;background-color:#fff;border:1px solid #D3D3D3;border-width:1px 1px 1px 1px;position:relative;}
+.right_introbox{padding:10px 10px;line-height:26px;border-top:1px dotted #ccc;color:#666;}
+.right_routebox{padding:0px 10px;line-height:26px;}
+
+.right_service{margin-bottom: 10px;background-color:#fff;border:1px solid #D3D3D3;border-width:1px 1px 1px 1px;position:relative;}
+.right_servicebox{padding:10px 5px;line-height:26px;border-top:1px dotted #ccc;color:#666;}
+.right_service .infos {margin-bottom:10px}
+.right_service .title {padding-left:10px;margin-bottom: 15px;color:#666666;font-size: 14px; font-weight: normal;line-height: 20px;border-bottom:1px solid #D3D3D3;}
+.right_service .content {padding:0 10px 0 15px;line-height:22px;}
+.alert h1 {LINE-HEIGHT: 22px;margin-bottom:5px;border-bottom:1px dotted #ccc;font-size:16px;}
+.alert {padding: 8px 15px 8px 15px;}
+.Recommend_box{padding-top:0px;}
+.Recommend_title{padding-left:10px;color:#666666; LINE-HEIGHT: 36px;font-size: 14px; font-weight: bold;background-color:#F7F7F7;height:36px;}
+.Recommend_list {overflow:hidden;}
+.Recommend_list li{list-style-type:none;float:left;width:180px;padding:6px 5px;border-top:1px dotted #ccc;overflow:hidden;height:22px;line-height:22px;}
+.Recommend_list .p-name{float:left;width:156px;height:22px;overflow:hidden;}
+.Recommend_list .fore{border-top:1px dotted #ccc;padding:10px 5px 10px;height:85px;border-top:0;}
+.Recommend_list .fore .p-img{float:left;margin-right:5px;}
+.Recommend_list .fore .p-name{margin-left:20px;margin-top:5px;float:left;width:150px;height:3em;line-height:1.5em;}
+.Recommend_list .fore .p-price{font-size: 16px;FONT-WEIGHT: bold; FONT-FAMILY: Arial Unicode MS;COLOR: #f60;float:left;height:28px;line-height:28px;}
+.Recommend_list .fore .p-price em{font-style:normal;font-weight:normal;font-size:10px;padding-left:2px;*vertical-align:1px;}
+.Recommend_list .fore1 .fno,
+.Recommend_list .fore2 .fno,
+.Recommend_list .fore3 .fno{border:1px solid #01AA07;color:#01AA07;}
+.Recommend_list .fno{float:left;width:16px;height:16px;border:1px solid #cdcdcd;border-radius:10px;margin:2px 3px 0 0;text-align:center;font:normal 12px/16px arial;color:#cdcdcd;}
+
+.nav{z-index:20;width:978px; height:36px; position:absolute; border:1px solid #d3d3d3; background:#f7f7f7;-moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; } 
+.nav li{cursor: pointer;text-align: center;width:100px;float:left; height:35px; line-height:35px; padding:0 10px; border-top:2px solid #f7f7f7;border-right: 1px solid #d3d3d3; font-size:14px; font-weight:bold} 
+.nav li.current{color:#468847;background:#ffffff; height:35px; border-top:2px solid #01AA07} 
+.nav li.current a{color:#468847} 
+.shadow{-moz-box-shadow:1px 1px 2px rgba(0,0,0,.2); -webkit-box-shadow:1px 1px 2px rgba(0,0,0,.2); box-shadow:1px 1px 2px rgba(0,0,0,.2);} 
+
+
+/*线路列表*/
+#linelist{FONT-SIZE: 12px;margin-bottom: 0px;background-color:#ffffff;overflow:hidden;padding:0px 0px 0 0px;}
+#linelist dl{border-top: 1px dotted #DDD;padding-top:15px;padding-bottom:15px;color:#666;}
+#linelist dt{position:absolute;width:140px;text-align:left;}
+#linelist dd{padding-left:140px;position:relative;_position:static;overflow:hidden;_zoom:1;}
+#linelist dt img {border: 1px solid #CDCDCD;padding:1px;WIDTH: 120px;height: 90px;}
+#linelist .lineprice {padding-left:5px;FLOAT: right;width:130px;height: 80px;border-left:1px solid #DDDDDD;}
+#linelist .p-name {color:#333;FONT-SIZE: 16px;height: 24px;line-height: 20px;overflow:hidden;margin-bottom:6px;}
+#linelist .route {line-height: 22px;}
+#linelist em {
+  display: inline-block;
+  padding: 5px 8px;
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 14px;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #f89406;
+  FONT-FAMILY: Georgia, "Times New Roman", "微软雅黑", serif;
+  -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+        border-radius: 3px;
+}
+#linelist .stander {
+  padding: 4px 20px 4px 20px;
+  margin-bottom: 10px;
+}
+#linelist .stander LI {PADDING-RIGHT: 10px; LINE-HEIGHT: 18px; HEIGHT: 18px; OVERFLOW: hidden;}
+#linelist .stander LI SPAN {
+	COLOR: #990000; 
+}
+
+
+.select_box{margin-right:10px;float:left;border:solid 1px #FAA732;color:#666;position:relative;cursor:pointer;width:50px;background-color:#ffffff;font-size:14px;}
+.selet_open{display:inline-block;background-color:#FAA732;position:absolute;right:0;top:0;width:14px;height:20px;padding:4px 2px 0 2px}
+.select_txt{display:inline-block;padding-left:8px;line-height:24px;height:24px;cursor:text;overflow:hidden;}
+.option{width:100%;border:solid 1px #EDE7D6;border-top:solid 1px #FAA732;position:absolute;top:24px;left:-1px;z-index:100;overflow:hidden;display:none;}
+.option a{display:block;height:26px;line-height:26px;text-align:left;padding:0 10px;width:100%;background:#fff;}
+.option a:hover{background:#DFF0D8;text-decoration:none;}
+
+.detail_info {margin-bottom:0px}
+.info_title {margin-bottom: 10px;font-family: SimHei,SimSun;color:#468847;font-size: 14px;font-weight: normal;line-height: 26px;border-bottom:1px solid #D3D3D3;}
+.info_content{padding:0 10px 15px 15px;line-height:22px;}
+
+.trips {float:left;WIDTH: 350px; margin-right:10px;height:420px;}
+.tripsHead {BORDER-BOTTOM: #cccccc 1px solid; LINE-HEIGHT: 30px; HEIGHT: 30px; PADDING-TOP: 0px}
+.tripsHead STRONG {FONT-SIZE: 14px}
+.tripsItem {color:#A96B26;FONT-SIZE: 13px;BORDER-BOTTOM: #cccccc 1px dotted; LINE-HEIGHT: 40px; HEIGHT: 40px; OVERFLOW: hidden}
+.tripsItem .terms {TEXT-ALIGN: center;WIDTH: 50px; FLOAT: left;HEIGHT: 40px;}
+.tripsItem .port {WIDTH: 160px; FLOAT: left}
+.tripsItem .arrive {TEXT-ALIGN: center; WIDTH: 50px; FLOAT: left}
+.tripsItem .startUp {TEXT-ALIGN: center; WIDTH: 50px; FLOAT: left}
+.tripList {HEIGHT: 340px;OVERFLOW-Y: auto; PADDING-TOP: 0px}
+
+#myFocus{ width:560px; height:350px;}
+.mF_games_tb_wrap{padding:0px;border:0px solid #999;background:#fff;height:420px;width:560px;float:left;}/*背景边框*/
+.mF_games_tb {background:#f1f1f1; position:relative;}
+.mF_games_tb .loading{ position:absolute; width:100%; height:100%; background:#fff url(/img/loading.gif) center no-repeat; z-index:9;}
+.mF_games_tb .pic{position:absolute;top:0;left:0;}
+.mF_games_tb .pic li{position:absolute;width:100%;height:100%;overflow:hidden;display:none;}
+.mF_games_tb .pic li img {width:560px;}
+.mF_games_tb .thumb{position:absolute;bottom:0;left:0;overflow:hidden;}
+.mF_games_tb .thumb ul{position:absolute;top:0;left:0;}
+.mF_games_tb .thumb ul li{position:relative;float:left;overflow:hidden;cursor:pointer;}
+.mF_games_tb .thumb ul li a{display:block;border:3px solid #D3D3D3; margin:10px 4px;}
+.mF_games_tb .thumb ul li img{position:relative;z-index:1;width:100%;height:100%;}
+.mF_games_tb .thumb ul li.current{background:url(img/mF_games_tb/ar.gif) center 5px no-repeat;}
+.mF_games_tb .thumb ul li.current a{border-color:#FF8C00;}
+.mF_games_tb .txt li{position:absolute;z-index:2;width:100%;height:38px;line-height:38px;display:none;}/*默认标题高度*/
+.mF_games_tb .txt li a{display:block;position:relative;z-index:1;color:#fff;padding-left:16px;font-size:14px;font-weight:bold;text-decoration:none;}/*标题样式*/
+.mF_games_tb .txt li b{display:block;height:100%;width:100%;position:absolute;top:0;left:0;background:#000;filter:alpha(opacity=30);opacity:0.3;}
+.mF_games_tb .prev,.mF_games_tb .next{font:bold 50px/50px arial;width:16px;overflow:hidden;position:absolute;z-index:4;left:0;bottom:20px;cursor:pointer;}
+.mF_games_tb .next{left:auto;right:0;}
+.mF_games_tb .prev a,.mF_games_tb .next a{display:block;color:#bbb;text-align:center;text-decoration:none;}
+.mF_games_tb .prev a:hover,.mF_games_tb .next a:hover{color:#f60;}
+
+.Viewdiv {MARGIN-TOP: 10px;PADDING:5px 10px 10px 10px;BORDER: #f3e7c7 1px solid; BACKGROUND: #FBFFF5;}
+.ViewHead {LINE-HEIGHT: 30px; HEIGHT: 30px; PADDING-TOP: 0px;FONT-WEIGHT: bold;font-size: 14px;}
+.Viewdiv table {table-layout:fixed;BORDER: #F3EFE5 1px solid;BACKGROUND: #ffffff; }
+.Viewdiv td {TEXT-ALIGN: center;font-size: 12px;BORDER-TOP: #F3EFE5 1px solid;LINE-HEIGHT: 35px;}
+.Viewdiv .tit td{TEXT-ALIGN: center;FONT-WEIGHT: bold;font-size: 13px;white-space:nowrap;overflow:hidden;LINE-HEIGHT: 30px;}
+.Viewdiv .tdn {COLOR: #E56700;}
+.Viewdiv .tds {COLOR: #f00;font-size: 14px;}
+.Viewdiv .img{CURSOR: hand;}
+.Viewdiv .Sight{PADDING:5px 10px 5px 10px;TEXT-ALIGN: left;LINE-HEIGHT: 20px;text-indent:2em;LINE-HEIGHT: 30px;}
+.Viewdiv .price {FONT-FAMILY: Arial Unicode MS; COLOR: #FF7A17; FONT-SIZE: 12px; FONT-WEIGHT: bold;}
+
+.cruisesroom
+{
+margin-top:20px;
+}
+
+#tabdiv {background: #ffffff;padding:0 10px 10px 10px;color:#666666;
+         border: 1px solid lightGrey;
+border-width:0px 1px 1px 1px;}
+.cruisesroom .roomnav {
+width: 947px;
+height: 30px;
+*position: absolute;
+border: 1px solid lightGrey;
+border-width:0px 0px 1px 1px;
+background-color: #FCF8E3;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+}
+.cruisesroom li { list-style:none; float:left; min-width: 60px;TEXT-ALIGN: center;line-height: 20px;}
+.cruisesroom ul a 
+{
+  FONT-SIZE: 13px;
+  display:block;
+  padding:2px 8px;
+  text-decoration:none!important;
+  color:#666666;
+  background:#F7F7F7;
+  line-height: 25px;
+  border-right: 1px solid lightGrey;
+  border-top: 1px solid lightGrey;
+  border-bottom: 1px solid lightGrey;
+  margin-right:0px;
+}
+.cruisesroom ul a:hover {
+  color:#666666;
+  line-height: 25px;
+  border-bottom: 1px solid lightGrey;
+  }
+.cruisesroom ul a.selected 
+{
+  border-top: 2px solid #FAA732;
+  line-height: 24px;
+  margin-bottom:0;
+  color:#666666;
+  background:#fff;
+  cursor:default;
+  border-bottom: 1px solid #ffffff;
+  }
+  
+
+.cruisesroom .rtit {
+TEXT-ALIGN: center;
+FONT-WEIGHT: bold;
+font-size: 13px;
+white-space: nowrap;
+overflow: hidden;
+LINE-HEIGHT: 40px;
+HEIGHT: 40px;
+border-bottom: 1px dotted #E6E6E6;
+}
+
+.cruisesroom td dfn {
+font-variant: small-caps;
+font-style: normal;
+FONT-SIZE: 14px;
+FONT-WEIGHT: bold;
+COLOR: #FF7A17;
+}
+.cruisesroom .btn-warning {FONT-SIZE: 12px;padding: 4px 4px;}
+
+.roomdiv 
+{
+margin-top:20px;
+background: #ffffff;
+color:#666;
+padding: 5px 10px;
+border: 1px dotted #F3E7C7;
+-moz-box-shadow:1px 1px 2px rgba(0,0,0,.2); -webkit-box-shadow:1px 1px 2px rgba(0,0,0,.2); box-shadow:1px 1px 2px rgba(0,0,0,.2);
+-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+        border-radius: 5px;
+}
+
+.tit {
+TEXT-ALIGN: center;
+FONT-WEIGHT: bold;
+font-size: 12px;
+white-space: nowrap;
+overflow: hidden;
+LINE-HEIGHT: 35px;
+HEIGHT: 35px;
+border-top: 1px dotted #E6E6E6;
+}
+.roomdiv .tdn {
+COLOR: #E56700;
+}
+.roomdiv td {
+TEXT-ALIGN: center;
+font-size: 12px;
+white-space: nowrap;
+overflow: hidden;
+LINE-HEIGHT: 35px;
+HEIGHT: 35px;
+border-top: 1px dotted #E6E6E6;
+}
+.roomHead {
+LINE-HEIGHT: 35px;
+HEIGHT: 35px;
+PADDING-TOP: 0px;
+}
+.roomdiv .tds {
+COLOR: #f00;
+font-size: 14px;
+}
+.roomdiv .img {
+CURSOR: pointer;
+}
+
+.pcount {
+display: -moz-inline-box;
+display: inline-block;
+width: 150px;
+FONT-FAMILY: Arial Unicode MS;
+COLOR: #f00;
+FONT-SIZE: 30px;
+FONT-WEIGHT: blod;
+MARGIN-RIGHT: 18px;
+padding-right: 5px;
+}
+.roomlist{
+	padding: 10px 10px 10px 10px;background:#FBF9F0;BORDER: #FBEED5 1px solid; 
+}
+.roomlist  A.deck {
+	PADDING-TOP: 2px; PADDING-BOTTOM: 2px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px;LINE-HEIGHT: 15px; WHITE-SPACE: nowrap; HEIGHT: 15px; OVERFLOW: hidden; TEXT-DECORATION: none
+}
+.roomlist A.deck:link {
+	COLOR: #005aa0
+}
+.roomlist A.deck:visited {
+	COLOR: #005aa0
+}
+.roomlist A.deck:hover {
+	BACKGROUND: #FAA732; COLOR: #fff
+}
+.roomlist A.deck:active {
+	BACKGROUND: #FAA732; COLOR: #fff
+}
+.roomlist div{
+	line-height:22px;
+}
+.roomlist span{
+	padding-right: 30px;
+}
+#roompic{
+	padding-bottom: 5px;
+}
+#roompic .tip{
+	padding-right: 10px;
+}
+#roompic IMG { 
+	width:160px;height:120px;BORDER: #e5e5e5 2px solid;margin-right: 10px;
+}
+
+.hotelename{
+	FONT-SIZE: 16px;line-height:25px;
+}
+
+.HotelDiscretion
+{
+    padding: 5px 20px 5px 60px;
+    FONT-SIZE: 12px;
+    COLOR: #696969;
+    LINE-HEIGHT: 20px;
+    BORDER-BOTTOM: #e5e5e5 1px solid;
+}
+.HotelDiscretion A {margin: 0px 20px 0px 0px;FONT-SIZE: 14px;LINE-HEIGHT: 30px; }
+.hotel_price {
+	FLOAT: left; FONT-WEIGHT: normal;MARGIN-TOP: 0px; LINE-HEIGHT: 30px;HEIGHT: 26px; PADDING-TOP: 10px; PADDING-BOTTOM: 5px; FONT-SIZE: 12px; COLOR: #FF6600
+}
+.hotel_price span{
+	FONT-SIZE: 30px;FONT-WEIGHT: normal; FONT-FAMILY: Arial Unicode MS;COLOR: #FF6600;FONT-FAMILY: Arial Unicode MS;
+}
+.hotel_price dfn{
+	font-style: normal;FONT-SIZE: 25px;FONT-FAMILY: Arial;
+}
+.hotelorder{
+	TEXT-ALIGN: center; LINE-HEIGHT: 48px; WIDTH: 130px; DISPLAY: block; BACKGROUND: url(/images/detail.png) no-repeat 0px 0px; HEIGHT: 48px; COLOR: #fff; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.btn_book_now { display:block; width:129px; height:46px; color:#FFF; background:url(/images/detail.png) no-repeat #44AEF8; font:bold 14px/46px Simsun; text-align:center; text-indent:200px; overflow:hidden; }
+.btn_book_now:hover { text-decoration:none; background:url(/images/un_hotel_detail.png) no-repeat 0 -1088px; }
+
+.cruisesroom .hoteltab {
+	ZOOM: 1; OVERFLOW: hidden
+}
+.cruisesroom .hoteltab LI {
+	TEXT-ALIGN: center; FLOAT: left; CURSOR: pointer
+}
+.cruisesroom .hoteltab A {
+	TEXT-ALIGN: center; FLOAT: left; CURSOR: pointer
+}
+.cruisesroom .hoteltab-item {
+	TEXT-ALIGN: center; FLOAT: left; CURSOR: pointer
+}
+.cruisesroom .hoteltab {
+	BORDER-BOTTOM: #4C9E21 2px solid; MARGIN-BOTTOM: 0px
+}
+.cruisesroom .hoteltab LI {
+	POSITION: relative; PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; PADDING-LEFT: 12px; PADDING-RIGHT: 12px; BACKGROUND: url(/images/icon_clubs.gif) #ccc no-repeat right -150px; HEIGHT: 24px; COLOR: #398510; FONT-SIZE: 14px; OVERFLOW: hidden; FONT-WEIGHT: bold; MARGIN-RIGHT: 3px; PADDING-TOP: 3px
+}
+.cruisesroom .hoteltab SPAN {
+	Z-INDEX: 1; POSITION: absolute; WIDTH: 10px; BACKGROUND: url(/images/icon_clubs.gif) no-repeat 0px -150px; HEIGHT: 27px; TOP: 0px; LEFT: 0px
+}
+.cruisesroom .hoteltab A {
+	FLOAT: none; COLOR: #398510
+}
+.cruisesroom .hoteltab .curr {
+	BACKGROUND-POSITION: right -178px; COLOR: #fff
+}
+.cruisesroom .hoteltab .curr SPAN {
+	BACKGROUND-POSITION: 0px -178px
+}
+.cruisesroom .hoteltab .curr A {
+	COLOR: #fff
+}
+.cruisesroom .borders {
+	BACKGROUND: #ffffff; BORDER-BOTTOM: #B5EA99 1px solid; BORDER-LEFT: #B5EA99 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 2px; BORDER-RIGHT: #B5EA99 1px solid; PADDING-TOP: 10px
+}
+.cruisesroom .borders01 {
+	BACKGROUND: #FBFFF5; BORDER-BOTTOM: #B5EA99 1px solid; BORDER-LEFT: #B5EA99 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 2px; BORDER-RIGHT: #B5EA99 1px solid; PADDING-TOP: 10px
+}
+
+.cruisesroom table {table-layout:fixed;}
+.cruisesroom td {font-size: 12px;white-space:nowrap;overflow:hidden;BORDER-bottom: #EFEFEF 1px dotted;}
+.cruisesroom .tit {BACKGROUND: url(/images/icon_clubs.gif) repeat 0px -180px;FONT-WEIGHT: bold;LINE-HEIGHT: 25px;TEXT-ALIGN: center;font-size: 12px;COLOR: #ffffff;}
+.cruisesroom .tir {COLOR: #666;FONT-SIZE: 13px;LINE-HEIGHT: 35px;HEIGHT: 35px;border-bottom: 1px dotted #E6E6E6;}
+.cruisesroom td dfn{
+	font-variant: small-caps;font-style: normal;FONT-SIZE: 14px;FONT-WEIGHT: bold;COLOR: #FF7A17;
+}
+.cruisesroom td span{
+	FONT-SIZE: 12px;COLOR: #666;
+}
+.cruisesroom td .roomname {
+	LINE-HEIGHT: 35px;MARGIN-LEFT: 10px;PADDING-LEFT: 25px; FONT-SIZE: 13px;BACKGROUND: url(/images/icons/sign.png) no-repeat;
+}
+.yltags {
+PADDING-BOTTOM: 5px;
+PADDING-RIGHT: 1px;
+}
+.cruisesroom .roomdetailaa{
+	background:#FBFFF5;
+}
+.cruisesroom .btns{
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; WIDTH: 64px; DISPLAY: block; BACKGROUND: url(/images/bg_hotsale.gif) no-repeat 0px -466px; HEIGHT: 25px; COLOR: #fff; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.cruisesroom .roomsell span{
+	padding-right: 10px;
+}
+.cruisesroom .roomsellaa{
+	WIDTH: 885px;MARGIN: 5px 10px 5px 10px;PADDING: 8px 10px 8px 5px; FONT-SIZE: 13px; MARGIN-BOTTOM: 5px; BORDER-BOTTOM: #FFD6AC 1px solid; BORDER-LEFT: #FFD6AC 1px solid; BACKGROUND: #fffceb; COLOR: #ED8611; OVERFLOW: visible; BORDER-TOP: #FFD6AC 1px solid; BORDER-RIGHT: #FFD6AC 1px solid
+}
+.cruisesroom .pcount{
+	display:-moz-inline-box;display:inline-block;width:100px;FONT-FAMILY: Arial Unicode MS; COLOR: #f00; FONT-SIZE: 26px; FONT-WEIGHT: blod; MARGIN-RIGHT: 18px;padding-right: 5px;
+}
+
+.cruisesroom .radioBox {
+	WIDTH: 15px; BACKGROUND: url(/images/infos.png) no-repeat -84px -309px; HEIGHT: 15px; TOP: 10px; CURSOR: pointer; LEFT: 15px
+}
+.cruisesroom .radioBoxOn {
+	WIDTH: 15px; BACKGROUND: url(/images/infos.png) no-repeat -84px -327px; HEIGHT: 15px; TOP: 10px; CURSOR: pointer; LEFT: 15px
+}
+.cruisesroom .radioBoxNo {
+	WIDTH: 15px;  BACKGROUND: url(/images/infos.png) #ffffff no-repeat -85px -346px; HEIGHT: 15px; TOP: 10px; CURSOR: auto; LEFT: 15px
+}
+
+.btn-0yuan {
+	LINE-HEIGHT: 100px; WIDTH: 102px; BACKGROUND: url(/images/btn_new.jpg) no-repeat 0px -183px; FLOAT: right; HEIGHT: 40px; OVERFLOW: hidden; MARGIN-RIGHT: 50px
+}
+
+.plandate_info{margin-bottom: 30px;}
+.plan_date{
+	PADDING: 0 0 5px;width:980px;overflow:hidden;line-height:16px;display: inline-block;text-align:center;
+}
+.plan_date table{
+	text-align:center; float:left; width:488px; border-spacing:0px;
+}
+.monthTitle{
+	text-align: center; FONT-WEIGHT: bold; color:#2D680D; font-size:14px; height:25px;
+}
+.calendarPanel{
+	float:left; margin:0px 0px 0px 0px;
+}
+.weekday{
+	font-size:14px; color:#ffffff; BACKGROUND: #5BB75B; 
+}
+.weekend{
+	font-size:14px; color:#ffffff; BACKGROUND: #5BB75B;
+}
+.prevMonth,.nextMonth{
+	width:50px;
+}
+
+.other-month{
+	color:#ffffff !Important;
+	background-color:#ffffff !Important;
+}
+.outdays
+{
+	color:#CCCCCC;
+}
+.current-month{
+	color:#CCCCCC;
+}
+.hasEvent{
+	background:#fff;
+	font-weight:bold;
+	font-size:14px;
+	cursor: pointer;
+}
+.hasEvent a:link
+{
+	*color:#468847 !Important;
+	CURSOR: hand;
+	FONT-SIZE: 15px;
+	float:left;
+	color:#468847;
+}
+.hasEvent a
+{
+	color:#468847;
+	FONT-SIZE: 15px;
+}
+.other-month.weekday.hasEvent .planPrice, .other-month.weekday.hasEvent a 
+{
+	*color:#468847;
+	CURSOR: hand;
+}
+
+.hasEvent a:hover
+{
+	*color:#A52A2A;
+	CURSOR: hand;
+}
+
+.showCalendarPanel table {
+	border-bottom:1px solid #DFF0D8;
+	border-left:1px solid #DFF0D8;
+	border-spacing:0px;
+}
+
+.other-month.outdays
+{
+	color:#999 !Important;
+}
+
+.showCalendarPanel th{
+	LINE-HEIGHT: 28px; border-right:1px solid #5BB75B; border-top:1px solid #DFF0D8;border-spacing:0px;
+}
+
+.showCalendarPanel td {
+	border-right:1px solid #DFF0D8;
+	border-top:1px solid #DFF0D8;
+	border-spacing:0px;
+	height:65px;
+	width:52px;
+	font-size:12px;
+	text-align:left;
+	padding:4px 2px 0px 4px;
+	vertical-align:top;
+	color:#AAAAAA;
+}
+
+.route_1 {float:right;color:#FF6600;FONT-SIZE: 12px;}
+.route_2 {float:right;color:#468847;FONT-WEIGHT: normal;FONT-SIZE: 12px;}
+.route_5 {float:right;color:#DA4F49;FONT-WEIGHT: normal;FONT-SIZE: 12px;}
+
+.hasEvent .route_3 a {float:right;color:#FF6600;FONT-WEIGHT: normal;FONT-SIZE: 12px;}
+.hasEvent .route_3 a:link {color:#FF6600;}
+.hasEvent .route_3 a:hover {color:#FF6600;}
+.hasEvent .route_4 a {float:right;color:#468847;FONT-WEIGHT: normal;FONT-SIZE: 12px;}
+
+.Visa DL {
+padding:5px 0;OVERFLOW: hidden;
+}
+.Visa DL.fore {
+	BORDER-TOP: 0px
+}
+.Visa DT {
+	font-size: 12px;TEXT-ALIGN: right; LINE-HEIGHT: 22px; WIDTH: 100px; FLOAT: left; FONT-WEIGHT: bold
+}
+.Visa DD {
+	WIDTH: 830px; FLOAT: right; OVERFLOW: hidden;padding-bottom:5px;BORDER-BOTTOM: #ccc 1px dotted;
+}
+.Visa DD DIV {
+	FLOAT: left;  LINE-HEIGHT: 22px; MARGIN-RIGHT: 5px; PADDING-Left: 5px;
+}
+.Visa .files {
+	WIDTH: 830px;FLOAT: left;PADDING-Left: 5px;FONT-WEIGHT: bold;COLOR: #398510;
+}
+    
+    
+ .thickframe {
+	Z-INDEX: 10000000; BORDER-BOTTOM: 0px; POSITION: fixed; FILTER: alpha(opacity=0); BORDER-LEFT: 0px; WIDTH: 100%; BACKGROUND: #000; HEIGHT: 100%; BORDER-TOP: 0px; TOP: 0px; BORDER-RIGHT: 0px; LEFT: 0px; opacity: 0
+}
+.thickdiv {
+	Z-INDEX: 10000001; BORDER-BOTTOM: 0px; POSITION: fixed; FILTER: alpha(opacity=15); BORDER-LEFT: 0px; WIDTH: 100%; BACKGROUND: #000; HEIGHT: 100%; BORDER-TOP: 0px; TOP: 0px; BORDER-RIGHT: 0px; LEFT: 0px; opacity: 0.15
+}
+.thickbox {
+	Z-INDEX: 10000002; POSITION: absolute; PADDING-BOTTOM: 4px; PADDING-LEFT: 0px; PADDING-RIGHT: 4px; BACKGROUND: url(/img/bg_shadow.gif) no-repeat -4px 0px; OVERFLOW: hidden; PADDING-TOP: 0px; -moz-border-radius: 0 20px 6px 20px; -webkit-border-radius: 0 20px 6px 20px
+}
+.thicktitle {
+	BORDER-BOTTOM: #c4c4c4 0px solid; BORDER-LEFT: #c4c4c4 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 27px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-FAMILY: arial, "宋体"; BACKGROUND: #f3f3f3; HEIGHT: 27px; COLOR: #333; FONT-SIZE: 14px; BORDER-TOP: #c4c4c4 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #c4c4c4 1px solid; PADDING-TOP: 0px; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0
+}
+.thickclose:link {
+	Z-INDEX: 100000; POSITION: absolute; LINE-HEIGHT: 100px; WIDTH: 15px; DISPLAY: block; BACKGROUND: url(/img/bg_thickbox.gif) no-repeat 0px -18px; HEIGHT: 15px; FONT-SIZE: 0px; OVERFLOW: hidden; TOP: 7px; RIGHT: 12px
+}
+.thickclose:visited {
+	Z-INDEX: 100000; POSITION: absolute; LINE-HEIGHT: 100px; WIDTH: 15px; DISPLAY: block; BACKGROUND: url(/img/bg_thickbox.gif) no-repeat 0px -18px; HEIGHT: 15px; FONT-SIZE: 0px; OVERFLOW: hidden; TOP: 7px; RIGHT: 12px
+}
+.thickcon {
+	BORDER-BOTTOM: #c4c4c4 1px solid; BORDER-LEFT: #c4c4c4 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #fff; OVERFLOW: auto; BORDER-TOP: #c4c4c4 1px solid; BORDER-RIGHT: #c4c4c4 1px solid; PADDING-TOP: 10px
+}
+.thickloading {
+	BACKGROUND: url(/images/loading.gif) #fff no-repeat center center
+}
+#thicktitler {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 0px; PADDING-LEFT: 11px; PADDING-RIGHT: 11px; BACKGROUND: #80D04D; COLOR: #fff; BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 0px
+}
+#thickcloser:link {
+	WIDTH: 16px; BACKGROUND-POSITION: 0px 0px; HEIGHT: 17px; TOP: 6px; RIGHT: 9px
+}
+#thickcloser:visited {
+	WIDTH: 16px; BACKGROUND-POSITION: 0px 0px; HEIGHT: 17px; TOP: 6px; RIGHT: 9px
+}
+#thickconr {
+	BORDER-BOTTOM: #80D04D 1px solid; BORDER-LEFT: #80D04D 1px solid; BORDER-TOP: #80D04D 1px solid; BORDER-RIGHT: #80D04D 1px solid
+}
+
+.xico,.xgallery_prev i,.xgallery_next i,.xvip_arrow,.x_mod_promo_tag i,.xoption_ico_selected,.x_mod_number_minus,.x_mod_number_plus,.x_mod_grade_star,.x_mod_grade_star span,.x_mod_tab_arrow,.xzoom_prev,.xzoom_next,.xzoom_close,.xstaged_step i {
+	background:url('/img/x_spr.png') no-repeat
+}
+    .xgallery {
+	position:relative;
+	z-index:30;
+	padding:0 0 20px 0
+}
+.xgallery img {
+	display:block
+}
+.xgallery_show {
+	position:relative;
+	height:250px;
+	margin:0 auto 10px;
+	zoom:1
+}
+
+.xgallery_img {
+	width:320px;
+	height:240px;
+	margin:0 auto;
+	padding:4px 4px 4px 4px;
+	border:1px solid #EFEFEF;
+}
+.xgallery_thumb {
+	position:relative;
+	zoom:1
+}
+.xgallery_thumb_wrapper {
+	position:relative;
+	width:248px;
+	height:54px;
+	overflow:hidden;
+	margin:0 auto
+}
+.xgallery_thumb_list {
+	position:absolute;
+	width:1000px;
+	background:#fff
+}
+.xgallery_thumb_list li {
+	float:left;
+	display:inline;
+	height:45px;
+	width:50px;
+	overflow:hidden;
+	margin-left:4px;
+	margin-right:4px;
+	padding:1px;
+	border:1px solid #ccc;
+	cursor:pointer
+}
+.xgallery_thumb_list .current {
+	position:relative;
+	border:1px solid #FAA732
+}
+.xgallery_thumb_list img {
+	width:50px;
+	height:45px
+}
+.xgallery_next,.xgallery_prev {
+	position:absolute;
+	top:0;
+	display:block;
+	height:54px;
+	width:20px
+}
+.xgallery_prev {
+	left:0
+}
+.xgallery_next {
+	right:0
+}
+.xgallery_prev i,.xgallery_next i {
+	display:block;
+	width:12px;
+	height:20px;
+	margin:20px auto 0;
+	background-position:-70px 0;
+	cursor:pointer
+}
+.xgallery_next i {
+	background-position:-121px 0
+}
+.xgallery_prev:hover i {
+	background-position:-86px 0
+}
+.xgallery_next:hover i {
+	background-position:-138px 0
+}
+.xgallery_prev_disabled i,.xgallery_prev_disabled:hover i {
+	background-position:-103px 0
+}
+.xgallery_next_disabled i,.xgallery_next_disabled:hover i {
+	background-position:-155px 0
+}
+.xgallery_next_disabled,.xgallery_prev_disabled {
+	display:none;
+	cursor:default
+}
+.xgallery_zoom {
+	position:absolute;
+	top:0;
+	left:319px;
+	z-index:30;
+	background:#fff
+}
+
+
+.grid_m 
+{
+float:left;
+width: 780px;
+padding: 0 10px;
+}
+.xbase {
+	padding:15px 0 0px 15px
+}
+.xbase_row1 {
+	margin-bottom:13px;
+	border-bottom: 1px dotted #CCC;
+	padding-bottom:10px;
+}
+.xbase_row2,.xbase_row4 {
+	margin-bottom:10px
+}
+.xbase_row3 {
+	background:#f2f2f2;
+	width:100%;
+	padding:20px 0 10px 15px;
+	margin:0 0 18px -15px
+}
+.xbase_item {
+	margin-bottom:15px;
+	zoom:1;
+	padding-left:60px
+}
+.xbase_col1 {
+	position:absolute;
+	width:55px;
+	height:20px;
+	overflow:hidden;
+	margin-left:-60px;
+	line-height:18px;
+	line-height:22px\9;
+	_line-height:18px
+}
+
+.xbase_col2 {
+	zoom:1
+}
+.xbase_col2:after {
+	display:block;
+	clear:both;
+	height:0;
+	content:".";
+	visibility:hidden
+}
+.xname 
+{
+    line-height:20px;
+    height:40px;
+	font-weight:bold;
+	font-size:16px;
+	color:#333;
+	font-family:"\5FAE\8F6F\96C5\9ED1",tahoma;
+	word-wrap:break-word;
+	word-break:break-all
+}
+.xdesc {
+	margin:3px 0;
+	color:#ff7300;
+	font-size:14px;
+	font-weight:bold;
+	font-family:"\5FAE\8F6F\96C5\9ED1",tahoma
+}
+.xinclude {
+	color:#999
+}
+.xprice {
+	position:relative;
+	margin-bottom:15px
+}
+.xprice .xbase_col1 {
+	margin-top:7px
+}
+.xprice .xprice_val {
+	float:left;
+	display:inline;
+	margin:0 10px 0 0;
+	height:30px;
+	line-height:30px;
+	font-size:24px;
+	color:#d70000
+}
+.xprice .xprice_val i {
+	display:inline-block;
+	vertical-align:middle
+}
+.xprice .mod_hint {
+	width:300px
+}
+.xprice_none .xbase_col1 {
+	margin-top:0
+}
+.xprice_none .xprice_val {
+	height:20px;
+	font-size:14px;
+	color:#999;
+	line-height:20px
+}
+.xprice_none .xprice_val i {
+	display:none
+}
+.mod_price i {
+margin-right: 2px;
+font-size: 12px;
+font-family: "arial";
+}
+
+
+
+.xprice_tag {
+	float:left;
+	display:inline;
+	height:18px;
+	padding:0 3px;
+	margin:6px 10px 6px 0;
+	line-height:16px;
+	line-height:20px\9;
+	_line-height:16px;
+	color:#fff;
+	background:#cd0000;
+	border-radius:2px
+}
+.xprice .x_mod_time {
+	float:left;
+	display:inline;
+	height:20px;
+	margin:5px 10px 5px 0
+}
+.xprice_origin {
+	position:relative;
+	color:#666;
+	margin-bottom:10px
+}
+.xprice_origin .xprice_val {
+	color:#999;
+	font-size:16px;
+	font-weight:normal;
+	height:20px;
+	line-height:20px
+}
+.xprice_origin .xprice_val i {
+	font-size:14px
+}
+.xprice_origin .xvip {
+	margin:0 0 0 15px
+}
+.xprice_origin .xbase_col1 {
+	margin-top:0;
+	color:#666
+}
+
+
+
+
+.x_mod_tab {
+	zoom:1
+}
+.x_mod_tab_bd {
+	padding:20px 0px 20px;
+	background:#fff;
+	border:0px solid #ccc;
+	_zoom:1
+}
+.x_mod_tab_hd {
+	height:37px;
+}
+.x_mod_tab_nav {
+	float:left
+}
+.x_mod_tab_nav li {
+	position:relative;
+	float:left;
+	display:inline;
+	margin-right:-1px;
+	margin-bottom:-1px;
+	text-align:center;
+	border:1px solid #ccc;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	backface-visibility:hidden
+}
+.x_mod_tab_nav a {
+	display:block;
+	width:100px;
+	border-top:1px;
+	padding:7px 0;
+	height:21px;
+	line-height:21px;
+	font-size:14px;
+	border:1px solid #fff;
+	border-width:1px 0 0 1px;
+	background:#eee;
+	background:-webkit-linear-gradient(top,#f5f5f5,#eaeaea);
+	background:-moz-linear-gradient(top,#f5f5f5,#eaeaea 100%)
+}
+.x_mod_tab_nav a:hover {
+	color:#333;
+	text-decoration:none;
+	background:#eaeaea;
+	background:-webkit-linear-gradient(top,#eaeaea,#f5f5f5);
+	background:-moz-linear-gradient(top,#eaeaea,#f5f5f5 100%)
+}
+.x_mod_tab_nav .current {
+	border:0
+}
+.x_mod_tab_nav .current a,.x_mod_tab_nav .current a:hover {
+	padding:9px 1px 8px 2px;
+	color:#fff;
+	font-weight:bold;
+	background:#0479ca;
+	border:0
+}
+.x_mod_tab_nav .current a:hover {
+	text-decoration:none
+}
+.x_mod_tab_arrow {
+	position:absolute;
+	top:40px;
+	left:50%;
+	display:none;
+	width:24px;
+	height:24px;
+	overflow:hidden;
+	margin-left:-12px;
+	background-position:-298px 0
+}
+.x_mod_tab_nav .current .x_mod_tab_arrow {
+	display:none
+}
+.x_mod_tab_nav .xico {
+	*margin-top:3px
+}
+.ic_safari .x_mod_tab_nav .xico {
+	margin-top:-2px
+}
+.x_mod_tab_nav .x_mod_tab_nav_last a {
+	width:237px
+}
+.x_mod_tab_extra {
+	float:right
+}
+

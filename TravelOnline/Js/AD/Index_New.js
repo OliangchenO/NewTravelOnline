@@ -1,0 +1,1 @@
+﻿(function () { var ads = [{width: 211,width2: 0,height: 90,url: "/Upload/AdImage/2013100600533128491663.jpg",url2: "",alt: "121",link: "321321"}];var rate = [1];asyncScript(function () {setRandomAds(ads, rate, "Index_New", false);})})();

@@ -1,0 +1,1 @@
+﻿(function () { var ads = [{width: 211,width2: 0,height: 90,url: "/Upload/AdImage/2013100623134567869121.jpg",url2: "",alt: "33",link: "33"},{width: 211,width2: 0,height: 90,url: "/Upload/AdImage/2013100623133471953125.jpg",url2: "",alt: "22",link: "22"}];var rate = [1];asyncScript(function () {setRandomAds(ads, rate, "InLand_Small", false);})})();

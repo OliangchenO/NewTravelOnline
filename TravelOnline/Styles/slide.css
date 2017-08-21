@@ -1,0 +1,11 @@
+#slide {
+background:url(/images/loading.gif) no-repeat center 52px;height:270px;margin-bottom:10px;overflow:hidden;position:relative;width:546px; z-index:1}
+#slide ul {height:270px;left:0;position:absolute;top:0;width:546px;}
+#slide li {float:left;height:270px;overflow-x:hidden;overflow-y:hidden;width:546px;}
+#slide div {height:30px;overflow:hidden;position:absolute;bottom:0;width:100%}
+*html #slide div{bottom:-1px}
+#slide span {cursor:pointer;float:left;text-align:center;height:30px;line-height:30px;background:#666;filter:Alpha(Opacity=80);opacity:0.8;font-size:14px;border-right:1px solid #333}
+#slide .curr {background:#36811B}
+#slide span a:link, #slide span a:visited {color:#FFF;text-decoration:none;}
+#slide .curr a:link, #slide .curr a:visited {color:#FFF;font-weight:bold;}
+

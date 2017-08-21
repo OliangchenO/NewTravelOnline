@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoToOnlinePay.aspx.cs" Inherits="TravelOnline.GoToPage.GoToOnlinePay" %>

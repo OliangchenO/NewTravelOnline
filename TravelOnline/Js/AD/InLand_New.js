@@ -1,0 +1,1 @@
+﻿(function () { var ads = [{width: 211,width2: 0,height: 90,url: "/Upload/AdImage/2013100702542976555026.jpg",url2: "",alt: "11",link: "22"}];var rate = [1];asyncScript(function () {setRandomAds(ads, rate, "InLand_New", false);})})();

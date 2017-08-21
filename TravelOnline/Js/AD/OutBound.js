@@ -1,0 +1,1 @@
+﻿$("#slide").jdSlide({width: (screen.width >= 1200) ? 766 : 546,height:200,pics: [{src: (screen.width >= 1200) ? "/Upload/AdImage/2011080403523154695578.jpg" : "/Upload/AdImage/2011080403523632411005.jpg",href: "#",alt: "",breviary: "#",type: "img"}]})

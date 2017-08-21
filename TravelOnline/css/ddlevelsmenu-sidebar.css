@@ -1,0 +1,9 @@
+@charset "utf-8";
+.markermenu{width:250px;clear:left;position:relative;}
+.markermenu ul{list-style-type:none;margin:5px 0;padding:0;border-top:1px solid #a0be7c;border-left:1px solid #a0be7c;}
+.markermenu ul li a{ background: #FFF url(/images/bulletlist.gif) no-repeat 3px center;font: 14px "宋体", Verdana, Helvetica, sans-serif;color:#00014e;display:block;width:auto;padding:12px 0;padding-left:20px;text-decoration:none;border-right:1px solid #a0be7c;border-bottom:1px solid #a0be7c;}
+*html .markermenu ul li a{width:155px;}
+.markermenu ul li a:visited, .markermenu ul li a:active{color:#00014e;}
+.markermenu ul li a:hover, .markermenu ul li a.selected{background-color:#f0ffeb;}
+.blackwhite li a{background:white;}
+.blackwhite li a:hover{background:black;color:white;}

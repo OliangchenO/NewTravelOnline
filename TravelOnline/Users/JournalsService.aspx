@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" validateRequest="false" AutoEventWireup="true" CodeBehind="JournalsService.aspx.cs" Inherits="TravelOnline.Users.JournalsService" %>

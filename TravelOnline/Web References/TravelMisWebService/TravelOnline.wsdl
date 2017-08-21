@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/TravelMIS/TravelOnline" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://travelmis.com/webservices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://tempuri.org/TravelMIS/TravelOnline" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/TravelMIS/TravelOnline">
+      <s:import namespace="http://travelmis.com/webservices/" />
+      <s:element name="Icbc_Sign_Class">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transdata" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Icbc_Sign_ClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Icbc_Sign_ClassResult" type="tns:IcbcSignData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IcbcSignData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TransData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SignData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CertData" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Icbc_Base64dec_Class">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transdata" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Icbc_Base64dec_ClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Icbc_Base64dec_ClassResult" type="tns:IcbcSignData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CruisesPlanNoCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lineid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupPlanNoId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CruisesPlanNoCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CruisesPlanNoCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CruisesGuestPlanNoCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lineid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupGuestId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CruisesGuestPlanNoCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CruisesGuestPlanNoCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CruisesPlanNoChange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lineid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupGuestId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WWWPlanId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WWWPlanNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CruisesPlanNoChangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CruisesPlanNoChangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CruisesOrderAdjust">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orders" type="tns:OrderInfos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrderInfos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="orderid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="infoid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lineid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="planid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="linename" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ordernumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="childs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="begindate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="days" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gathering" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="deptid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderdate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderflag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="payflag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ordermemo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ordername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contract" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="invoice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellDept" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="acom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adept" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruisesFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ccid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ordertypes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseOrderRooms" type="tns:ArrayOfCruiseOrderRoom" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCruiseOrderRoom">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CruiseOrderRoom" nillable="true" type="tns:CruiseOrderRoom" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CruiseOrderRoom">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="priceid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rooms" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nums" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adults" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="childs" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CruisesOrderAdjustResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CruisesOrderAdjustResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderLinkInfoAdjust">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orders" type="tns:OrderInfos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderLinkInfoAdjustResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderLinkInfoAdjustResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCruisesRoom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lineid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCruisesRoomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCruisesRoomResult" type="tns:CruisesLine" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CruisesLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Lineid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruisesPlans" type="tns:ArrayOfCruisesPlan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCruisesPlan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CruisesPlan" nillable="true" type="tns:CruisesPlan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CruisesPlan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PlanId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeginDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruisesRooms" type="tns:ArrayOfCruisesRoom" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCruisesRoom">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CruisesRoom" nillable="true" type="tns:CruisesRoom" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CruisesRoom">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PriceId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruisesId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomStand" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomBed" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPlanCruisesRoom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="planid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlanCruisesRoomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlanCruisesRoomResult" type="tns:CruisesPlan" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WeChatPlanDateCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lineid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WeChatPlanDateCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WeChatPlanDateCreateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlinePlanDateCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lineid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlinePlanDateCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnlinePlanDateCreateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineOrderAdjust">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineOrderAdjustResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnlineOrderAdjustResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayInfoSave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PayInfos" type="tns:PayInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PayInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayContent" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PayInfoSaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayInfoSaveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orders" type="tns:OrderInfos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlanSeats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lineid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="planid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="begindate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlanSeatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlanSeatsResult" type="tns:PlanSeats" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PlanSeats">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Seats" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Route" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeginDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StopDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="onlineseat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPlanPrices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lineid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="planid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="priceid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlanPricesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlanPricesResult" type="tns:PlanPrices" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PlanPrices">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Planid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanStaPrice" type="tns:ArrayOfStaPrice" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanExtPrice" type="tns:ArrayOfExtPrice" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanRebatePrice" type="tns:ArrayOfRebatePrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStaPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StaPrice" nillable="true" type="tns:StaPrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StaPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="InfoId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseRoomId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseRoomNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseRoomBed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseTax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thd_adultprice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thd_childprice" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfExtPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ExtPrice" nillable="true" type="tns:ExtPrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="InfoId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OnlineNeeds" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRebatePrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RebatePrice" nillable="true" type="tns:RebatePrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RebatePrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PriceId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nums" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLinePrices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lineid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="begindate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLinePricesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLinePricesResult" type="tns:PlanPrices" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlanRoute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="planid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlanRouteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlanRouteResult" type="s1:LineInfos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_GetPlanList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lineid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_GetPlanListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SHTL_GetPlanListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_GetPlanSeats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Planid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_GetPlanSeatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SHTL_GetPlanSeatsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_GetPriceList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lineid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Planid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_GetPriceListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SHTL_GetPriceListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_SaveOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orders" type="tns:TL_OrderInfos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TL_OrderInfos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="orderid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lineid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="planid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="linename" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ordernumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="childs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="begindate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="days" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gathering" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderdate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ordermemo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ordername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SHTL_SaveOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SHTL_SaveOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_OrderCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nums" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="childs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="price" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_OrderCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SHTL_OrderCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_GetPlanRoute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Planid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SHTL_GetPlanRouteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SHTL_GetPlanRouteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ota_Order">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lineid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="planid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nums" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ordername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ota" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ota_OrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ota_OrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://travelmis.com/webservices/">
+      <s:complexType name="LineInfos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MisId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Topic" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineDays" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Standard" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MsPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AreaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineFeature" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeptId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pics" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="yfk" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tags" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuisesId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SfId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="wwwyh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruisesPlanId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RouteServices" type="s1:RouteService" />
+          <s:element minOccurs="0" maxOccurs="1" name="RouteDetail" type="s1:ArrayOfRouteInfos" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanDetail" type="s1:ArrayOfPlanInfos" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaInfos" type="s1:VisaInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaDocuments" type="s1:ArrayOfVisaDocument" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RouteService">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Feature" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attentions" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceIn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceOut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OwnExpense" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Shopping" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TravelAgency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Scenery" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Traffic" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hotel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Foods" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Guide" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Insure" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Others" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRouteInfos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RouteInfos" nillable="true" type="s1:RouteInfos" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RouteInfos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="rname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="route" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dinner" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="room" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="daterank" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pics" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPlanInfos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlanInfos" nillable="true" type="s1:PlanInfos" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlanInfos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PlanId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BgnDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildPrice" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VisaInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Validity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Stay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkDay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Memo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVisaDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VisaDocument" nillable="true" type="s1:VisaDocument" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VisaDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FlagName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaContent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisaFile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="V1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="V2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Icbc_Sign_ClassSoapIn">
+    <wsdl:part name="parameters" element="tns:Icbc_Sign_Class" />
+  </wsdl:message>
+  <wsdl:message name="Icbc_Sign_ClassSoapOut">
+    <wsdl:part name="parameters" element="tns:Icbc_Sign_ClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icbc_Base64dec_ClassSoapIn">
+    <wsdl:part name="parameters" element="tns:Icbc_Base64dec_Class" />
+  </wsdl:message>
+  <wsdl:message name="Icbc_Base64dec_ClassSoapOut">
+    <wsdl:part name="parameters" element="tns:Icbc_Base64dec_ClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="CruisesPlanNoCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:CruisesPlanNoCancel" />
+  </wsdl:message>
+  <wsdl:message name="CruisesPlanNoCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:CruisesPlanNoCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="CruisesGuestPlanNoCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:CruisesGuestPlanNoCancel" />
+  </wsdl:message>
+  <wsdl:message name="CruisesGuestPlanNoCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:CruisesGuestPlanNoCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="CruisesPlanNoChangeSoapIn">
+    <wsdl:part name="parameters" element="tns:CruisesPlanNoChange" />
+  </wsdl:message>
+  <wsdl:message name="CruisesPlanNoChangeSoapOut">
+    <wsdl:part name="parameters" element="tns:CruisesPlanNoChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CruisesOrderAdjustSoapIn">
+    <wsdl:part name="parameters" element="tns:CruisesOrderAdjust" />
+  </wsdl:message>
+  <wsdl:message name="CruisesOrderAdjustSoapOut">
+    <wsdl:part name="parameters" element="tns:CruisesOrderAdjustResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrderLinkInfoAdjustSoapIn">
+    <wsdl:part name="parameters" element="tns:OrderLinkInfoAdjust" />
+  </wsdl:message>
+  <wsdl:message name="OrderLinkInfoAdjustSoapOut">
+    <wsdl:part name="parameters" element="tns:OrderLinkInfoAdjustResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCruisesRoomSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCruisesRoom" />
+  </wsdl:message>
+  <wsdl:message name="GetCruisesRoomSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCruisesRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanCruisesRoomSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlanCruisesRoom" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanCruisesRoomSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlanCruisesRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="WeChatPlanDateCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:WeChatPlanDateCreate" />
+  </wsdl:message>
+  <wsdl:message name="WeChatPlanDateCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:WeChatPlanDateCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnlinePlanDateCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:OnlinePlanDateCreate" />
+  </wsdl:message>
+  <wsdl:message name="OnlinePlanDateCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:OnlinePlanDateCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnlineOrderAdjustSoapIn">
+    <wsdl:part name="parameters" element="tns:OnlineOrderAdjust" />
+  </wsdl:message>
+  <wsdl:message name="OnlineOrderAdjustSoapOut">
+    <wsdl:part name="parameters" element="tns:OnlineOrderAdjustResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayInfoSaveSoapIn">
+    <wsdl:part name="parameters" element="tns:PayInfoSave" />
+  </wsdl:message>
+  <wsdl:message name="PayInfoSaveSoapOut">
+    <wsdl:part name="parameters" element="tns:PayInfoSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveOrder" />
+  </wsdl:message>
+  <wsdl:message name="SaveOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanSeatsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlanSeats" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanSeatsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlanSeatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanPricesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlanPrices" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanPricesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlanPricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLinePricesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLinePrices" />
+  </wsdl:message>
+  <wsdl:message name="GetLinePricesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLinePricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanRouteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlanRoute" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanRouteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlanRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_GetPlanListSoapIn">
+    <wsdl:part name="parameters" element="tns:SHTL_GetPlanList" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_GetPlanListSoapOut">
+    <wsdl:part name="parameters" element="tns:SHTL_GetPlanListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_GetPlanSeatsSoapIn">
+    <wsdl:part name="parameters" element="tns:SHTL_GetPlanSeats" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_GetPlanSeatsSoapOut">
+    <wsdl:part name="parameters" element="tns:SHTL_GetPlanSeatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_GetPriceListSoapIn">
+    <wsdl:part name="parameters" element="tns:SHTL_GetPriceList" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_GetPriceListSoapOut">
+    <wsdl:part name="parameters" element="tns:SHTL_GetPriceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_SaveOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SHTL_SaveOrder" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_SaveOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SHTL_SaveOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_OrderCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:SHTL_OrderCancel" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_OrderCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:SHTL_OrderCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_GetPlanRouteSoapIn">
+    <wsdl:part name="parameters" element="tns:SHTL_GetPlanRoute" />
+  </wsdl:message>
+  <wsdl:message name="SHTL_GetPlanRouteSoapOut">
+    <wsdl:part name="parameters" element="tns:SHTL_GetPlanRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ota_OrderSoapIn">
+    <wsdl:part name="parameters" element="tns:Ota_Order" />
+  </wsdl:message>
+  <wsdl:message name="Ota_OrderSoapOut">
+    <wsdl:part name="parameters" element="tns:Ota_OrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TravelOnlineServiceSoap">
+    <wsdl:operation name="Icbc_Sign_Class">
+      <wsdl:input message="tns:Icbc_Sign_ClassSoapIn" />
+      <wsdl:output message="tns:Icbc_Sign_ClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Icbc_Base64dec_Class">
+      <wsdl:input message="tns:Icbc_Base64dec_ClassSoapIn" />
+      <wsdl:output message="tns:Icbc_Base64dec_ClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CruisesPlanNoCancel">
+      <wsdl:input message="tns:CruisesPlanNoCancelSoapIn" />
+      <wsdl:output message="tns:CruisesPlanNoCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CruisesGuestPlanNoCancel">
+      <wsdl:input message="tns:CruisesGuestPlanNoCancelSoapIn" />
+      <wsdl:output message="tns:CruisesGuestPlanNoCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CruisesPlanNoChange">
+      <wsdl:input message="tns:CruisesPlanNoChangeSoapIn" />
+      <wsdl:output message="tns:CruisesPlanNoChangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CruisesOrderAdjust">
+      <wsdl:input message="tns:CruisesOrderAdjustSoapIn" />
+      <wsdl:output message="tns:CruisesOrderAdjustSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderLinkInfoAdjust">
+      <wsdl:input message="tns:OrderLinkInfoAdjustSoapIn" />
+      <wsdl:output message="tns:OrderLinkInfoAdjustSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCruisesRoom">
+      <wsdl:input message="tns:GetCruisesRoomSoapIn" />
+      <wsdl:output message="tns:GetCruisesRoomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanCruisesRoom">
+      <wsdl:input message="tns:GetPlanCruisesRoomSoapIn" />
+      <wsdl:output message="tns:GetPlanCruisesRoomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WeChatPlanDateCreate">
+      <wsdl:input message="tns:WeChatPlanDateCreateSoapIn" />
+      <wsdl:output message="tns:WeChatPlanDateCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlinePlanDateCreate">
+      <wsdl:input message="tns:OnlinePlanDateCreateSoapIn" />
+      <wsdl:output message="tns:OnlinePlanDateCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlineOrderAdjust">
+      <wsdl:input message="tns:OnlineOrderAdjustSoapIn" />
+      <wsdl:output message="tns:OnlineOrderAdjustSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayInfoSave">
+      <wsdl:input message="tns:PayInfoSaveSoapIn" />
+      <wsdl:output message="tns:PayInfoSaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrder">
+      <wsdl:input message="tns:SaveOrderSoapIn" />
+      <wsdl:output message="tns:SaveOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanSeats">
+      <wsdl:input message="tns:GetPlanSeatsSoapIn" />
+      <wsdl:output message="tns:GetPlanSeatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanPrices">
+      <wsdl:input message="tns:GetPlanPricesSoapIn" />
+      <wsdl:output message="tns:GetPlanPricesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLinePrices">
+      <wsdl:input message="tns:GetLinePricesSoapIn" />
+      <wsdl:output message="tns:GetLinePricesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanRoute">
+      <wsdl:input message="tns:GetPlanRouteSoapIn" />
+      <wsdl:output message="tns:GetPlanRouteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_GetPlanList">
+      <wsdl:input message="tns:SHTL_GetPlanListSoapIn" />
+      <wsdl:output message="tns:SHTL_GetPlanListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_GetPlanSeats">
+      <wsdl:input message="tns:SHTL_GetPlanSeatsSoapIn" />
+      <wsdl:output message="tns:SHTL_GetPlanSeatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_GetPriceList">
+      <wsdl:input message="tns:SHTL_GetPriceListSoapIn" />
+      <wsdl:output message="tns:SHTL_GetPriceListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_SaveOrder">
+      <wsdl:input message="tns:SHTL_SaveOrderSoapIn" />
+      <wsdl:output message="tns:SHTL_SaveOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_OrderCancel">
+      <wsdl:input message="tns:SHTL_OrderCancelSoapIn" />
+      <wsdl:output message="tns:SHTL_OrderCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_GetPlanRoute">
+      <wsdl:input message="tns:SHTL_GetPlanRouteSoapIn" />
+      <wsdl:output message="tns:SHTL_GetPlanRouteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ota_Order">
+      <wsdl:input message="tns:Ota_OrderSoapIn" />
+      <wsdl:output message="tns:Ota_OrderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TravelOnlineServiceSoap" type="tns:TravelOnlineServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Icbc_Sign_Class">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/Icbc_Sign_Class" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Icbc_Base64dec_Class">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/Icbc_Base64dec_Class" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CruisesPlanNoCancel">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/CruisesPlanNoCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CruisesGuestPlanNoCancel">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/CruisesGuestPlanNoCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CruisesPlanNoChange">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/CruisesPlanNoChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CruisesOrderAdjust">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/CruisesOrderAdjust" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderLinkInfoAdjust">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/OrderLinkInfoAdjust" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCruisesRoom">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/GetCruisesRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanCruisesRoom">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/GetPlanCruisesRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WeChatPlanDateCreate">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/WeChatPlanDateCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlinePlanDateCreate">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/OnlinePlanDateCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineOrderAdjust">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/OnlineOrderAdjust" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayInfoSave">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/PayInfoSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrder">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/SaveOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanSeats">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/GetPlanSeats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanPrices">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/GetPlanPrices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinePrices">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/GetLinePrices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanRoute">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/GetPlanRoute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_GetPlanList">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/SHTL_GetPlanList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_GetPlanSeats">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/SHTL_GetPlanSeats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_GetPriceList">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/SHTL_GetPriceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_SaveOrder">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/SHTL_SaveOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_OrderCancel">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/SHTL_OrderCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SHTL_GetPlanRoute">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/SHTL_GetPlanRoute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ota_Order">
+      <soap:operation soapAction="http://tempuri.org/TravelMIS/TravelOnline/Ota_Order" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TravelOnlineService">
+    <wsdl:port name="TravelOnlineServiceSoap" binding="tns:TravelOnlineServiceSoap">
+      <soap:address location="http://127.0.0.1:801/WebService/TravelOnline.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,148 @@
+.base_step {height: 46px; overflow: hidden;padding-bottom:10px;}
+.base_step li { float: left; width: 208px; height: 40px; margin-left: -12px; text-align: center; background-image: url(/images/un_step.gif); background-repeat: no-repeat; background-position: 0 -78px; color: #999;}
+.base_step1 .view,.base_step2 .selects, .base_step3 .book,.base_step4 .check,.base_step5 .submit { background-position: 0 18px; font-weight: bold; color: #333; }
+.base_step2 .view,
+.base_step3 .view,.base_step3 .selects,
+.base_step4 .view,.base_step4 .selects, .base_step4 .book,
+.base_step5 .view,.base_step5 .selects, .base_step5 .book,.base_step5 .check,
+.base_step6 .view,.base_step6 .selects, .base_step6 .book,.base_step6 .check, .base_step6 .submit{ background-position: 0 -30px; color: #333;}
+.headline { font-size:16px; background:url(/images/bg_function.png) no-repeat;padding:0 0 10px 45px; margin:20px 5px 0;}
+.headstep { font-size:16px; padding-left: 15px;color:#4C9E21;}
+.headstep1 { font-size:16px; padding-left: 15px;color:#FF8636;}
+.fontcolor02 {padding-top: 5px;font-size:12px; font-weight:normal;}
+.radiobtn {padding-left: 5px;padding-right: 20px;}
+.package_ptfix{position: fixed; top: 8px;}
+.package_pepleprise{ padding:10px;}
+.package_pepleprise .base_price02{ font-family:Verdana,Simsun; font-size:16px;}
+.package_pepleprise p{ line-height:22px;font-size:13px;}
+.base_price02 { font-weight:bold; color:#e56700; font-style:normal; font-family:Verdana; text-decoration:none; margin:0 2px; }
+.price{	font-size:13px;LINE-HEIGHT: 30px;}
+.price li {HEIGHT: 30px;}
+.price .cur {FONT-WEIGHT: bold;BACKGROUND: #F4F9DB; COLOR: #333; TEXT-ALIGN: center}
+.price .cur div {BORDER-TOP: #ffffff 0px solid;FONT-WEIGHT: bold;FLOAT: left;}
+.price .ttype {WIDTH: 120px;}
+.price .tname {WIDTH: 350px;}
+.price .tnamelong {WIDTH: 500px;}
+.price .roomname {WIDTH: 180px;}
+.price .tsname {WIDTH: 400px;}
+.price .tprice {WIDTH: 110px;}
+.price .troom {WIDTH: 70px;}
+.price .tnum {WIDTH: 60px;}
+.price .tsum {WIDTH: 110px;}
+.price .tpic {WIDTH: 50px;}
+.price div { BORDER-TOP: #e6e6e6 1px solid; HEIGHT: 30px;OVERFLOW: hidden;FONT-WEIGHT: normal;FLOAT: left;TEXT-ALIGN: center}
+.price .fpic {WIDTH: 50px;BACKGROUND: url(/images/oks.gif) center top no-repeat;}
+.price .fnpic {WIDTH: 50px;}
+.price .ftype {WIDTH: 120px;}
+.price .fname {WIDTH: 350px;TEXT-ALIGN: left}
+.price .fnamelong {WIDTH: 500px;TEXT-ALIGN: left}
+.price .froomname {WIDTH: 180px;TEXT-ALIGN: left}
+.price .fsname {WIDTH: 400px;TEXT-ALIGN: left}
+.price .fprice {WIDTH: 110px;color:#E56700;font-family: Arial, Simsun;}
+.price .froom {WIDTH: 70px;}
+.price .fnum {WIDTH: 60px;}
+.price .fsum {WIDTH: 110px;color:#E56700;font-family: Arial, Simsun;}
+.price .psel {margin-top: 5px;WIDTH: 50px;}
+.price .PrePrice {color:#4C9E21;}
+.gotonext {TEXT-ALIGN: center;}
+.btn-personal {LINE-HEIGHT: 35px; MARGIN: 20px auto; WIDTH: 137px; BACKGROUND: url(/images/bg_regist.jpg) no-repeat 0px -185px; HEIGHT: 35px; FONT-SIZE: 14px; FONT-WEIGHT: bold}
+.btn-personal:hover {TEXT-DECORATION: none}
+.btn-link {MARGIN-RIGHT: 50px;TEXT-ALIGN: center; DISPLAY: inline-block; OVERFLOW: hidden}
+.guest {padding-bottom: 15px;}
+#titles {FONT-SIZE: 13px;COLOR: #4C9E21;MARGIN-BOTTOM: 10px;FONT-WEIGHT: bold;BACKGROUND: #FBFFF5;BORDER-BOTTOM: #f3e7c7 1px solid; BORDER-LEFT: #f3e7c7 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; BORDER-TOP: #f3e7c7 1px solid; BORDER-RIGHT: #f3e7c7 1px solid; PADDING-TOP: 5px}
+#ht_title {FONT-SIZE: 13px;COLOR: #4C9E21;MARGIN-BOTTOM: 10px;FONT-WEIGHT: bold;BACKGROUND: #FBFFF5;BORDER-BOTTOM: #f3e7c7 1px solid; BORDER-LEFT: #f3e7c7 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; BORDER-TOP: #f3e7c7 1px solid; BORDER-RIGHT: #f3e7c7 1px solid; PADDING-TOP: 5px}
+#fp_title {FONT-SIZE: 13px;COLOR: #4C9E21;MARGIN-BOTTOM: 10px;FONT-WEIGHT: bold;BACKGROUND: #FBFFF5;BORDER-BOTTOM: #f3e7c7 1px solid; BORDER-LEFT: #f3e7c7 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; BORDER-TOP: #f3e7c7 1px solid; BORDER-RIGHT: #f3e7c7 1px solid; PADDING-TOP: 5px}
+.order{	font-size:13px;LINE-HEIGHT: 30px;}
+.order .xh {padding-right: 5px;COLOR: #ED1C24;}
+.order .hs {padding-left: 5px;COLOR: #999;}
+.order li {HEIGHT: 30px;}
+.order .cur {MARGIN-BOTTOM: 10px;padding-left: 15px;HEIGHT: 30px;FONT-WEIGHT: bold;BACKGROUND: #F4F9DB; COLOR: #333;}
+.order .memo {padding-top: 3px;HEIGHT: 60px;}
+.order div { HEIGHT: 30px;OVERFLOW: hidden;FONT-WEIGHT: normal;FLOAT: left;TEXT-ALIGN: left}
+.order .oname {WIDTH: 100px;TEXT-ALIGN: right; }
+.order .oinfo {WIDTH: 700px;}
+.order .mapoinfo {padding-top: 10px;WIDTH: 650px;HEIGHT: 400px;}
+.order .ginfo {WIDTH: 300px;}
+.order .oname1 {WIDTH: 70px;TEXT-ALIGN: right; }
+.order .ginfo1 {WIDTH: 330px;}
+.order #ErrorMessagePanel {padding-left: 5px;COLOR: #ED1C24;}
+.order .txt {WIDTH: 150px;}
+.order .sex {WIDTH: 60px;}
+.order .icon_del { FONT-WEIGHT: normal;margin-left: 15px;padding: 3px 0 0 20px; background: url(/images/un_icon.png) 0 -124px no-repeat;}
+.order a {
+	text-decoration:none;
+	outline:none;
+	color:#159ce9;
+}
+.order a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#159ce9;
+}
+.order a:hover{	text-decoration:underline;}
+.divOver{ background:#F8F8F8;} /* eff8fe */
+#checkinfo {
+	FONT-SIZE: 16px;COLOR: #4C9E21;MARGIN-BOTTOM: 5px;FONT-WEIGHT: normal;BACKGROUND: #FBFFF5;BORDER-BOTTOM: #f3e7c7 1px solid; BORDER-LEFT: #f3e7c7 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; BORDER-TOP: #f3e7c7 1px solid; BORDER-RIGHT: #f3e7c7 1px solid; PADDING-TOP: 5px
+}
+.checks{	font-size:12px;LINE-HEIGHT: 20px;}
+.checks div { FLOAT: left;TEXT-ALIGN: left}
+.checks .oname {color:#E56700;WIDTH: 70px;TEXT-ALIGN: right; }
+.checks .oinfo {padding-left: 5px;WIDTH: 700px;}
+
+.guests {font-size:13px;LINE-HEIGHT: 30px;}
+.guests li {HEIGHT: 30px;}
+.guests .cur {FONT-WEIGHT: bold;BACKGROUND: #F4F9DB; COLOR: #333; TEXT-ALIGN: center}
+.guests .cur div { BORDER-TOP: 0px solid; HEIGHT: 30px;OVERFLOW: hidden;FONT-WEIGHT: bold;FLOAT: left;TEXT-ALIGN: center}
+.guests div { BORDER-TOP: #e6e6e6 1px solid; HEIGHT: 30px;OVERFLOW: hidden;FONT-WEIGHT: normal;FLOAT: left;TEXT-ALIGN: center}
+.guests .fname {WIDTH: 120px;}
+.guests .fename {WIDTH: 210px;}
+.guests .fbirth {WIDTH: 150px;}
+.guests .ftype {WIDTH: 120px;}
+.guests .fnum {WIDTH: 200px;}
+.htspan {color:#E56700;padding-left: 20px;}
+
+.forget .mt {
+	BACKGROUND: url(/images/tit_regist.jpg) #d1d1d1 repeat-x 0px -34px; HEIGHT: 33px
+}
+.forget .mt H2 {
+	LINE-HEIGHT: 33px; PADDING-LEFT: 15px; BACKGROUND: url(/images/tit_regist.jpg) no-repeat 0px 0px; FLOAT: left; HEIGHT: 33px
+}
+.forget .mt SPAN {
+	TEXT-ALIGN: right; LINE-HEIGHT: 33px; FLOAT: right; HEIGHT: 33px
+}
+.forget .mt B {
+	WIDTH: 10px; BACKGROUND: url(/images/tit_regist.jpg) no-repeat 0px -68px; FLOAT: right; HEIGHT: 33px
+}
+.forget .mc {
+	MARGIN-BOTTOM: 15px;BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: #d1d1d1 1px solid; PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BORDER-TOP: #d1d1d1 0px solid; BORDER-RIGHT: #d1d1d1 1px solid; PADDING-TOP: 10px
+}
+.forget .success {
+	BORDER-BOTTOM: #f3e7c7 1px solid;WIDTH: 940px; FLOAT: left; OVERFLOW: hidden; MARGIN-BOTTOM: 30px;
+}
+.forget .fa {
+	WIDTH: 80px; FLOAT: left; MARGIN-LEFT: 20px; MARGIN-RIGHT: 10px
+}
+.forget .fl {
+	WIDTH: 820px; FLOAT: right; MARGIN-BOTTOM: 10px;PADDING-RIGHT: 10px
+}
+.forget .infos {
+	font-size: 13px;WIDTH: 820px;LINE-HEIGHT: 25px; TEXT-ALIGN: left;
+}
+.forget .jf {
+	MARGIN-TOP: 10px;font-size: 13px;WIDTH: 820px;LINE-HEIGHT: 25px; TEXT-ALIGN: left;
+}
+.forget .sul {
+	font-size: 14px;LINE-HEIGHT: 25px;PADDING-LEFT: 110px;
+}
+.forget .payul {
+	font-size: 14px;LINE-HEIGHT: 30px;PADDING-LEFT: 20px;
+}
+.forget .payul div { LINE-HEIGHT: 30px;OVERFLOW: hidden;FONT-WEIGHT: normal;FLOAT: left;TEXT-ALIGN: left}
+.forget .payul .tname {WIDTH: 80px;TEXT-ALIGN: right}
+.forget .payul .tinfo {WIDTH: 820px;}
+.forget .payul .banks {WIDTH: 900px;}
+.forget .payul .pname {BORDER-BOTTOM: #f3e7c7 1px solid;WIDTH: 80px;TEXT-ALIGN: right}
+.forget .payul .pinfo {BORDER-BOTTOM: #f3e7c7 1px solid;WIDTH: 820px;}
+.forget .payul .banklogo {padding-left: 5px;padding-right: 40px;}
+
+

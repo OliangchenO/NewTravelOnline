@@ -1,0 +1,335 @@
+﻿2015-4-4 19:51:06:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_Line where id='2043'
+2015-4-4 19:51:06:
+从数据类型 varchar 转换为 numeric 时出错。
+insert into Ota_Price (orderid,priceid,priceflag,pricetype,nums,pricename,price,allprice)  values ('100796','','','','','','','')
+2015-4-4 20:10:10:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_Line where id='2043'
+2015-4-4 20:10:10:
+从数据类型 varchar 转换为 numeric 时出错。
+insert into OL_OrderPrice (OrderId,PriceType,PriceMemo,OrderNums,SellPrice,SumPrice,InputDate)  values ('f2a57dcd-7eca-4e48-b13a-a470014c62a9','ExtPrice',' ','','','','2015-4-4 20:10:10')
+2015-4-4 20:10:44:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_Line where id='2043'
+2015-4-4 20:14:45:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_Line where id='2043'
+2015-4-4 20:20:47:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_Line where id='2043'
+2015-4-4 20:34:51:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_Line where id='2043'
+2015-4-7 16:29:03:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 16:42:14:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 17:36:22:
+正在中止线程。
+select top 10 * from View_SpecialLine where Stid='12' order by SortNum,EditTime desc
+2015-4-7 18:08:33:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 18:08:35:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 18:08:36:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 18:09:07:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 18:09:40:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 18:11:22:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 18:11:31:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 18:12:05:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 18:13:18:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-4-7 23:15:47:
+将字符串转换为 uniqueidentifier 时失败。
+select OrderId,AutoId,(select top 1 PayPrice from OL_PayMent where OrderId=OL_Order.OrderId order by PayTime desc) as pay from OL_Order where OrderId=''
+2015-4-7 23:16:24:
+将字符串转换为 uniqueidentifier 时失败。
+select OrderId,AutoId,(select top 1 PayPrice from OL_PayMent where OrderId=OL_Order.OrderId order by PayTime desc) as pay from OL_Order where OrderId=''
+2015-4-9 17:11:51:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 17:12:34:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 17:12:42:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 17:12:47:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 17:43:44:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 17:43:44:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 17:53:06:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 17:53:07:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 18:40:27:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 18:40:46:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 18:42:09:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 18:42:54:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 18:43:18:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 18:43:21:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 18:45:24:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-9 18:45:27:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-15 15:36:28:
+将字符串转换为 uniqueidentifier 时失败。
+select * from OL_TempOrder where OrderId=''
+2015-4-15 18:06:18:
+对象名 'OL_TempOrder1' 无效。
+select * from OL_TempOrder1 where OrderId='1db43a8f-419f-4c6c-8e74-a47b00fe08bd'
+2015-4-15 18:08:08:
+对象名 'OL_TempOrder1' 无效。
+select * from OL_TempOrder1 where OrderId='1db43a8f-419f-4c6c-8e74-a47b00fe08bd'
+2015-4-15 18:10:58:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select PriceId from OL_OrderPrice where OrderId=OL_TempOrder.OrderId and PriceType='Coupon') as CouponId,(select OrderNums from OL_OrderPrice where OrderId=OL_TempOrder.OrderId and PriceType='Coupon') as CouponNums,(select misid from OL_LoginUser where Id=OL_TempOrder.OrderUser) as auser,(select misid from DeptInfo where id=OL_TempOrder.orderdept) as adept,(select misid from Company where id=OL_TempOrder.ordercompany) as acom from OL_TempOrder where OrderId=''
+2015-4-20 20:29:06:
+INSERT 语句中列的数目大于 VALUES 子句中指定的值的数目。VALUES 子句中值的数目必须与 INSERT 语句中指定的列的数目匹配。
+insert into LineDest (lineid,destid,days) values ('3873','739')
+2015-4-20 20:29:31:
+INSERT 语句中列的数目大于 VALUES 子句中指定的值的数目。VALUES 子句中值的数目必须与 INSERT 语句中指定的列的数目匹配。
+insert into LineDest (lineid,destid,days) values ('3878','739')
+2015-4-20 20:32:03:
+列名 'destid' 无效。
+insert into ViewDest (lineid,destid,days) values ('3878','19','undefined')
+2015-4-20 20:32:30:
+列名 'destid' 无效。
+insert into ViewDest (lineid,destid,days) values ('3878','19','undefined')
+2015-4-20 20:37:11:
+列名 'destid' 无效。
+insert into ViewDest (lineid,destid,days) values ('3878','2','')
+2015-4-20 20:37:21:
+列名 'destid' 无效。
+insert into ViewDest (lineid,destid,days) values ('3878','19','undefined')
+2015-4-20 20:37:57:
+列名 'destid' 无效。
+insert into ViewDest (lineid,destid,days) values ('3873','19','')
+2015-4-20 20:38:03:
+列名 'destid' 无效。
+insert into ViewDest (lineid,destid,days) values ('3873','19','')
+2015-4-20 20:46:55:
+将截断字符串或二进制数据。
+语句已终止。
+insert into ViewDest (lineid,viewid,days) values ('3896','18','undefined')
+2015-4-20 20:48:44:
+将截断字符串或二进制数据。
+语句已终止。
+insert into ViewDest (lineid,viewid,days) values ('3878','19','undefined')
+2015-4-20 20:48:49:
+将截断字符串或二进制数据。
+语句已终止。
+insert into ViewDest (lineid,viewid,days) values ('3878','19','undefined')
+2015-4-20 20:50:08:
+将截断字符串或二进制数据。
+语句已终止。
+insert into ViewDest (lineid,viewid,days) values ('3878','19','undefined')
+2015-4-21 14:56:42:
+'intro' 附近有语法错误。
+关键字 'order' 附近有语法错误。
+select id,viewid,days,(select viewname from OL_View where id=ViewDest.viewid) as viewname,(select left(intro,30) from OL_View where id=ViewDest.viewid) asas intro,(select top 1 picurl from OL_ViewPic where viewid=ViewDest.viewid order by newId()) as picurl from ViewDest where lineid='3925') order by days
+2015-4-21 14:56:42:
+'intro' 附近有语法错误。
+关键字 'order' 附近有语法错误。
+select id,viewid,days,(select viewname from OL_View where id=ViewDest.viewid) as viewname,(select left(intro,30) from OL_View where id=ViewDest.viewid) asas intro,(select top 1 picurl from OL_ViewPic where viewid=ViewDest.viewid order by newId()) as picurl from ViewDest where lineid='3925') order by days
+2015-4-21 14:57:39:
+'intro' 附近有语法错误。
+关键字 'order' 附近有语法错误。
+select id,viewid,days,(select viewname from OL_View where id=ViewDest.viewid) as viewname,(select left(intro,30) from OL_View where id=ViewDest.viewid) asas intro,(select top 1 picurl from OL_ViewPic where viewid=ViewDest.viewid order by newId()) as picurl from ViewDest where lineid='3925' order by days
+2015-4-21 14:57:39:
+'intro' 附近有语法错误。
+关键字 'order' 附近有语法错误。
+select id,viewid,days,(select viewname from OL_View where id=ViewDest.viewid) as viewname,(select left(intro,30) from OL_View where id=ViewDest.viewid) asas intro,(select top 1 picurl from OL_ViewPic where viewid=ViewDest.viewid order by newId()) as picurl from ViewDest where lineid='3925' order by days
+2015-4-21 14:58:37:
+列名 'id' 无效。
+select id,viewid,days,(select viewname from OL_View where id=ViewDest.viewid) as viewname,(select left(intro,30) from OL_View where id=ViewDest.viewid) as intro,(select top 1 picurl from OL_ViewPic where viewid=ViewDest.viewid order by newId()) as picurl from ViewDest where lineid='3925' order by days
+2015-4-21 14:58:37:
+列名 'id' 无效。
+select id,viewid,days,(select viewname from OL_View where id=ViewDest.viewid) as viewname,(select left(intro,30) from OL_View where id=ViewDest.viewid) as intro,(select top 1 picurl from OL_ViewPic where viewid=ViewDest.viewid order by newId()) as picurl from ViewDest where lineid='3925' order by days
+2015-4-30 13:52:37:
+将字符串转换为 uniqueidentifier 时失败。
+select *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderId=''
+2015-5-26 16:47:42:
+')' 附近有语法错误。
+select *,DATEDIFF(yy, birthday, GETDATE()) AS age from View_GuestRoomInfo where lineid='2043' and PlanAllotid in () order by RoomNoid,rankno
+
+2015-6-16 11:03:41:
+Debug--->TempOrder()
+
+2015-6-16 11:04:08:
+Debug--->TempOrder()
+2015-11-17 14:20:35:
+列名 'cardId' 无效。
+select top 1 *,(select deptname from DeptInfo where id=OL_LoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_LoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_LoginUser.companyid) as RebateFlag from OL_LoginUser where (UserEmail='lujixiao@163.com' or Mobile='lujixiao@163.com' or cardId = 'lujixiao@163.com') and LoginPassWord='E3CEB5881A0A1FDAAD01296D7554868D'
+2015-11-17 14:20:42:
+列名 'cardId' 无效。
+select top 1 *,(select deptname from DeptInfo where id=OL_LoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_LoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_LoginUser.companyid) as RebateFlag from OL_LoginUser where (UserEmail='lujixiao@163.com' or Mobile='lujixiao@163.com' or cardId = 'lujixiao@163.com') and LoginPassWord='96E79218965EB72C92A549DD5A330112'
+2015-11-17 14:21:40:
+2015-11-17 14:21:40	列名 'CardID' 无效。
+列名 'UserType' 无效。
+列名 'ThirdPartyType' 无效。
+列名 'ThirdPartyID' 无效。	insert into OL_LoginUser (Id,UserEmail,LoginPassWord,RegTime,LoginCount,LastLoginTime,UserName,Mobile,CardID,UserType,ThirdPartyType,ThirdPartyID) values ('81e8ebc4-091c-4947-bbbc-a55300ecaa4e','1113@11.com','96E79218965EB72C92A549DD5A330112','2015-11-17 14:21:40','1','2015-11-17 14:21:40','aaaa','13811155222','','','','')
+insert into OL_LoginUser (Id,UserEmail,LoginPassWord,RegTime,LoginCount,LastLoginTime,UserName,Mobile,CardID,UserType,ThirdPartyType,ThirdPartyID) values ('81e8ebc4-091c-4947-bbbc-a55300ecaa4e','1113@11.com','96E79218965EB72C92A549DD5A330112','2015-11-17 14:21:40','1','2015-11-17 14:21:40','aaaa','13811155222','','','','')
+2015-11-17 14:23:19:
+列名 'cardId' 无效。
+select top 1 *,(select deptname from DeptInfo where id=OL_LoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_LoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_LoginUser.companyid) as RebateFlag from OL_LoginUser where (UserEmail='lujixiao1@163.com' or Mobile='lujixiao1@163.com' or cardId = 'lujixiao1@163.com') and LoginPassWord='96E79218965EB72C92A549DD5A330112'
+2015-11-17 14:23:28:
+列名 'cardId' 无效。
+select top 1 *,(select deptname from DeptInfo where id=OL_LoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_LoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_LoginUser.companyid) as RebateFlag from OL_LoginUser where (UserEmail='lujixiao1@163.com' or Mobile='lujixiao1@163.com' or cardId = 'lujixiao1@163.com') and LoginPassWord='E3CEB5881A0A1FDAAD01296D7554868D'
+2016/11/17 9:57:41:
+在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+select top 5 * from OL_FlashAD where AdFlag='N_Index_Slide' and HideFlag='0' order by AdSort,EditTime desc
+2016/11/17 10:33:33:
+在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+select top 5 * from OL_FlashAD where AdFlag='N_Index_Slide' and HideFlag='0' order by AdSort,EditTime desc
+2016/11/25 14:32:47:
+在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+select top 1 *,(select RightCode from OL_UserRight where id=OL_ManageUser.UserRight) as RightInfos from OL_ManageUser where LoginName='liangchen' and LoginPassWord='9EC3811E5CA57E20B51A33B3F0B78F06'
+2016/12/28 10:36:14:
+在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+SELECT *,(select ISNULL(sum(PayPrice),0) from OL_PayMent where OrderId=OL_Order.OrderId) as pay from OL_Order where OrderFlag<>'9' and OrderUser='1c2dc2c2-39ba-49e6-b4df-a1bd00b8ba7d' and OrderTime >= '2016/11/28 0:00:00' 
+2017/5/11 17:33:37:
+在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+select * from OL_ProductType where ProductType='' and MisClassId not in (1051)
+2017/5/12 9:24:06:
+超时时间已到。超时时间已到，但是尚未从池中获取连接。出现这种情况可能是因为所有池连接均在使用，并且达到了最大池大小。
+select top 1 * from SpecialTopic where Types='WeChat_FlashSale' order by SortNum,EditTime desc
+2017/5/12 9:25:03:
+在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+select * from OL_ProductType where ProductType='' and MisClassId not in (1051)
+2017/5/12 9:25:35:
+在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+select top 1 * from SpecialTopic where Types='WeChat_FlashSale' order by SortNum,EditTime desc
+2017/5/12 9:29:45:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/5/12 9:29:51:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/5/12 9:35:00:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/5/12 9:38:06:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/5/12 9:46:47:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/5/12 9:56:03:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/5/12 9:59:37:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/5/12 10:00:22:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/5/12 10:00:25:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/5/12 10:02:15:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:36:10:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:36:11:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:36:58:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:37:02:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:37:04:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:37:44:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:37:45:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:37:47:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:39:54:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/3 10:39:55:
+将字符串转换为 uniqueidentifier 时失败。
+select top 1 *,(select deptname from DeptInfo where id=OL_FXLoginUser.deptid) as thdeptname,(select companyname from Company where id=OL_FXLoginUser.companyid) as companyname,(select RebateFlag from Company where id=OL_FXLoginUser.companyid) as RebateFlag from OL_FXLoginUser where Id='favicon.ico'
+2017/7/21 15:18:44:
+OL_Preferential sql:
+select preferAmount from OL_Preferential where Lineid='24237' and startDate<='2017/8/31 0:00:00' and endDate>='2017/8/31 0:00:00' and (pStartDate is null or pStartDate<=getdate()) and (pEndDate is null or pEndDate>=getdate())
+2017/7/21 15:18:45:
+列名 'Autoid' 无效。
+select count(id) from OL_Comment where Autoid='137415'
+2017/7/21 15:21:49:
+OL_Preferential sql:
+select preferAmount from OL_Preferential where Lineid='24237' and startDate<='2017/8/31 0:00:00' and endDate>='2017/8/31 0:00:00' and (pStartDate is null or pStartDate<=getdate()) and (pEndDate is null or pEndDate>=getdate())
+2017/7/21 15:21:49:
+列名 'Autoid' 无效。
+select count(id) from OL_Comment where Autoid='137416'
+2017/7/21 15:27:03:
+OL_Preferential sql:
+select preferAmount from OL_Preferential where Lineid='24237' and startDate<='2017/8/31 0:00:00' and endDate>='2017/8/31 0:00:00' and (pStartDate is null or pStartDate<=getdate()) and (pEndDate is null or pEndDate>=getdate())
+2017/7/21 15:27:03:
+列名 'Autoid' 无效。
+select count(id) from OL_Comment where Autoid='137417'
+2017/7/24 12:54:35:
+path:
+D:\System\TravelOnlinePublic\TravelOnline\XML\Route\24237.xml
+2017/7/26 11:33:29:
+OL_Preferential sql:
+select preferAmount from OL_Preferential where Lineid='24237' and startDate<='2017/8/31 0:00:00' and endDate>='2017/8/31 0:00:00' and (pStartDate is null or pStartDate<=getdate()) and (pEndDate is null or pEndDate>=getdate())
+2017/7/26 11:33:47:
+列名 'Autoid' 无效。
+select count(id) from OL_Comment where Autoid='137425'
+2017/7/26 12:57:25:
+OL_Preferential sql:
+select preferAmount from OL_Preferential where Lineid='24237' and startDate<='2017/8/31 0:00:00' and endDate>='2017/8/31 0:00:00' and (pStartDate is null or pStartDate<=getdate()) and (pEndDate is null or pEndDate>=getdate())
+2017/7/26 12:57:27:
+列名 'Autoid' 无效。
+select count(id) from OL_Comment where Autoid='137430'

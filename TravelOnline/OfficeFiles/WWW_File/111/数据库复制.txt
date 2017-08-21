@@ -1,0 +1,51 @@
+5240110215760101
+
+http://www.scyts.com/FreeTour/1059/6440.html?Succeed=Y&CoNo=000244&BillNo=000000&Amount=0.01&Date=20120918&MerchantPara=eb1d5e46-62a9-49e7-8090-a0210003a4c8&Msg=00210002442012091800000000000000000000&Signature=100|10|224|235|155|240|43|83|51|211|140|180|18|149|169|32|246|46|22|121|27|201|233|211|152|101|22|50|126|106|5|175|190|62|24|237|163|135|245|165|39|202|3|23|241|191|161|171|140|132|185|24|231|160|148|68|117|50|147|81|240|144|3|52|
+
+
+
+<select id="floor" name="floor" style="width: 60px">
+                <option selected="selected" value=""></option>
+                <option value="1ºÅÂ¥">1ºÅÂ¥</option>
+	            <option value="5ºÅÂ¥">5ºÅÂ¥</option>
+            </select>&nbsp;&nbsp;
+
+$("#floor").val("<%=floor%>"); 
+
+
+134468  310105198006272813
+
+344919
+
+¾Æµêwifi
+8ydz  j8qr
+stfc g2ax
+
+
+orderdetail
+planincome
+touristinfo
+travelline
+travelplan
+
+
+
+insert into travelmis..orderdetail select  * from travelbak..orderdetail where  linename like '%Ì¨Íå%'
+
+
+
+
+
+set identity_insert mis_old..travelplan on
+go
+insert into mis_old..travelplan select  * from travelmis..travelplan  where id>0
+go
+set identity_insert mis_old..travelplan off
+go
+
+
+orderdetail
+planincome
+touristinfo
+travelline
+travelplan

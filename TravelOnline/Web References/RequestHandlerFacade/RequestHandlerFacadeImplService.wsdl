@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns2="http://cxf.apache.org/bindings/xformat" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://impl.interfaces/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://interfaces/" name="RequestHandlerFacadeImplService" targetNamespace="http://impl.interfaces/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://interfaces/" location="http://116.247.72.214:7001/houtai/cxf/webservices/requestHandlerFacade?wsdl=RequestHandlerFacade.wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="RequestHandlerFacadeImplServiceSoapBinding" type="ns1:RequestHandlerFacade">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="requestWithoutCardInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="requestWithoutCardInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="requestWithoutCardInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RequestHandlerFacadeImplService">
+    <wsdl:port name="RequestHandlerFacadeImplPort" binding="tns:RequestHandlerFacadeImplServiceSoapBinding">
+      <soap:address location="http://116.247.72.214:7001/houtai/cxf/webservices/requestHandlerFacade" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

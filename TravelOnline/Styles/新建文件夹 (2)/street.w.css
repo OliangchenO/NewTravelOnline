@@ -1,0 +1,11 @@
+#slide {
+background:url(http://misc.360buyimg.com/201006/skin/df/i/loading.gif) no-repeat center 52px;height:271px;margin-bottom:10px;overflow:hidden;position:relative;width:720px; z-index:1}
+#slide ul {height:271px;left:0;position:absolute;top:0;width:720px;}
+#slide li {float:left;height:271px;overflow-x:hidden;overflow-y:hidden;width:720px;}
+#slide div {height:30px;overflow:hidden;position:absolute;bottom:0;width:100%}
+*html #slide div{bottom:-1px}
+#slide span {cursor:pointer;float:left;text-align:center;height:30px;line-height:30px;background:#333;filter:Alpha(Opacity=80);opacity:0.8;font-size:14px;border-right:1px solid #ccc}
+#slide .curr {background:#225506}
+#slide span a:link, #slide span a:visited {color:#FFF;text-decoration:none;}
+#slide .curr a:link, #slide .curr a:visited {color:#FFF;font-weight:bold;}
+

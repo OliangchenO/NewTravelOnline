@@ -1,0 +1,140 @@
+.desname{TEXT-ALIGN: left;}
+.desname h3{
+font-size: 30px;
+font-family: Microsoft YaHei,Hiragino Sans GB;
+line-height: 30px;
+font-weight: normal;
+float:left;
+}
+.desname h3 span
+{
+font-family: Arial;
+font-size: 16px;
+color: #CCC;
+padding-left: 15px;
+}
+.desname h4{
+font-size: 20px;
+line-height: 26px;
+font-weight: normal;
+padding-bottom: 12px;
+margin-bottom: 0;
+font-family: Microsoft YaHei,Hiragino Sans GB;
+}
+        
+#myFocus{ width:500px; height:300px;}
+.mF_kdui { background:#000;}
+.mF_kdui .loading{ position:absolute; width:100%; height:100%; background:#fff url(../img/loading.gif) center no-repeat; z-index:9;}
+.mF_kdui .pic{position:absolute;z-index:1;width:100%;height:100%; overflow:hidden;}
+.mF_kdui .pic li{ width:500px;height:300px;position:absolute; top:0; display:none;overflow:hidden;}
+.mF_kdui .txt{position:absolute;z-index:2; top:12px;left:12px; width:200px;}/*默认标题高度*/
+.mF_kdui .txt li{position:absolute;top:0;width:100%; padding:12px; display:none;}
+.mF_kdui .txt li a{position:relative;z-index:1;display:block;color:#fff;font-size:14px;font-weight:bold;text-decoration:none; font-family:'微软雅黑';}/*标题样式*/
+.mF_kdui .txt li b{position:absolute;top:0;left:0;display:block;width:100%;height:100%;background:#000;filter:alpha(opacity=20);opacity:0.2; border-radius:5px;}
+.mF_kdui .txt li p{color:#fff;}
+.mF_kdui .dot{position:absolute; z-index:3;bottom:8px;left:0;width:100%;text-align:center;}
+.mF_kdui .dot li{ display:inline-block;margin:0 3px;*display:inline;*zoom:1; width:16px;height:16px; background:url(../img/mF_kdui/dots.png); cursor:pointer;}
+.mF_kdui .dot li.current{background-position: 0 -16px;}
+.mF_kdui .prev,.mF_kdui .next{ visibility:hidden; opacity:0; position:absolute; z-index:9;bottom:40%; left:12px; cursor:pointer; background:url(../img/mF_kdui/slider-arrows.png) 0 0; width:38px; height:38px;-webkit-transition:all 0.4s;-moz-transition:all 0.4s;-o-transition:all 0.4s;}
+.mF_kdui .next{ left:auto;right:12px; background-position:100% 0;}
+.mF_kdui .prev:hover,.mF_kdui .next:hover{opacity:1;}
+.mF_kdui .arr-hover{ visibility:visible; opacity:0.5;}
+
+        
+#allmap {width: 748px;height: 500px;overflow: hidden;margin:0;border:1px solid #CDCDCD;}
+        
+.bottomlink a {
+    color: #999999;
+    display: inline-block;
+    line-height: 24px;
+    margin-right: 12px;
+	text-decoration:none;
+	width:92px;
+	white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.bottomlink a:hover {
+    color: #01aa07;
+	text-decoration:underline;
+}
+       
+.alert {
+width: 410px;
+float: left;
+padding: 10px 8px 10px 10px;
+min-height: 278px;overflow: hidden;
+}
+.alert li {
+width: 410px;
+overflow: hidden;
+padding-bottom:5px
+}
+.alert dt {
+display: block;
+float: left;
+width: 90px;
+}
+.alert dd {
+width: 320px;
+float: left;
+position: relative;
+text-align: left;
+}
+
+.onsale_place{margin-left:0px;position:relative;overflow:hidden;border:0px solid #ffffff;border-width:0px 0px 0px 0px;}
+.onsale_place .product{ display:block;padding:14px 21px 18px 21px; height:160px; border:1px solid #DDDDDD; border-width:0 1px 1px 0;position:relative;}
+.onsale_place .product:hover{position:relative;text-decoration:none;border:2px solid #FFBE32;padding:12px 19px 17px 19px;height:160px;z-index:2;background-color:#fff;}
+.onsale_place .product .price_box{background-color:#3B352C;height:20px;width:191px;display:block;overflow:hidden;margin-bottom:5px;}
+.onsale_place .product .name_wrap{display:block;width:190px;height:32px;overflow:hidden;line-height:16px;}
+        
+.onsale_place .product_zoomfix{float:left;overflow:hidden;width:150px;height:120px;border:0px solid #ffffff;}
+.onsale_place .product{ height:110px;padding:5px 5px;border:0px solid #ffffff;border-width:0px 0px 0px 0px;}
+.onsale_place .product:hover{height:100px;padding:3px 3px;}
+.onsale_place {max-height:230px;height:auto;width:750px;}
+.onsale_place .product img{width:140px;height:80px;float:left;}
+.onsale_place .product .price_box{background-color:#3B352C;height:20px;width:140px;display:block;overflow:hidden;margin-bottom:5px;}
+        
+.onsale_product{border:0px solid #ffffff;border-width:0px 0px 0px 0px;}
+.onsale_product .product_zoomfix{width:150px;height:150px;border:0px solid #ffffff;}
+.onsale_product .product{ height:150px;padding:5px 5px;border:0px solid #ffffff;border-width:0px 0px 0px 0px;}
+.onsale_product .product:hover{height:135px;padding:3px 3px;}
+.onsale_product {max-height:300px;height:auto;width:750px;}
+.onsale_product .product img{width:140px;height:80px;float:left;}
+.onsale_product .product .price_box{background-color:#3B352C;height:20px;width:140px;display:block;overflow:hidden;margin-bottom:5px;}
+.onsale_product .product .price_box .price {font-size: 12px;}
+.onsale_product .product .name_wrap {width: 140px;}
+
+.left{margin-top:0px;float:left;width:500px;overflow: hidden;height:300px;}
+.right{margin-top:0px;margin-left:10px;float:left;width:430px;overflow:hidden;}
+.bigleft{margin-top:0px;float:left;width:750px;overflow: hidden;}
+.bigright{margin-top:30px;margin-left:10px;float:left;width:180px;overflow:hidden;z-index:1;}
+.news {
+border: 0px solid #DDD;
+}
+.news .content {
+FONT-SIZE: 14px;
+padding: 5px 0px;
+LINE-HEIGHT: 2em;
+}
+.news .mtc {
+margin-BOTTOM: 10px;
+COLOR: #666;
+FONT-SIZE: 18px;
+padding:20px 10px 5px 0px;
+LINE-HEIGHT: 28px;
+HEIGHT: 28px;
+font-weight:normal;
+border-bottom: 0px solid #EBEBEB;
+}
+.mct {COLOR: #999;}
+.nav{z-index:20;width:750px; height:34px; position:absolute;border:0px solid #d3d3d3; background:#fff;-moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; overflow: hidden;} 
+.nav li{cursor: pointer;text-align: center;width:100px;float:left; height:30px; line-height:30px; padding:0 5px; border-bottom:4px solid #DDDDDD;border-right: 0px solid #d3d3d3; border-top: 0px solid #d3d3d3;font-size:16px; font-weight:normal} 
+.nav li.current{color:#468847;background:#ffffff; height:30px; border-bottom:4px solid #01AA07;border-top:0px solid #01AA07} 
+.nav li.current a{color:#468847} 
+.nav li.last0{width:630px;}
+.nav li.last1{width:520px;}
+.nav li.last2{width:410px;}
+.nav li.last3{width:300px;}
+.nav li.last4{width:190px;}

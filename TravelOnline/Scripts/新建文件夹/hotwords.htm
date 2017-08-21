@@ -1,0 +1,26 @@
+﻿(function () {
+    var A = "<strong>热门搜索：</strong><a href='http://search.360buy.com/Search?keyword=华硕主板' target='_blank'>日韩</a><a href='http://search.360buy.com/Search?keyword=御青绿茶' target='_blank'>海岛</a><a href='http://search.360buy.com/Search?keyword=任我游GPS' target='_blank'>马尔代夫</a><a href='http://search.360buy.com/Search?keyword=乐扣便当盒' target='_blank'>越南</a><a href='http://search.360buy.com/Search?keyword=DELL笔记本' target='_blank'>海南岛</a><a href='http://search.360buy.com/Search?keyword=方正笔记本' target='_blank'>中东非洲</a><a href='http://search.360buy.com/Search?keyword=%B7%BD%D5%FD%B1%CA%BC%C7%B1%BE' target='_blank'>济州岛</a><a href='http://search.360buy.com/Search?keyword=%CF%A3%BD%DD%D2%C6%B6%AF%D3%B2%C5%CC&cid=693&page=1' target='_blank'>希捷移动硬盘</a>";
+    var B = ["尼康s80", "格力空调", "三星I9003", "蚊香液"];
+    var R = [3, 3, 3, 3];
+    var referrer = document.referrer;
+    if (referrer.match(/http:\/\/www.google.com/) || referrer.match(/http:\/\/cn.bing.com/)) {
+        var word = referrer.match(/\Wq=(.*?)&/)[1];
+        if (!new RegExp("[\\u4e00-\\u9fa5]").test(word)) {
+            B = decodeURI(word);
+        }
+    } else {
+        B = getRandomObj(B, R);
+    }
+    $("#hotwords").html(A);
+    $("#key").val(B).bind("focus", function () {
+        if (this.value == B) {
+            this.value = "";
+            this.style.color = "#333"
+        }
+    }).bind("blur", function () {
+        if (this.value == "") {
+            this.value = B;
+            this.style.color = "#999"
+        }
+    });
+})();

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://interfaces/" name="RequestHandlerFacade" targetNamespace="http://interfaces/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:tns="http://rq.interfaces" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://rq.interfaces">
+      <xsd:complexType name="RequestWithoutCardInfoRq">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="amount" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="channel" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="chargeFor" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="gateway" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="installment" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="merchantCode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="merchantKey" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderId" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="productInfo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="returnUrl" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="surferIp" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://rs.interfaces" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://rs.interfaces">
+      <xsd:complexType name="RequestWithoutCardInfoRs">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="message" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="requestUrl" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="statusCode" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://impl.interfaces/" xmlns="http://interfaces/" xmlns:ns1="http://rs.interfaces" xmlns:ns0="http://rq.interfaces" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://interfaces/">
+      <xsd:import namespace="http://rq.interfaces" />
+      <xsd:import namespace="http://rs.interfaces" />
+      <xsd:element name="requestWithoutCardInfo" type="requestWithoutCardInfo" />
+      <xsd:complexType name="requestWithoutCardInfo">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="arg0" nillable="true" type="ns0:RequestWithoutCardInfoRq" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="requestWithoutCardInfoResponse" type="requestWithoutCardInfoResponse" />
+      <xsd:complexType name="requestWithoutCardInfoResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" nillable="true" type="ns1:RequestWithoutCardInfoRs" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="requestWithoutCardInfoResponse">
+    <wsdl:part name="parameters" element="ns1:requestWithoutCardInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="requestWithoutCardInfo">
+    <wsdl:part name="parameters" element="ns1:requestWithoutCardInfo" />
+  </wsdl:message>
+  <wsdl:portType name="RequestHandlerFacade">
+    <wsdl:operation name="requestWithoutCardInfo">
+      <wsdl:input name="requestWithoutCardInfo" message="ns1:requestWithoutCardInfo" />
+      <wsdl:output name="requestWithoutCardInfoResponse" message="ns1:requestWithoutCardInfoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

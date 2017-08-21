@@ -1,0 +1,84 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#back-to-top{
+		position:fixed;
+		float: right;
+		bottom:50px;
+		right:13px;
+		z-index:10;
+		_position: absolute;
+		_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+		_margin-bottom:50px;
+	}
+	#back-to-top a{
+		text-align:center;
+		text-decoration:none;
+		color:#666;
+		display:block;
+		width:80px;
+		/*使用CSS3中的transition属性给跳转链接中的文字添加渐变效果*/
+		-moz-transition:color 1s; 
+		-webkit-transition:color 1s;
+		-o-transition:color 1s;
+	}
+	#back-to-top a:hover{
+		color:#333;
+	}
+	#back-to-top a span{
+		background:#d1d1d1;
+		border-radius:6px;
+		display:block;
+		height:80px;
+		width:80px;
+		background:#d1d1d1 url(../images/arrow-up.png) no-repeat center center;
+		margin-bottom:5px;
+		-moz-transition:background 1s;
+		-webkit-transition:background 1s;
+		-o-transition:background 1s;
+	}
+	#back-to-top a:hover span{
+		background:#979797 url(../images/arrow-up.png) no-repeat center center;
+	}

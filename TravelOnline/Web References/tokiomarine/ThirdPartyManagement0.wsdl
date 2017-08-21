@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:pts="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagement" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagementTPM/" name="ThirdPartyManagement" targetNamespace="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagementTPM/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://wss.nauw.ciod.ibm.com/ebusiness/thirdpartymanagement" location="http://221.133.245.13:7070/CIOD_ESB/webservices/ThirdPartyManagement?wsdl=ThirdPartyManagement.wsdl" />
+  <wsdl:types />
+  <wsdl:service name="ThirdPartyManagement">
+    <wsdl:documentation>[null|R000|ThirdPartyManagement ] null</wsdl:documentation>
+    <wsdl:port name="ThirdPartyManagementPort" binding="pts:ThirdPartyManagementBinding">
+      <soap:address location="http://221.133.245.13:7070/CIOD_ESB/webservices/ThirdPartyManagement" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

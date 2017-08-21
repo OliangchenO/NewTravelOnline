@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="uploadFile.aspx.cs" Inherits="net_uploadFile" %>

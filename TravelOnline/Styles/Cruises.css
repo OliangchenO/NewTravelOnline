@@ -1,0 +1,146 @@
+#tip {position:absolute;display:none;}
+#tip s {position:absolute;top:20px;left:-21px;display:block;width:0px;height:0px;font-size:0px;line-height:0px;border-color:transparent #4BA41B transparent transparent;border-style:dashed solid dashed dashed;border-width:10px;}
+#tip s i{position:absolute;top:-10px;left:-8px;display:block;width:0px;height:0px;font-size:0px;line-height:0px;border-color:transparent #fff transparent transparent;border-style:dashed solid dashed dashed;border-width:10px;}
+#tip .t_box {position:relative;background-color:#CCC;filter:alpha(opacity=50);-moz-opacity:0.5;bottom:-3px;right:-3px;}
+#tip .t_box div{width:220px;position:relative;background-color:#FFF;border:1px solid #4BA41B;padding:5px;top:-3px;left:-3px;}
+#logul {LINE-HEIGHT: 25px;}
+#logul li {PADDING-LEFT: 5px;PADDING-RIGHT: 5px;BORDER-BOTTOM: #f3e7c7 1px solid;}
+#logul .logtit{LINE-HEIGHT: 20px;background-color:#F7F7F7;}
+#summary .msprice {text-decoration:line-through;FONT-FAMILY: Arial Unicode MS; COLOR: #999; FONT-SIZE: 20px; FONT-WEIGHT: blod; MARGIN-RIGHT: 18px}
+.zjrx {MARGIN-LEFT: 10px;FONT-SIZE: 14px;}
+.CruisesDate {CURSOR: hand;FONT-WEIGHT: bold; font-family: Arial Unicode MS;color:#398510;FONT-SIZE: 16px;WIDTH: 100px;HEIGHT: 30px;PADDING-LEFT: 5px;PADDING-RIGHT: 5px;BORDER: #f3e7c7 2px solid;FLOAT: left;OVERFLOW: hidden; PADDING-TOP: 10px;MARGIN-RIGHT: 6px}
+.CruisesSelect {background-color:#59B827;color:#ffffff}
+.Cruises{font-size:12px;LINE-HEIGHT: 20px;color:#000000;}
+.Cruises li {HEIGHT: 61px;}
+.Cruises .cur {HEIGHT: 30px;FONT-WEIGHT: bold;BACKGROUND: #60C72A; COLOR: #fff; TEXT-ALIGN: center}
+.Cruises .cur div {PADDING-top: 5px;HEIGHT: 20px;BORDER-TOP: #ffffff 0px solid;FONT-WEIGHT: bold;FLOAT: left;}
+.Cruises .ttype {WIDTH: 80px;}
+.Cruises .tname {WIDTH: 120px;}
+.Cruises .tsname {WIDTH: 190px;}
+.Cruises .tprice {WIDTH: 80px;}
+.Cruises .tnum {WIDTH: 195px;}
+.Cruises .tpic {WIDTH: 50px;}
+.Cruises div { BORDER-TOP: #e6e6e6 1px solid; HEIGHT: 60px;OVERFLOW: hidden;FONT-WEIGHT: normal;FLOAT: left;TEXT-ALIGN: center}
+.Cruises .fpic {WIDTH: 45px;BACKGROUND: url(/images/oks.gif) center top no-repeat;}
+.Cruises .fnpic {WIDTH: 45px;}
+.Cruises .ftype {LINE-HEIGHT: 60px;WIDTH: 80px;BORDER-RIGHT: #e6e6e6 1px solid;}
+.Cruises .fname {LINE-HEIGHT: 60px;WIDTH: 120px;TEXT-ALIGN: center;BORDER-RIGHT: #e6e6e6 1px solid;}
+.Cruises .fsname {PADDING-LEFT: 5px;WIDTH: 180px;TEXT-ALIGN: left;BORDER-RIGHT: #e6e6e6 1px solid;}
+.Cruises .fprice {font-size:15px;LINE-HEIGHT: 60px;PADDING-RIGHT: 5px;WIDTH: 80px;color:#E56700;TEXT-ALIGN: RIGHT;FONT-FAMILY: Arial Unicode MS;BORDER-RIGHT: #e6e6e6 1px solid;}
+.Cruises .fnum {PADDING-LEFT: 5px;TEXT-ALIGN: left;LINE-HEIGHT: 60px;WIDTH: 195px;}
+.Cruises .psel {margin-top: 20px;WIDTH: 35px;}
+.Cruises .ddlnums {margin-top: 20px;WIDTH: 40px;}
+.Cruises .fpic {LINE-HEIGHT: 60px;WIDTH: 45px;BACKGROUND: url(../../images/oks.gif) center top no-repeat;background-position: center center;}
+.Cruises .fnpic {LINE-HEIGHT: 60px;WIDTH: 45px;}
+.borders01 {BORDER: #e6e6e6 1px solid;}
+.ShowMore {PADDING-TOP: 5px;font-size:14px;FLOAT: RIGHT;}
+.Cruises .color1 {BACKGROUND: #F8FFEC;}
+.Cruises .color2 {BACKGROUND: #FFFCEB;}
+.Cruises .color3 {BACKGROUND: #FDF4F7;}
+.Cruises .color4 {BACKGROUND: #FFFCEB;}
+.Cruises .color5 {BACKGROUND: #F8FFEC;}
+.Cruises .color6 {BACKGROUND: #F8FFEC;}
+
+.CruisesDate1 {background-color:#60C72A;color:#ffffff;TEXT-ALIGN: center;CURSOR: hand;FONT-WEIGHT: normal; font-family: Arial Unicode MS;FONT-SIZE: 12px;WIDTH: 120px;HEIGHT: 60px;BORDER: #E1D0A4 2px solid;FLOAT: left;OVERFLOW: hidden; PADDING-TOP: 5px;MARGIN-RIGHT: 6px}
+.CruisesDate1 .CruisesSpan{font-size: 16px; font-weight: bold}
+.CruisesDate1 A{COLOR: #ffffff;}
+
+.detail .pcount{
+	display:-moz-inline-box;display:inline-block;width:150px;FONT-FAMILY: Arial Unicode MS; COLOR: #f00; FONT-SIZE: 30px; FONT-WEIGHT: blod; MARGIN-RIGHT: 18px;padding-right: 5px;
+}
+.btn_book_1 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 37px; WIDTH: 101px; BACKGROUND: url(/images/infos.png) no-repeat left top; FLOAT: left; HEIGHT: 37px; COLOR: #ffffff; FONT-SIZE: 14px; FONT-WEIGHT: bold;
+}
+.btn_book_1:hover {
+	BACKGROUND-POSITION: left -36px
+}
+.btn_book_1:link {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.btn_book_1:visited {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.btn_book_1:active {
+	COLOR: #fff
+}
+.btn_book_1_no {
+	TEXT-ALIGN: center; LINE-HEIGHT: 36px; WIDTH: 101px; BACKGROUND: url(/images/infos.png) no-repeat left -72px; FLOAT: right; HEIGHT: 36px; COLOR: #999999; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+
+
+.CR_PicList {width: 440px; float: right;PADDING-right: 5px;}
+.tripsdiv {width: 280px; float: left;BORDER-BOTTOM: #f3e7c7 1px solid; BORDER-LEFT: #f3e7c7 1px solid; BACKGROUND: #ffffff; BORDER-TOP: #f3e7c7 1px solid; BORDER-RIGHT: #f3e7c7 1px solid; PADDING-TOP: 5px}
+.trips {PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; WIDTH: 270px; PADDING-RIGHT: 5px; FLOAT: left; PADDING-TOP: 0px}
+.tripsHead {BORDER-BOTTOM: #cccccc 1px solid; LINE-HEIGHT: 40px; HEIGHT: 40px; PADDING-TOP: 0px}
+.tripsHead STRONG {FONT-SIZE: 13px}
+.tripsBody {WIDTH: 270px}
+.tripsItem {BORDER-BOTTOM: #cccccc 1px dashed; LINE-HEIGHT: 30px; HEIGHT: 30px; OVERFLOW: hidden}
+.tripsItem .terms {TEXT-ALIGN: center;WIDTH: 40px; FLOAT: left}
+.tripsItem .port {WIDTH: 140px; FLOAT: left}
+.tripsItem .arrive {TEXT-ALIGN: center; WIDTH: 40px; FLOAT: left}
+.tripsItem .startUp {TEXT-ALIGN: center; WIDTH: 40px; FLOAT: left}
+.tripList {HEIGHT: 272px;OVERFLOW-Y: auto; PADDING-TOP: 0px}
+
+.img6-4{vertical-align:middle;WIDTH: 440px;HEIGHT: 310px;}
+
+.roomdiv {PADDING:5px 20px 5px 20px;width: 700px; float: left;BORDER-BOTTOM: #f3e7c7 1px solid; BORDER-LEFT: #f3e7c7 1px solid; BACKGROUND: #ffffff; BORDER-TOP: #f3e7c7 1px solid; BORDER-RIGHT: #f3e7c7 1px solid;}
+.roomHead {LINE-HEIGHT: 30px; HEIGHT: 30px; PADDING-TOP: 0px}
+.roomdiv table {table-layout:fixed;}
+.roomdiv td {TEXT-ALIGN: center;font-size: 12px;white-space:nowrap;overflow:hidden;BORDER-TOP: #E6E6E6 1px solid;LINE-HEIGHT: 30px; HEIGHT: 30px;}
+.roomdiv .tit {TEXT-ALIGN: center;FONT-WEIGHT: bold;font-size: 12px;white-space:nowrap;overflow:hidden;BORDER-TOP: #E6E6E6 1px solid;LINE-HEIGHT: 30px; HEIGHT: 30px;}
+.roomdiv .tit1 {BACKGROUND: #F4F9DB;TEXT-ALIGN: center;FONT-WEIGHT: bold;font-size: 12px;white-space:nowrap;overflow:hidden;BORDER-TOP: #E6E6E6 1px solid;LINE-HEIGHT: 30px; HEIGHT: 30px;}
+.roomdiv .tdn {COLOR: #E56700;}
+.roomdiv .tds {COLOR: #f00;font-size: 14px;}
+.roomdiv .img{CURSOR: hand;}
+
+.roomdivlist {float: left;width: 800px;}
+.roomlistHead {LINE-HEIGHT: 30px; HEIGHT: 30px; PADDING-TOP: 0px}
+.roomdivlist table {table-layout:fixed;BORDER-TOP: #cccccc 1px solid; }
+.roomdivlist td {TEXT-ALIGN: center;font-size: 12px;white-space:nowrap;overflow:hidden;BORDER-TOP: #E6E6E6 1px solid;LINE-HEIGHT: 30px; HEIGHT: 30px;}
+.roomdivlist .tit {TEXT-ALIGN: center;FONT-WEIGHT: bold;font-size: 12px;white-space:nowrap;overflow:hidden;BORDER-TOP: #E6E6E6 1px solid;LINE-HEIGHT: 30px; HEIGHT: 30px;}
+.roomdivlist .tit1 {BACKGROUND: #F4F9DB;TEXT-ALIGN: center;FONT-WEIGHT: bold;font-size: 12px;white-space:nowrap;overflow:hidden;BORDER-TOP: #E6E6E6 1px solid;LINE-HEIGHT: 30px; HEIGHT: 30px;}
+.roomdivlist .tdn {COLOR: #E56700;}
+.roomdivlist .tds {COLOR: #f00;font-size: 14px;}
+.roomdivlist .img{CURSOR: hand;}
+
+.Viewdiv {width: 580px;MARGIN-TOP: 10px;PADDING:5px 10px 10px 10px;float: left;BORDER-BOTTOM: #f3e7c7 1px solid; BORDER-LEFT: #f3e7c7 1px solid; BACKGROUND: #FBFFF5; BORDER-TOP: #f3e7c7 1px solid; BORDER-RIGHT: #f3e7c7 1px solid;}
+.ViewHead {LINE-HEIGHT: 30px; HEIGHT: 30px; PADDING-TOP: 0px;FONT-WEIGHT: bold;font-size: 14px;}
+.Viewdiv table {table-layout:fixed;BORDER: #cccccc 1px solid;BACKGROUND: #ffffff; }
+.Viewdiv td {TEXT-ALIGN: center;font-size: 12px;BORDER-TOP: #cccccc 1px dashed;LINE-HEIGHT: 30px;}
+.Viewdiv .tit td{TEXT-ALIGN: center;FONT-WEIGHT: bold;font-size: 12px;white-space:nowrap;overflow:hidden;BORDER-TOP: #cccccc 0px dashed;LINE-HEIGHT: 30px;}
+.Viewdiv .tdn {COLOR: #E56700;}
+.Viewdiv .tds {COLOR: #f00;font-size: 14px;}
+.Viewdiv .img{CURSOR: hand;}
+.Viewdiv .Sight{PADDING:5px 10px 5px 10px;TEXT-ALIGN: left;LINE-HEIGHT: 20px;text-indent:2em}
+.Viewdiv .pcount{display:-moz-inline-box;display:inline-block;FONT-FAMILY: Arial Unicode MS; COLOR: #FF7A17; FONT-SIZE: 12px; FONT-WEIGHT: bold;}
+
+.VisitList {width: 800px;}
+.VisitList table {table-layout:fixed;BORDER-TOP: #cccccc 1px solid; }
+.VisitList td {TEXT-ALIGN: center;font-size: 13px;BORDER-TOP: #E6E6E6 1px solid;LINE-HEIGHT: 30px;}
+.VisitList .tit {TEXT-ALIGN: center;FONT-WEIGHT: bold;font-size: 12px;BORDER-TOP: #E6E6E6 1px solid;LINE-HEIGHT: 30px;}
+.VisitList .tit1 {BACKGROUND: #F4F9DB;TEXT-ALIGN: center;FONT-WEIGHT: bold;font-size: 13px;LINE-HEIGHT: 30px;}
+.VisitList .tit2 {COLOR: #f00;}
+.VisitList .Visit_Span {FLOAT: left;TEXT-ALIGN: left;}
+
+.roomlist  A.deck {
+	PADDING-TOP: 2px; PADDING-BOTTOM: 2px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px;LINE-HEIGHT: 15px; WHITE-SPACE: nowrap; HEIGHT: 15px; OVERFLOW: hidden; TEXT-DECORATION: none
+}
+.roomlist A.deck:link {
+	COLOR: #005aa0
+}
+.roomlist A.deck:visited {
+	COLOR: #005aa0
+}
+.roomlist A.deck:hover {
+	BACKGROUND: #4C9E21; COLOR: #fff
+}
+.roomlist A.deck:active {
+	BACKGROUND: #4C9E21; COLOR: #fff
+}
+.CheckBoxList {TEXT-ALIGN: left;FLOAT: left;padding: 5px 20px 5px 5px;BACKGROUND: #FFFCEB;width: 800px;}
+.CheckBoxList DIV {TEXT-ALIGN: left;height:22px;LINE-HEIGHT: 10px;WIDTH: 120px;FLOAT: left;padding: 5px 5px 5px 5px;}
+
+
+
+
+

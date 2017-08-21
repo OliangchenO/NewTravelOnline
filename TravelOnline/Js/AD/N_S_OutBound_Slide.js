@@ -1,0 +1,1 @@
+﻿(function () { var ads = [{width: 211,width2: 0,height: 90,url: "/Upload/AdImage/201412140139139720932.png",url2: "",alt: "324",link: "324"},{width: 211,width2: 0,height: 90,url: "/Upload/AdImage/201412140138419352073.png",url2: "",alt: "324324",link: "324"}];var rate = [1];asyncScript(function () {setRandomAds(ads, rate, "N_S_OutBound_Slide", false);})})();

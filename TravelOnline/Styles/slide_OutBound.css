@@ -1,0 +1,30 @@
+#slide {
+	POSITION: relative; WIDTH: 546px; MARGIN-BOTTOM: 8px; BACKGROUND: url(/images/loading.gif) #f5f5f5 no-repeat center 52px; HEIGHT: 200px; OVERFLOW: hidden
+}
+#slide UL {
+	POSITION: absolute; WIDTH: 546px; HEIGHT: 200px; TOP: 0px; LEFT: 0px
+}
+#slide LI {
+	WIDTH: 546px; FLOAT: left; HEIGHT: 200px; OVERFLOW: hidden
+}
+#slide DIV {
+	POSITION: absolute; BOTTOM: 4px; ZOOM: 1; FLOAT: right; HEIGHT: 20px; OVERFLOW: hidden; RIGHT: 4px
+}
+#slide SPAN {
+	BORDER-BOTTOM: #50A423 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #50A423 1px solid; LINE-HEIGHT: 14px; MARGIN: 2px; WIDTH: 14px; FONT-FAMILY: arial; BACKGROUND: #fff; FLOAT: left; HEIGHT: 14px; BORDER-TOP: #50A423 1px solid; CURSOR: pointer; BORDER-RIGHT: #50A423 1px solid
+}
+#slide .curr {
+	BORDER-BOTTOM: #50A423 1px solid; BORDER-LEFT: #50A423 1px solid; LINE-HEIGHT: 18px; MARGIN: 0px 2px; WIDTH: 18px; BACKGROUND: #50A423; HEIGHT: 18px; BORDER-TOP: #50A423 1px solid; BORDER-RIGHT: #50A423 1px solid
+}
+#slide SPAN A:link {
+	COLOR: #50A423; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+#slide SPAN A:visited {
+	COLOR: #50A423; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+#slide .curr A:link {
+	COLOR: #fff; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+#slide .curr A:visited {
+	COLOR: #fff; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}

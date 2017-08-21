@@ -1,0 +1,16 @@
+﻿; window.replace = function () { return '' }; (function (h, k) {
+    var e, f = { getQuery: function (a) { a = location.href.match(RegExp("[?&]" + a + "=([^&]+)", "i")); return (null == a || 1 > a.length ? "" : a[1]) } }, g = function () { this.key = "UNION"; this.cKey = "Union"; this.store = h.localStorage; this.launch() }; g.prototype = { launch: function () {
+        var a = f.getQuery("allianceid"), c = f.getQuery("sid"), b = f.getQuery("ouid") || f.getQuery("actouid"); (a && c ? (e = { AllianceID: a, SID: c, OUID: b }, this.setStore(e), this.setCooki(e)) : this.referrer(a, c, b) || (a = this.getStore(this.key)) && (a.st && new Date(a.st) && 0 < (new Date).getTime() -
+a.st) && this.store.removeItem(this.key))
+    }, dateNext: function (a) { return new Date((new Date).getTime() + 864E5 * a) }, setStore: function (a, c) { var b = this.dateNext(7), b = { data: a, timeout: b.getFullYear() + "-" + (b.getMonth() + 1) + "-" + b.getDate() + " " + b.getHours() + ":" + b.getMinutes() + ":" + b.getSeconds(), st: b.getTime() }; this.store.setItem(this.key, JSON.stringify(b)) }, getStore: function (a) { var c; a = this.store.getItem(a); try { c = JSON.parse(a) } catch (b) { c = null } return c }, setCooki: function (a, c) {
+        var b = c || 7, e = new Date; e.setTime(e.getTime() +
+864E5 * b); document.cookie = this.cKey + "=" + ("OUID=" + a.OUID + "&AllianceID=" + a.AllianceID + "&SID=" + a.SID) + ";path=/;expires=" + e.toUTCString() + ";domain=" + window.location.hostname.split(".").slice(-2).join(".") || "ctrip.com"
+    }, getCooki: function (a) { a = document.cookie.match(RegExp("(^| )" + a + "=([^;]*)(;|$)")); return (null != a ? unescape(a[2]) : null) }, referrer: function (a, c, b) {
+        var f = location.host, d = document.referrer; e = null; if (f && -1 === d.indexOf(f)) {
+            d = d.replace("http://", "").replace("https://", "").split("/")[0].toLowerCase();
+-1 < d.indexOf("baidu") && (a = a || "4897", c = c || "353693", b = b || ""); -1 < d.indexOf("google") && (a = a || "4899", c = c || "353694", b = b || ""); -1 < d.indexOf("soso.com") && (a = a || "4900", c = c || "353696", b = b || ""); -1 < d.indexOf("sogou") && (a = a || "4901", c = c || "353698", b = b || ""); -1 < d.indexOf("m.so.com") && (a = a || "5376", c = c || "353699", b = b || ""); -1 < d.indexOf("so.360") && (a = a || "5376", c = c || "353700", b = b || ""); -1 < d.indexOf("bing.com") && (a = a || "4902", c = c || "353701", b = b || ""); -1 < d.indexOf("yahoo") && (a = a || "4903", c = c || "353703", b = b || ""); -1 < d.indexOf("youdao") &&
+(a = a || "4904", c = c || "353704", b = b || ""); if (-1 < d.indexOf("jike.com") || -1 < d.indexOf("babylon.com") || -1 < d.indexOf("ask.com") || -1 < d.indexOf("avg.com") || -1 < d.indexOf("easou.com") || -1 < d.indexOf("panguso.com") || -1 < d.indexOf("yandex.com")) a = a || "5376", c = c || "353700", b = b || ""; a && c && (e = { AllianceID: a, SID: c, OUID: b }, this.setStore(e), this.setCooki(e))
+        } return e
+    } 
+    }; try { (-1 != location.hostname.toLowerCase().indexOf("qa.nt.ctripcorp.com") || "m.ctrip.com" == location.hostname.toLowerCase()) && new g } catch (l) { } 
+})(window);

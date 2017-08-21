@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PingAn.aspx.cs" Inherits="TravelOnline.GoToPage.PingAn" %>

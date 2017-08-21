@@ -1,0 +1,124 @@
+/* login */
+.other-login dd a,.lg-form .input-error-wrap .login-error i,.reg-form-line b.pass,.reg-form .reg-error i,.success i {background: url('../image/member/bg_ico_20x20.png') no-repeat;}
+.lg-title span a:hover,.lg-form .wjma a:hover,.other-login dd a:hover,.reg-top .bk-nav a:hover,.other-line a:hover,.success a:hover,.lg-form .mumber a:hover {text-decoration: underline;}
+.login-logo,.reg-top {padding-top: 14px; width: 1000px; margin: 0 auto;}
+.login-logo a,.reg-top .logo {display: block; margin-left: 75px; width: 165px; height: 73px; background: url('../image/member/logo_s.png') no-repeat; text-indent: -999em;}
+.lg-content,.reg-content,.find-content {padding-bottom: 70px; width: 1000px; margin: 0 auto;}
+.cartoon {width: 465px;}
+.cartoon img {padding: 10px 0 0 23px;}
+.loginbox {padding: 0 27px; width: 329px; border: 1px solid #64a065;}
+.lg-title {padding: 17px 0 15px 0; font: 18px/20px 'Microsoft Yahei'; border-bottom: 1px solid #bbb;}
+.lg-title span {float: right; font: 12px/22px '宋体'; color: #666;}
+.lg-select {padding: 17px 0 0 14px; height: 52px;}
+.index-select {display: inline-block; width: 130px; height: 24px; border: 1px solid #64a065; text-align: center; font-size: 14px; line-height: 24px; cursor: pointer;}
+.lg-select .mrr {margin-right: 12px;}
+.lg-select .cur {background: #64a065; color: #fff;}
+.lg-form {margin-bottom: 22px; padding-left: 14px; border-bottom: 0px solid #ddd;}
+.lg-form li {padding-bottom: 28px; font-size: 16px;}
+.lg-input {margin-left: 9px; padding-left: 7px; width: 211px; height: 34px; border: 1px solid #ccc; font: 16px/34px 'Arial', sans-serif;}
+.lg-form .wjma {padding: 0 27px 0 63px; height: 37px; font-size: 12px;}
+.lg-form .wjma label input {vertical-align: -2px;}
+.lg-form .wjma a {float: right; color: #005bb5;}
+.lg-form .lg-btn {padding: 0 0 10px 63px;}
+.lg-form .lg-btn a {display: block; width: 218px; height: 38px; border: 1px solid #3b783c; border-radius: 3px; background: #64a065; text-align: center; font: 18px/38px 'Microsoft Yahei'; color: #fff;}
+.lg-form .lg-btn a:hover,.reg-form .reg-btn:hover,.term-pop .pop-btn:hover {background: #7cb07d;}
+.lg-form .mumber {display: block; padding: 0 0 25px 64px;}
+.lg-form .mumber a {color: #005bb5;}
+.lg-form .action-psw a {padding-left: 5px; font-size: 12px; color: #ccc; cursor: default;}
+.lg-form .action-psw .btn-blue {color: #0069ca; cursor: pointer;}
+.lg-form .input-error-wrap {margin: -18px 0 0 65px; padding-bottom: 15px;}
+.lg-form .input-error-wrap .login-error,.reg-form .reg-error {font-size: 12px; color: #f6969c; line-height: 16px;}
+.lg-form .input-error-wrap .login-error i,.reg-form .reg-error i {float: left; padding-right: 6px; background-position: 0 -104px; width: 17px; height: 17px; clear: both;}
+.other-login {margin-bottom: 60px;}
+.other-login dt {margin-bottom: 15px;}
+.other-login dd a {display: inline-block; padding-left: 25px; margin: 0 4px; color: #333; line-height: 20px;}
+.other-login dd .sina {background-position: 0 -26px;}
+.other-login dd .baidu {background-position: 0 -52px;}
+.other-login dd .pay {background-position: 0 -78px;}
+/* register */
+.reg-top {height: 61px; border-bottom: 1px solid #e2e2e2;}
+.reg-top .logo {float: left; margin-left: 0; height: 61px;}
+.reg-top .bk-nav {float: right; font-size: 12px; line-height: 60px; font-weight: normal;}
+.reg-top .bk-nav a {color: #666;}
+.reg-top .bk-nav span {padding: 0 15px; color: #ccc;}
+.reg-content {padding-top: 39px;}
+.regbox {padding: 0 27px; width: 536px;}
+.reg-title {margin-bottom: 22px; padding: 0 0 15px 21px; width: 485px; border-bottom: 1px solid #bbb; font: 20px/1em 'Microsoft Yahei'; color: #64a065;}
+.reg-form {margin-top: 22px; padding-left: 19px;}
+.reg-form dl {padding: 12px 0;}
+.reg-form .pt6 {padding: 8px 0;}
+.reg-form dt {float: left; margin-right: 6px; width: 80px; line-height: 36px; font-size: 16px; text-align: right;}
+.reg-form .accept {line-height: 16px;}
+.reg-form dd {float: left; padding-right: 12px;}
+.reg-form dd .reg-input {display: inline-block; vertical-align: middle; padding-left: 5px; width: 213px; height: 34px; line-height: 34px; border: 1px solid #ccc; background: #fff;}
+.reg-form-line b.pass {display: inline-block; margin-top: 8px; width: 17px; height: 17px; background-position: 0 -126px;}
+.reg-form .reg-error {margin-left: 90px;}
+.reg-form span a {color: #ccc; line-height: 36px; cursor: default;}
+.reg-form label input {vertical-align: -3px; margin-right: 2px;}
+.reg-form span {color: #0069ca; cursor: pointer;}
+.reg-form .reg-btn,.term-pop .pop-btn  {display: block; width: 218px; height: 38px; font: 18px/38px 'Microsoft Yahei'; border: 1px solid #3b783c; border-radius: 3px; text-align: center; background: #64a065; color: #fff;}
+.term-pop {display: none; position: absolute; z-index: 10000; top: 97px; left: 650px; padding: 0 15px; width: 466px; border: 5px solid #ddd; background: #fff;}
+.term-pop .pop-title h3 {font-size: 14px; text-align: center; line-height: 40px;}
+.term-pop .pop-title span {float: right; margin: 8px -3px 0 0; color: #ccc; width: 18px; height: 18px; font: 18px/15px "Tahoma"; cursor: pointer; text-align: center;}
+.term-pop .pop-title span:hover {background: #42a644; color: #fff;}
+.term-pop .pop-wrap {margin-bottom: 25px; padding: 0 13px; width: 438px; height: 422px; border: 1px solid #ccc; overflow: hidden; overflow-y: auto;}
+.term-pop .pop-wrap .pop-list {margin: 10px 0 8px 0; font-weight: bold;}
+.term-pop .pop-wrap .pop-con {line-height: 18px;}
+.term-pop .pop-btn {margin: 0 0 30px 119px; height: 32px; line-height: 32px;}
+.pop-mask {position: absolute; top: 0; left: 0; z-index: 9999; width: 100%; height: 100%; background: #000; opacity: 0.4; filter: alpha(opacity=40);}
+/* FindPassword */
+.find-box {padding: 0 29px; width: 550px; border: 1px solid #e3e3e3; margin: 0 auto; margin-top: 31px;}
+.fd-title {padding: 29px 0 0 18px; height: 33px; font: normal 20px/1em 'Microsoft Yahei'; border-bottom: 1px solid #bbb; color: #64a065;}
+.reg-form .next-step {margin-bottom: 41px; width: 108px; height: 32px; line-height: 32px;}
+/* PasswordSuccess */
+.pass-wrap {margin: 40px 0 60px 0; padding-left: 106px;}
+.success {margin-bottom: 60px; font-size: 16px;}
+.success span {float: left; font-weight: bold;}
+.success p {margin-left: 31px; padding: 10px 0 5px 0; line-height: 1.2em; font-size: 12px; color: #666;}
+.success p em {padding-right: 2px; color: #f60;}
+.success i {float: left; margin-right: 13px; width: 17px; height: 17px; background-position: 0 -126px;}
+.success a {color: #005bbd;}
+.other-line span {display: block; height: 30px; color: #666; line-height: 1em;}
+.other-line a {padding: 0 10px; color: #005bb5;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

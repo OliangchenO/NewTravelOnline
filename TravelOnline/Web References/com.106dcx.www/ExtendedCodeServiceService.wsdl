@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.techown.com/" name="ExtendedCodeServiceService" targetNamespace="http://service.techown.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://service.techown.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="batchSend" type="tns:batchSend" />
+      <xs:element name="batchSendResponse" type="tns:batchSendResponse" />
+      <xs:element name="massSend" type="tns:massSend" />
+      <xs:element name="massSendResponse" type="tns:massSendResponse" />
+      <xs:element name="querySendAppLog" type="tns:querySendAppLog" />
+      <xs:element name="querySendAppLogResponse" type="tns:querySendAppLogResponse" />
+      <xs:element name="variableSend" type="tns:variableSend" />
+      <xs:element name="variableSendResponse" type="tns:variableSendResponse" />
+      <xs:complexType name="batchSend">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userName" type="xs:string" />
+          <xs:element minOccurs="0" name="passWord" type="xs:string" />
+          <xs:element minOccurs="0" name="smsContent" type="xs:string" />
+          <xs:element minOccurs="0" name="fileName" type="xs:string" />
+          <xs:element minOccurs="0" name="sendTime" type="xs:string" />
+          <xs:element minOccurs="0" name="smsPriority" type="xs:string" />
+          <xs:element minOccurs="0" name="sendAppId" type="xs:string" />
+          <xs:element minOccurs="0" name="extendedCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="batchSendResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="batchSend" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="variableSend">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userName" type="xs:string" />
+          <xs:element minOccurs="0" name="passWord" type="xs:string" />
+          <xs:element minOccurs="0" name="variableTemplateContent" type="xs:string" />
+          <xs:element minOccurs="0" name="fileName" type="xs:string" />
+          <xs:element minOccurs="0" name="sendTime" type="xs:string" />
+          <xs:element minOccurs="0" name="smsPriority" type="xs:string" />
+          <xs:element minOccurs="0" name="sendAppId" type="xs:string" />
+          <xs:element minOccurs="0" name="extendedCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="variableSendResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="variableSend" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="querySendAppLog">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userName" type="xs:string" />
+          <xs:element minOccurs="0" name="passWord" type="xs:string" />
+          <xs:element minOccurs="0" name="sendTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="querySendAppLogResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="querySendAppLog" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="massSend">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="userName" type="xs:string" />
+          <xs:element minOccurs="0" name="passWord" type="xs:string" />
+          <xs:element minOccurs="0" name="smsContent" type="xs:string" />
+          <xs:element minOccurs="0" name="cellPhone" type="xs:string" />
+          <xs:element minOccurs="0" name="sendTime" type="xs:string" />
+          <xs:element minOccurs="0" name="smsPriority" type="xs:string" />
+          <xs:element minOccurs="0" name="sendAppId" type="xs:string" />
+          <xs:element minOccurs="0" name="extendedCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="massSendResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="massSend" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="variableSendResponse">
+    <wsdl:part name="parameters" element="tns:variableSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="variableSend">
+    <wsdl:part name="parameters" element="tns:variableSend" />
+  </wsdl:message>
+  <wsdl:message name="querySendAppLog">
+    <wsdl:part name="parameters" element="tns:querySendAppLog" />
+  </wsdl:message>
+  <wsdl:message name="batchSendResponse">
+    <wsdl:part name="parameters" element="tns:batchSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="batchSend">
+    <wsdl:part name="parameters" element="tns:batchSend" />
+  </wsdl:message>
+  <wsdl:message name="massSendResponse">
+    <wsdl:part name="parameters" element="tns:massSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="massSend">
+    <wsdl:part name="parameters" element="tns:massSend" />
+  </wsdl:message>
+  <wsdl:message name="querySendAppLogResponse">
+    <wsdl:part name="parameters" element="tns:querySendAppLogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ExtendedCodeService">
+    <wsdl:operation name="batchSend">
+      <wsdl:input name="batchSend" message="tns:batchSend" />
+      <wsdl:output name="batchSendResponse" message="tns:batchSendResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="variableSend">
+      <wsdl:input name="variableSend" message="tns:variableSend" />
+      <wsdl:output name="variableSendResponse" message="tns:variableSendResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="querySendAppLog">
+      <wsdl:input name="querySendAppLog" message="tns:querySendAppLog" />
+      <wsdl:output name="querySendAppLogResponse" message="tns:querySendAppLogResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="massSend">
+      <wsdl:input name="massSend" message="tns:massSend" />
+      <wsdl:output name="massSendResponse" message="tns:massSendResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExtendedCodeServiceServiceSoapBinding" type="tns:ExtendedCodeService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="batchSend">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="batchSend">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="batchSendResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="variableSend">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="variableSend">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="variableSendResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySendAppLog">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="querySendAppLog">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="querySendAppLogResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="massSend">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="massSend">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="massSendResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExtendedCodeServiceService">
+    <wsdl:port name="ExtendedCodeServicePort" binding="tns:ExtendedCodeServiceServiceSoapBinding">
+      <soap:address location="http://www.106dcx.com:16373/SMSService/webService/smsEC" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

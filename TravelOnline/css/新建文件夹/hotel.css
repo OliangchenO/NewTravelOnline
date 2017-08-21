@@ -1,0 +1,361 @@
+/*
+.hotel_table A:link {
+	COLOR: #039
+}
+.hotel_table A:visited {
+	COLOR: #039
+}
+.hotel_table A {
+	COLOR: #0033cc; TEXT-DECORATION: none
+}
+.hotel_table A:hover {
+	COLOR: #ff0000
+}
+.hotel_table {
+	BACKGROUND-IMAGE: none; BORDER-BOTTOM: #004d9b 2px solid; BORDER-LEFT: #004d9b 2px solid; BACKGROUND-COLOR: #dfeaf2; MARGIN: 10px 0px 0px; BORDER-TOP: #004d9b 2px solid; BORDER-RIGHT: #004d9b 2px solid
+}
+.hotel_tr {
+	TEXT-ALIGN: center; LINE-HEIGHT: 22px; BACKGROUND-COLOR: #015aa9; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.hotel_tdleft {
+	BORDER-BOTTOM: #c6c6c6 1px dotted; TEXT-ALIGN: left; FONT-SIZE: 12px
+}
+.hotel_td {
+	BORDER-BOTTOM: #c6c6c6 1px dotted; TEXT-ALIGN: center; LINE-HEIGHT: 22px; FONT-SIZE: 12px
+}
+.hotel_td1 {
+	BORDER-BOTTOM: #c6c6c6 1px dotted; TEXT-ALIGN: center; LINE-HEIGHT: 22px; BACKGROUND-COLOR: #ffffff; FONT-SIZE: 12px
+}
+.hotel_tdr {
+	TEXT-ALIGN: center; LINE-HEIGHT: 22px; BACKGROUND-COLOR: #3d68c0; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.price_rec {
+	LINE-HEIGHT: 21px; FONT-FAMILY: Arial; COLOR: #ff6600; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+
+.hotel {
+	padding: 5px 20px 5px 20px;
+}
+.hotellist {padding-top: 15px;padding-BOTTOM: 20px;padding-left: 5px;BORDER-top: #60C72A 1px solid;BORDER-bottom: #EFEFEF 1px solid;BORDER-left: #EFEFEF 1px solid;BORDER-right: #EFEFEF 1px solid;}
+
+*/
+.roomdiv 
+{
+margin-top:20px;
+background: #ffffff;
+color:#666;
+padding: 5px 10px;
+border: 1px dotted #F3E7C7;
+-moz-box-shadow:1px 1px 2px rgba(0,0,0,.2); -webkit-box-shadow:1px 1px 2px rgba(0,0,0,.2); box-shadow:1px 1px 2px rgba(0,0,0,.2);
+-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+        border-radius: 5px;
+}
+
+.tit {
+TEXT-ALIGN: center;
+FONT-WEIGHT: bold;
+font-size: 12px;
+white-space: nowrap;
+overflow: hidden;
+LINE-HEIGHT: 35px;
+HEIGHT: 35px;
+border-top: 1px dotted #E6E6E6;
+}
+.roomdiv .tdn {
+COLOR: #E56700;
+}
+.roomdiv td {
+TEXT-ALIGN: center;
+font-size: 12px;
+white-space: nowrap;
+overflow: hidden;
+LINE-HEIGHT: 35px;
+HEIGHT: 35px;
+border-top: 1px dotted #E6E6E6;
+}
+.roomHead {
+LINE-HEIGHT: 35px;
+HEIGHT: 35px;
+PADDING-TOP: 0px;
+}
+.roomdiv .tds {
+COLOR: #f00;
+font-size: 14px;
+}
+.roomdiv .img {
+cursor:default;
+}
+
+.pcount {
+display: -moz-inline-box;
+display: inline-block;
+width: 150px;
+FONT-FAMILY: Arial Unicode MS;
+COLOR: #f00;
+FONT-SIZE: 30px;
+FONT-WEIGHT: blod;
+MARGIN-RIGHT: 18px;
+padding-right: 5px;
+}
+.roomlist{
+	padding: 10px 10px 10px 10px;background:#FBF9F0;BORDER: #FBEED5 1px solid; 
+}
+.roomlist div{
+	line-height:22px;
+}
+.roomlist span{
+	padding-right: 30px;
+}
+#roompic{
+	padding-bottom: 5px;
+}
+#roompic .tip{
+	padding-right: 10px;
+}
+#roompic .tip IMG { 
+	width:100px;height:75px;BORDER: #e5e5e5 2px solid;
+}
+
+.hotelename{
+	FONT-SIZE: 16px;line-height:25px;
+}
+
+.HotelDiscretion
+{
+    padding: 5px 20px 5px 60px;
+    FONT-SIZE: 12px;
+    COLOR: #696969;
+    LINE-HEIGHT: 20px;
+    BORDER-BOTTOM: #e5e5e5 1px solid;
+}
+.HotelDiscretion A {margin: 0px 20px 0px 0px;FONT-SIZE: 14px;LINE-HEIGHT: 30px; }
+.hotel_price {
+	FLOAT: left; FONT-WEIGHT: normal;MARGIN-TOP: 0px; LINE-HEIGHT: 30px;HEIGHT: 26px; PADDING-TOP: 10px; PADDING-BOTTOM: 5px; FONT-SIZE: 12px; COLOR: #FF6600
+}
+.hotel_price span{
+	FONT-SIZE: 30px;FONT-WEIGHT: normal; FONT-FAMILY: Arial Unicode MS;COLOR: #FF6600;FONT-FAMILY: Arial Unicode MS;
+}
+.hotel_price dfn{
+	font-style: normal;FONT-SIZE: 25px;FONT-FAMILY: Arial;
+}
+.hotelorder{
+	TEXT-ALIGN: center; LINE-HEIGHT: 48px; WIDTH: 130px; DISPLAY: block; BACKGROUND: url(/images/detail.png) no-repeat 0px 0px; HEIGHT: 48px; COLOR: #fff; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.btn_book_now { display:block; width:129px; height:46px; color:#FFF; background:url(/images/detail.png) no-repeat #44AEF8; font:bold 14px/46px Simsun; text-align:center; text-indent:200px; overflow:hidden; }
+.btn_book_now:hover { text-decoration:none; background:url(/images/un_hotel_detail.png) no-repeat 0 -1088px; }
+
+.cruisesroom .hoteltab {
+	ZOOM: 1; OVERFLOW: hidden
+}
+.cruisesroom .hoteltab LI {
+	TEXT-ALIGN: center; FLOAT: left; CURSOR: pointer
+}
+.cruisesroom .hoteltab A {
+	TEXT-ALIGN: center; FLOAT: left; CURSOR: pointer
+}
+.cruisesroom .hoteltab-item {
+	TEXT-ALIGN: center; FLOAT: left; CURSOR: pointer
+}
+.cruisesroom .hoteltab {
+	BORDER-BOTTOM: #4C9E21 2px solid; MARGIN-BOTTOM: 0px
+}
+.cruisesroom .hoteltab LI {
+	POSITION: relative; PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; PADDING-LEFT: 12px; PADDING-RIGHT: 12px; BACKGROUND: url(/images/icon_clubs.gif) #ccc no-repeat right -150px; HEIGHT: 24px; COLOR: #398510; FONT-SIZE: 14px; OVERFLOW: hidden; FONT-WEIGHT: bold; MARGIN-RIGHT: 3px; PADDING-TOP: 3px
+}
+.cruisesroom .hoteltab SPAN {
+	Z-INDEX: 1; POSITION: absolute; WIDTH: 10px; BACKGROUND: url(/images/icon_clubs.gif) no-repeat 0px -150px; HEIGHT: 27px; TOP: 0px; LEFT: 0px
+}
+.cruisesroom .hoteltab A {
+	FLOAT: none; COLOR: #398510
+}
+.cruisesroom .hoteltab .curr {
+	BACKGROUND-POSITION: right -178px; COLOR: #fff
+}
+.cruisesroom .hoteltab .curr SPAN {
+	BACKGROUND-POSITION: 0px -178px
+}
+.cruisesroom .hoteltab .curr A {
+	COLOR: #fff
+}
+.cruisesroom .borders {
+	BACKGROUND: #ffffff; BORDER-BOTTOM: #B5EA99 1px solid; BORDER-LEFT: #B5EA99 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 2px; BORDER-RIGHT: #B5EA99 1px solid; PADDING-TOP: 10px
+}
+.cruisesroom .borders01 {
+	BACKGROUND: #FBFFF5; BORDER-BOTTOM: #B5EA99 1px solid; BORDER-LEFT: #B5EA99 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 2px; BORDER-RIGHT: #B5EA99 1px solid; PADDING-TOP: 10px
+}
+
+.cruisesroom table {table-layout:fixed;}
+.cruisesroom td {font-size: 12px;white-space:nowrap;overflow:hidden;BORDER-bottom: #EFEFEF 1px dotted;}
+.cruisesroom .tit {BACKGROUND: url(/images/icon_clubs.gif) repeat 0px -180px;FONT-WEIGHT: bold;LINE-HEIGHT: 25px;TEXT-ALIGN: center;font-size: 12px;COLOR: #ffffff;}
+.cruisesroom .tir {LINE-HEIGHT: 35px;COLOR: #666;}
+.cruisesroom td dfn{
+	font-variant: small-caps;font-style: normal;FONT-SIZE: 14px;FONT-WEIGHT: bold;COLOR: #FF7A17;
+}
+.cruisesroom td span{
+	FONT-SIZE: 12px;COLOR: #666;
+}
+.cruisesroom td .roomname {
+	MARGIN-LEFT: 10px;PADDING-LEFT: 25px; FONT-SIZE: 13px;BACKGROUND: url(/images/icons/sign.png) no-repeat;
+}
+.cruisesroom .roomdetailaa{
+	background:#FBFFF5;
+}
+.cruisesroom .btns{
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; WIDTH: 64px; DISPLAY: block; BACKGROUND: url(/images/bg_hotsale.gif) no-repeat 0px -466px; HEIGHT: 25px; COLOR: #fff; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.cruisesroom .roomsell span{
+	padding-right: 10px;
+}
+.cruisesroom .roomsellaa{
+	WIDTH: 885px;MARGIN: 5px 10px 5px 10px;PADDING: 8px 10px 8px 5px; FONT-SIZE: 13px; MARGIN-BOTTOM: 5px; BORDER-BOTTOM: #FFD6AC 1px solid; BORDER-LEFT: #FFD6AC 1px solid; BACKGROUND: #fffceb; COLOR: #ED8611; OVERFLOW: visible; BORDER-TOP: #FFD6AC 1px solid; BORDER-RIGHT: #FFD6AC 1px solid
+}
+.cruisesroom .pcount{
+	display:-moz-inline-box;display:inline-block;width:100px;FONT-FAMILY: Arial Unicode MS; COLOR: #f00; FONT-SIZE: 26px; FONT-WEIGHT: blod; MARGIN-RIGHT: 18px;padding-right: 5px;
+}
+
+.cruisesroom .radioBox {
+	WIDTH: 15px; BACKGROUND: url(/images/infos.png) no-repeat -84px -309px; HEIGHT: 15px; TOP: 10px; CURSOR: pointer; LEFT: 15px
+}
+.cruisesroom .radioBoxOn {
+	WIDTH: 15px; BACKGROUND: url(/images/infos.png) no-repeat -84px -327px; HEIGHT: 15px; TOP: 10px; CURSOR: pointer; LEFT: 15px
+}
+.cruisesroom .radioBoxNo {
+	WIDTH: 15px;  BACKGROUND: url(/images/infos.png) #ffffff no-repeat -85px -346px; HEIGHT: 15px; TOP: 10px; CURSOR: auto; LEFT: 15px
+}
+
+.btn-0yuan {
+	LINE-HEIGHT: 100px; WIDTH: 102px; BACKGROUND: url(/images/btn_new.jpg) no-repeat 0px -183px; FLOAT: right; HEIGHT: 40px; OVERFLOW: hidden; MARGIN-RIGHT: 50px
+}
+/*
+#hotelsDetail .ho_box{width:940px;margin-top:10px;margin-left:20px}
+#hotelsDetail .ho_box .topy{COLOR: #398510;height:33px;background:url(/images/hotelsbg.png) no-repeat 0 0;padding-left:10px;line-height:33px;overflow:hidden;font-size:14px;font-weight:bold;*zoom:1}
+#hotelsDetail .ho_box .topy .ri{width:70px;height:14px;line-height:17px;float:right;font-size:12px;font-weight:normal;padding-left:17px}
+#hotelsDetail .ho_box .topy .upimg{margin-top:10px;background:url(/images/hotelsDetail.png) no-repeat -188px -123px}
+#hotelsDetail .ho_box .downy{height:5px;background:url(/images/hotelsbg.png) 0 -33px no-repeat;overflow:hidden}
+#hotelsDetail .ho_box .bgy{color:#555;padding:10px 7px 5px 10px;border-left:1px solid #c6c6c6;border-right:1px solid #c6c6c6;*zoom:1}
+#hotelsDetail .ho_box .jt{background:url(/images/hotelsDetail.png?t=201207031050) no-repeat -140px -101px;padding-right:15px}
+#hotelsDetail .sp{width:880px;margin-top:10px;border-top:1px dashed #ccc;padding:5px 15px;text-align:right;float:left}
+#hotelsDetail a.gray{color:#555}
+#hotelsDetail a.gray:hover{color:#f00}
+#hotelsDetail .hotelImg{width:230px;height:200px;float:left;margin-right:3px}
+#hotelsDetail .hotelImg p{text-align:center;padding:3px 0}
+#hotelsDetail .facilities{width:900px;border-bottom:1px solid #e6e6e6;font-size:12px;color:#555;overflow:auto;height:1%;padding:5px}
+#hotelsDetail .facilities dt{FONT-WEIGHT: bold;width:100px;float:left;color:#000;line-height:25px}
+#hotelsDetail .facilities dd{width:800px;float:right;line-height:25px}
+#hotelsDetail .facilities dt.lin{line-height:60px}
+#hotelsDetail .facilities dd.credit{height:60px}
+#hotelsDetail .facilities dd.credit strong{line-height:60px}
+#hotelsDetail .facilities dd.credit span{margin-top:8px;width:75px;height:40px;text-indent:-1000px;float:left;background:url(/images/credit_new.gif?t=201207031050) no-repeat 0 10px}
+#hotelsDetail .facilities dd.credit span.master{background-position:0 0}
+#hotelsDetail .facilities dd.credit span.visa{background-position:-84px 0}
+#hotelsDetail .facilities dd.credit span.unionpay{background-position:-162px 0}
+#hotelsDetail .facilities dd.credit span.amex{width:50px;background-position:-244px 0}
+#hotelsDetail .facilities dd.credit span.dinersclub{background-position:-302px 0}
+#hotelsDetail .facilities dd.credit span.jcb{background-position:-384px 0}
+#hotelsDetail .facilities dd .mo{margin-right:30px;display:inline-block}
+#hotelsDetail .ho_box .brno{border-top:0}
+
+
+#DateList {
+	BORDER-BOTTOM: #f3e7c7 1px solid; BORDER-LEFT: #f3e7c7 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #ffffff; BORDER-TOP: #f3e7c7 1px solid; BORDER-RIGHT: #f3e7c7 1px solid; PADDING-TOP: 5px
+}
+.plan_date{
+	width:920px; float:left; padding:0px; FONT-FAMILY: Georgia, "Times New Roman", "Î¢ÈíÑÅºÚ", serif 
+}
+.plan_date table{
+	text-align:center; float:left; width:448px; border-spacing:0px;
+}
+.monthTitle{
+	width:320px; float:left; FONT-WEIGHT: bold; color:#2D680D; font-size:16px; height:25px;
+}
+.calendarPanel{
+	width:448px; float:left; margin:0px 5px;
+}
+.weekday{
+	font-size:14px; color:#ffffff; BACKGROUND: #56BD21; 
+}
+.weekend{
+	font-size:14px; color:#ffffff; BACKGROUND: #4C9E21;
+}
+.prevMonth,.nextMonth{
+	width:80px;color:#ffffff;font-size:14px; 
+}
+
+.other-month{
+	color:#ffffff !Important;
+	background-color:#ffffff !Important;
+}
+.outdays
+{
+	color:#CCCCCC;
+}
+.current-month{
+	color:#2D680D;
+}
+.hasEvent{
+	background:#56BD21;
+	font-weight:bold;
+	font-size:16px;
+	CURSOR: hand;
+}
+
+.hasEvent a
+{
+	color:#ffffff !Important;
+}
+.other-month.weekday.hasEvent .planPrice, .other-month.weekday.hasEvent a 
+{
+	color:#ffffff;
+}
+
+.hasEvent a:hover
+{
+	color:#A52A2A;
+}
+
+.showCalendarPanel table {
+	border-bottom:1px solid #B5EA99;
+	border-left:1px solid #B5EA99;
+	border-spacing:0px;
+}
+
+.other-month.outdays
+{
+	color:#999 !Important;
+}
+
+.showCalendarPanel th{
+	LINE-HEIGHT: 28px; border-right:1px solid #B5EA99; border-top:1px solid #B5EA99;border-spacing:0px;
+}
+
+.showCalendarPanel td {
+	border-right:1px solid #B5EA99;
+	border-top:1px solid #B5EA99;
+	border-spacing:0px;
+	height:40px;
+	width:52px;
+}
+
+.planPrice
+{
+	font-size:12px; font-weight:normal; color:#ffffff; FONT-FAMILY: Arial Unicode MS, "Times New Roman", "Î¢ÈíÑÅºÚ", serif 
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

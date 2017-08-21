@@ -1,0 +1,85 @@
+/* 头部 */
+.topNav li a:hover,.link a:hover {text-decoration: underline;}
+.headtop {border-bottom: 3px solid #ccc; background: #fff;}
+.topposition {width: 1000px; height: 50px; margin: 0 auto;}
+.telphone img {width: 122px; height: 50px; text-align: center;}
+.topNav li {display: inline-block; margin-left: 35px; height: 50px;}
+.topNav li a { font: bold 16px/50px 'Microsoft Yahei'; color: #666;}
+/* 尾部 */
+.foot {width: 1000px; margin: 0 auto;}
+.attention {margin: 20px auto; position: relative; height: 40px; line-height: 40px; text-align: center;}
+.attention p {position: absolute; top: 0; left: 0; z-index: 1; height: 20px; border-bottom: 1px solid #ccc; width: 100%; }
+.attention strong {display: inline-block; font: 26px/40px 'Microsoft Yahei'; background: #fff; padding: 0 20px;}
+.scanning {width: 464px; height: 80px; margin: 20px auto 0; overflow: hidden;}
+.scanning .wrap-box {float: left; margin-right: 10px; padding: 10px; background: #fff; width: 184px; height: 60px;}
+.scanning .wx,.scanning .wb {float: left; width: 60px; height: 60px; background: url('../images/icon.png') no-repeat;}
+.scanning .ts {float: left; width: 112px;}
+.scanning .ts h6 {margin: 0 0 10px 8px; font: bold 12px/12px "宋体";}
+.scanning .ts p {text-align: center;}
+.scanning .wb {background-position: -60px 0;}
+.scanning .ts .me {margin-left: 30px; padding: 2px 5px; line-height: 30px; border: 1px solid #ccc;}
+.bottomNav {width: 1000px; margin: 0 auto; text-align: center;}
+.link {width: 568px; height: 20px; line-height: 20px; margin: 20px auto 0;}
+.link a {padding-right: 11px; color: #666;}
+.bottomNav p {margin-bottom: 50px; color: #666; line-height: 30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+﻿(function () { var ads = [{width: 211,width2: 0,height: 90,url: "/Upload/AdImage/2013100623554030856555.jpg",url2: "",alt: "213",link: "213"},{width: 211,width2: 0,height: 90,url: "/Upload/AdImage/2013100623552763772675.jpg",url2: "",alt: "12",link: "12"}];var rate = [1];asyncScript(function () {setRandomAds(ads, rate, "OutBound_New", false);})})();

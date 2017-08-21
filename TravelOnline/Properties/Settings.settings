@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TravelOnline.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TravelOnline_TravelMisWebService_TravelOnlineService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://127.0.0.1:801/WebService/TravelOnline.asmx</Value>
+    </Setting>
+    <Setting Name="TravelOnline_com_106dcx_www_ExtendedCodeServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.106dcx.com:16373/SMSService/webService/smsEC</Value>
+    </Setting>
+    <Setting Name="TravelOnline_tokiomarine_ThirdPartyManagement" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://221.133.245.13:7070/CIOD_ESB/webservices/ThirdPartyManagement</Value>
+    </Setting>
+    <Setting Name="TravelOnline_cn_ztsms_www_SendsmsWebServiceImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.ztsms.cn/ztws/SendsmsWebService</Value>
+    </Setting>
+    <Setting Name="TravelOnline_RequestHandlerFacade_RequestHandlerFacadeImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7001/houtai/cxf/webservices/requestHandlerFacade</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

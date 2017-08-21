@@ -1,0 +1,298 @@
+@charset "utf-8";
+.ddsubmenustyle,.ddsubmenustyle div{font:normal 13px Verdana;margin:0;padding:0;position:absolute;left:0;top:0;list-style-type:none;background:white;border:1px solid #a0be7c;visibility:hidden;z-index:10000;}
+.ddsubmenustyle ul{margin:0;padding:0;position:absolute;left:0;top:0;list-style-type:none;border:0px none;}
+.ddsubmenustyle li{position: relative;_zoom: 1;width:270px;padding:4px 5px; padding-left:5.5em;background-color: #FFF;}
+.ddsubmenustyle li strong {position: absolute;left:0;top:10px; left:0.5em;}
+.ddsubmenustyle li a{display:inline-block;color:black;text-decoration:none;margin: 5px 10px 5px 0;}
+* html .ddsubmenustyle li{display:inline-block;width:270px;}
+.ddsubmenustyle li a:hover{ text-decoration:underline;}
+.downarrowpointer{padding-left:4px;border:0;}
+.rightarrowpointer{position:absolute;padding-top:3px;left:100px;border:0;}
+.ddiframeshim{position:absolute;z-index:500;background:transparent;border-width:0;width:0;height:0;display:block;}
+.bgwap1 { background:#dfdfdf url(/images/016.gif) repeat;
+margin:0;
+padding-top:20px; border-top:2px  #CCCCCC solid;border-bottom:2px #CCCCCC solid;}
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+.side {
+	width: 250px;
+	float: left;
+}
+.map {
+	width:710px;
+	float:left;
+}
+.map li {
+	display:inline
+}
+.map .map-world {
+    background:url(/images/map_world.gif) top center no-repeat;
+}
+.map .map-china {
+	background:url(/images/map_china.gif) top center no-repeat;
+}
+.map .map-world, .map .map-china {
+	height:420px;
+	position:relative;
+	zoom:1;
+}
+.clear {
+	height:-1px;
+	clear:both;
+}
+.tit {
+	margin:0 auto;
+	width:210px;
+	padding:0px;
+}
+.tit ul {
+	margin:0 auto;
+	font-size:14px;
+	font-weight:bold;
+}
+.tit ul a {
+	text-decoration:none;
+}
+.tit ul li {
+	list-style:none;
+	float:left;
+	width:80px;
+	height:30px;
+	text-align:center;
+	cursor: pointer;
+	line-height:30px;
+}
+.tit ul li.tita {
+	color:#000;
+	background:url(/images/btn.jpg) top left;
+	background-position:100% 100%;
+}
+.tit ul li.titb {
+	color:#fff;
+	background:url(/images/btn.jpg) top left;
+}
+.sub_content1 {
+	width:700px;
+	display:block;
+	margin:0 auto;
+}
+.sub_content2 {
+	display:none;
+}
+/*��ͼ*/
+.place {
+	position:absolute;
+	z-index:1;
+	line-height:18px;
+	left: 380px;
+	top: 132px;
+	color: #333;
+	background:#FFFFFF;
+	border-radius:5px;
+}
+.place:hover, .place span a:hover {
+	color: #09F;
+}
+.place span {
+	font-weight:bold;
+	cursor:pointer;
+	padding:4px;
+	font-size:13px;
+	z-index:1;
+}
+.place span a {
+	color: #333;
+	text-decoration:none;
+	z-index:1;}
+
+.detail_map {
+	width:180px;
+	padding:8px 0 8px 8px;
+	position:absolute;
+	left:-65px;
+	top:18px;
+	border:1px solid #a0be7c;
+	background-color:#ffffff;
+	display:none;
+	color:#444;
+	z-index:1000;
+	line-height:18px;
+	border-radius:5px;
+}
+.detail_map a {
+	font-size:12px;
+	text-decoration:none;
+	display:inline-block;
+	color:#000000;
+	margin-right:1em;
+	margin-top:5px;
+}
+.detail_map a:hover {
+	text-decoration:underline;
+}
+.detail_map h2 { margin:0;  line-height:30px !important; display:block;}
+.detail_map h2 a { font-size:18px; color:#009933}
+/*����*/
+.America {
+	left: 131px;
+	top: 138px;
+}
+.SouthAmerica {
+	left: 211px;
+	top: 252px;
+}
+.Asia {
+	left: 510px;
+	top: 170px;
+}
+.Europe {
+	left: 390px;
+	top: 116px;
+}
+.Africa {
+	left: 364px;
+	top: 215px;
+}
+.Oceania {
+	left: 560px;
+	top: 282px;
+}
+/*�й�*/
+.xinjiang{
+	left: 190px;
+	top: 141px;
+}
+.xizhang{
+	top:246px;
+	left:196px;
+}
+.qinghai{
+	top:202px;
+	left:277px;
+}
+.gansu{
+	top:151px;
+	left:280px;
+}
+.yunnan{
+	top:322px;
+	left:322px;
+}
+.sichuan{
+	top:259px;
+	left:332px;
+}
+.ningxia{
+	top:187px;
+	left:364px;
+}
+.guizhou{
+	top:299px;
+	left:375px;
+}
+.chongqing{
+	top:269px;
+	left:378px;
+}
+.shanxi{
+	top:215px;
+	left:387px;
+}
+.guangxi{
+	top:327px;
+	left:401px;
+}
+.hainan{
+	top:384px;
+	left:422px;
+}
+.shan_xi{
+	top:189px;
+	left:415px;
+}
+.hubei{
+	top:247px;
+	left:426px;
+}
+.hunan{
+	top:286px;
+	left:422px;
+}
+.aomen{
+	top:351px;
+	left:428px;
+}
+.henan{
+	top:216px;
+	left:434px;
+}
+.hebei{
+	top:169px;
+	left:444px;
+}
+.guangdong{
+	top:325px;
+	left:455px;
+}
+.xianggang{
+	top:345px;
+	left:471px;
+}
+.jiangxi{
+	top:280px;
+	left:463px;
+}
+.anhui{
+	top:240px;
+	left:474px;
+}
+.shandong{
+	top:190px;
+	left:475px;
+}
+.jiangsu{
+	top:217px;
+	left:496px;
+}
+.fujian{
+	top:301px;
+	left:489px;
+}
+.liaoning{
+	top:129px;
+	left:501px;
+}
+.zhejiang{
+	top:263px;
+	left:505px;
+}
+.shanghai{
+	top:241px;
+	left:527px;
+}
+.taiwan{
+	top:333px;
+	left:529px;
+}
+.jilin{
+	top:98px;
+	left:529px;
+}
+.nmg{
+	top:144px;
+	left:377px;
+}
+.hlj{
+	top:53px;
+	left:530px;
+}
+.beijing{
+	top:149px;
+	left:452px;
+}
+.tianjing{
+	top:161px;
+	left:485px;
+}

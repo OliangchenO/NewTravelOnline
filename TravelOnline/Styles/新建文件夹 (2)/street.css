@@ -1,0 +1,30 @@
+#slide {
+	POSITION: relative; WIDTH: 500px; MARGIN-BOTTOM: 10px; BACKGROUND: url(http://misc.360buyimg.com/201006/skin/df/i/loading.gif) no-repeat center 52px; HEIGHT: 271px; OVERFLOW: hidden
+}
+#slide UL {
+	POSITION: absolute; WIDTH: 500px; HEIGHT: 271px; TOP: 0px; LEFT: 0px
+}
+#slide LI {
+	OVERFLOW-X: hidden; OVERFLOW-Y: hidden; WIDTH: 500px; FLOAT: left; HEIGHT: 271px
+}
+#slide DIV {
+	POSITION: absolute; WIDTH: 100%; BOTTOM: 0px; HEIGHT: 24px; OVERFLOW: hidden
+}
+#slide SPAN {
+	TEXT-ALIGN: center; FILTER: Alpha(Opacity=80); LINE-HEIGHT: 24px; WIDTH: 124px; BACKGROUND: #fff; FLOAT: left; HEIGHT: 24px; FONT-SIZE: 12px; CURSOR: pointer; BORDER-RIGHT: #ccc 1px solid; opacity: 0.8
+}
+#slide .curr {
+	BACKGROUND: #f00
+}
+#slide SPAN A:link {
+	TEXT-DECORATION: none
+}
+#slide SPAN A:visited {
+	TEXT-DECORATION: none
+}
+#slide .curr A:link {
+	COLOR: #fff; FONT-WEIGHT: bold
+}
+#slide .curr A:visited {
+	COLOR: #fff; FONT-WEIGHT: bold
+}

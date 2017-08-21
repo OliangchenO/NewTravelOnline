@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://webservice.web.zhutong.cn.com/" xmlns:ns1="http://cxf.apache.org/bindings/xformat" name="SendsmsWebServiceImplService" targetNamespace="http://webservice.web.zhutong.cn.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://webservice.web.zhutong.cn.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getBalanceApi" type="tns:getBalanceApi" />
+      <xs:element name="getBalanceApiResponse" type="tns:getBalanceApiResponse" />
+      <xs:element name="getBatchReport" type="tns:getBatchReport" />
+      <xs:element name="getBatchReportResponse" type="tns:getBatchReportResponse" />
+      <xs:element name="getReplyData" type="tns:getReplyData" />
+      <xs:element name="getReplyDataResponse" type="tns:getReplyDataResponse" />
+      <xs:element name="getSubmitStatistics" type="tns:getSubmitStatistics" />
+      <xs:element name="getSubmitStatisticsResponse" type="tns:getSubmitStatisticsResponse" />
+      <xs:element name="sendChangeSms" type="tns:sendChangeSms" />
+      <xs:element name="sendChangeSmsResponse" type="tns:sendChangeSmsResponse" />
+      <xs:element name="sendSms" type="tns:sendSms" />
+      <xs:element name="sendSmsResponse" type="tns:sendSmsResponse" />
+      <xs:complexType name="getBalanceApi">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBalanceApiResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sendSms">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+          <xs:element minOccurs="0" name="arg4" type="xs:string" />
+          <xs:element minOccurs="0" name="arg5" type="xs:string" />
+          <xs:element minOccurs="0" name="arg6" type="xs:string" />
+          <xs:element minOccurs="0" name="arg7" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sendSmsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBatchReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBatchReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSubmitStatistics">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSubmitStatisticsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getReplyData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getReplyDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sendChangeSms">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+          <xs:element minOccurs="0" name="arg4" type="xs:string" />
+          <xs:element minOccurs="0" name="arg5" type="xs:string" />
+          <xs:element minOccurs="0" name="arg6" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sendChangeSmsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getReplyData">
+    <wsdl:part name="parameters" element="tns:getReplyData" />
+  </wsdl:message>
+  <wsdl:message name="getBalanceApiResponse">
+    <wsdl:part name="parameters" element="tns:getBalanceApiResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBalanceApi">
+    <wsdl:part name="parameters" element="tns:getBalanceApi" />
+  </wsdl:message>
+  <wsdl:message name="sendSms">
+    <wsdl:part name="parameters" element="tns:sendSms" />
+  </wsdl:message>
+  <wsdl:message name="getBatchReportResponse">
+    <wsdl:part name="parameters" element="tns:getBatchReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBatchReport">
+    <wsdl:part name="parameters" element="tns:getBatchReport" />
+  </wsdl:message>
+  <wsdl:message name="getSubmitStatisticsResponse">
+    <wsdl:part name="parameters" element="tns:getSubmitStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSubmitStatistics">
+    <wsdl:part name="parameters" element="tns:getSubmitStatistics" />
+  </wsdl:message>
+  <wsdl:message name="getReplyDataResponse">
+    <wsdl:part name="parameters" element="tns:getReplyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendSmsResponse">
+    <wsdl:part name="parameters" element="tns:sendSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendChangeSms">
+    <wsdl:part name="parameters" element="tns:sendChangeSms" />
+  </wsdl:message>
+  <wsdl:message name="sendChangeSmsResponse">
+    <wsdl:part name="parameters" element="tns:sendChangeSmsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SendsmsWebService">
+    <wsdl:operation name="getBalanceApi">
+      <wsdl:input name="getBalanceApi" message="tns:getBalanceApi" />
+      <wsdl:output name="getBalanceApiResponse" message="tns:getBalanceApiResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendSms">
+      <wsdl:input name="sendSms" message="tns:sendSms" />
+      <wsdl:output name="sendSmsResponse" message="tns:sendSmsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getBatchReport">
+      <wsdl:input name="getBatchReport" message="tns:getBatchReport" />
+      <wsdl:output name="getBatchReportResponse" message="tns:getBatchReportResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSubmitStatistics">
+      <wsdl:input name="getSubmitStatistics" message="tns:getSubmitStatistics" />
+      <wsdl:output name="getSubmitStatisticsResponse" message="tns:getSubmitStatisticsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getReplyData">
+      <wsdl:input name="getReplyData" message="tns:getReplyData" />
+      <wsdl:output name="getReplyDataResponse" message="tns:getReplyDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendChangeSms">
+      <wsdl:input name="sendChangeSms" message="tns:sendChangeSms" />
+      <wsdl:output name="sendChangeSmsResponse" message="tns:sendChangeSmsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SendsmsWebServiceImplServiceSoapBinding" type="tns:SendsmsWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getBalanceApi">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getBalanceApi">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getBalanceApiResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSms">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="sendSms">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sendSmsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBatchReport">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getBatchReport">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getBatchReportResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubmitStatistics">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSubmitStatistics">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getSubmitStatisticsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReplyData">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getReplyData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getReplyDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendChangeSms">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="sendChangeSms">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sendChangeSmsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SendsmsWebServiceImplService">
+    <wsdl:port name="SendsmsWebServiceImplPort" binding="tns:SendsmsWebServiceImplServiceSoapBinding">
+      <soap:address location="http://www.ztsms.cn/ztws/SendsmsWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
