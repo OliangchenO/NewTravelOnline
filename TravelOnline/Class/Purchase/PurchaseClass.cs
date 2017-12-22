@@ -8,6 +8,7 @@ using System.Configuration;
 using TravelOnline.TravelMisWebService;
 using System.Text.RegularExpressions;
 using TravelOnline.GetCombineKeys;
+using TravelOnline.NewPage.erp;
 
 namespace TravelOnline.Class.Purchase
 {
@@ -88,6 +89,8 @@ namespace TravelOnline.Class.Purchase
             DataSet DS = new DataSet();
             DS.Clear();
             DS = MyDataBaseComm.getDataSet(SqlQueryText);
+            string allprice = "0";
+            string iweboutid = "";
             if (DS.Tables[0].Rows.Count > 0)
             {
                 //orders.CruisesFlag 1,CancelCruisesRoom退舱房 2 AdjustCruisesRoom舱房变更 3 AdjustVisit观光调整 4 OrderRetreat取消订单 5 AdjustPrice费用变更 6 Settlement 结算方式变更
@@ -95,14 +98,17 @@ namespace TravelOnline.Class.Purchase
                 Sorder.adult = DS.Tables[0].Rows[0]["Adults"].ToString();
                 Sorder.childs = DS.Tables[0].Rows[0]["Childs"].ToString();
                 Sorder.gathering = DS.Tables[0].Rows[0]["Price"].ToString();
+                allprice = DS.Tables[0].Rows[0]["Price"].ToString();
                 Sorder.planid = DS.Tables[0].Rows[0]["PlanId"].ToString();
                 Sorder.orderno = DS.Tables[0].Rows[0]["AutoId"].ToString();
+                iweboutid = DS.Tables[0].Rows[0]["AutoId"].ToString();
                 Sorder.CruisesFlag = flag;
 
                 string RebateFlag = DS.Tables[0].Rows[0]["RebateFlag"].ToString();
                 if (RebateFlag == "1")
                 {
                     Sorder.gathering = (MyConvert.ConToDec(DS.Tables[0].Rows[0]["Price"].ToString()) - MyConvert.ConToDec(DS.Tables[0].Rows[0]["rebate"].ToString())).ToString();
+                    allprice = (MyConvert.ConToDec(DS.Tables[0].Rows[0]["Price"].ToString()) - MyConvert.ConToDec(DS.Tables[0].Rows[0]["rebate"].ToString())).ToString();
                 }
                 //游客rankno
                 string rankno = "";
@@ -119,8 +125,10 @@ namespace TravelOnline.Class.Purchase
                 }
                 Sorder.ordername = rankno;
 
-                Result = rsp.CruisesOrderAdjust(UpPassWord, Sorder);
-                if (Result != "OK")
+                //Result = rsp.CruisesOrderAdjust(UpPassWord, Sorder);
+
+                Result = ErpUtil.UpdateOrderAccount(iweboutid, allprice);
+                if (Result != "0")
                 {
                     //orderid,doflag,inputtime,infos
                     //畅游同步失败，将本次操作保存到相应表，可事后操作
@@ -685,12 +693,13 @@ namespace TravelOnline.Class.Purchase
             {
                 if (Planid == "0")
                 {
-                    GetPlan = rsp.GetLinePrices(UpPassWord, Lineid, BeginDate);
+                    //GetPlan = rsp.GetLinePrices(UpPassWord, Lineid, BeginDate);
+                    GetPlan = ErpUtil.getPriceInfo(Lineid, BeginDate);
                 }
                 else
                 {
-                    GetPlan = rsp.GetPlanPrices(UpPassWord, Lineid, Planid, PriceId);
-
+                    //GetPlan = rsp.GetPlanPrices(UpPassWord, Lineid, Planid, PriceId);
+                    GetPlan = ErpUtil.getPriceInfo(Lineid, BeginDate);
                 }
             }
             catch

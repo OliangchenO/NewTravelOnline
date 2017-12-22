@@ -37,7 +37,7 @@ namespace TravelOnline.Management
         protected override void GridView_DataBind()
         {
             CruisesShip = ViewState["CruisesShip"].ToString();
-            string sqlstr = "select *,(select top 1 ProductName from OL_ProductType where MisClassId=View_SpecialLine.LineClass) as TypeName from View_SpecialLine where Stid='" + Cid + "' order by SortNum,EditTime desc";
+            string sqlstr = "select * from View_SpecialLine where Stid='" + Cid + "' order by SortNum,EditTime desc";
             DataSet DS = new DataSet();
             DS.Clear();
             DS = MyDataBaseComm.getDataSet(sqlstr);
@@ -54,7 +54,7 @@ namespace TravelOnline.Management
                     destid = DS1.Tables[0].Rows[0]["Destinationid"].ToString();
                     if (typeid.Length > 2 || destid.Length > 3)
                     {
-                        sqlstr = "SELECT *,(select top 1 ProductName from OL_ProductType where MisClassId=View_SpecialLineTemp.LineClass) as TypeName FROM View_SpecialLineTemp where 1=1";
+                        sqlstr = "SELECT * FROM View_SpecialLineTemp where 1=1";
                         if (typeid.Length > 2)
                         {
 

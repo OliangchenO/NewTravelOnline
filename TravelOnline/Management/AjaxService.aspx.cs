@@ -1532,7 +1532,7 @@ namespace TravelOnline.Management
                 if (Request.QueryString["Cruises"].Trim() == "Cruises")
                 {
                     string result = PurchaseClass.CruisesOrderAdjust(Request.QueryString["OrderId"], "AdjustPrice", "Yes");
-                    if (result == "OK")
+                    if (result == "0")
                     {
                         Response.Write("{\"success\":\"OK\"}");
                     }

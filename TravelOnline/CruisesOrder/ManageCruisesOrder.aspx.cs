@@ -91,11 +91,11 @@ namespace TravelOnline.CruisesOrder
                         e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">待确认</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         e.Row.Cells[10].Text = string.Format("<A class=\"order Doit\" href=\"javascript:void(0)\" tgs={0} dept={1} reb={2}>操作</A> ", DataBinder.Eval(e.Row.DataItem, "OrderId"), DataBinder.Eval(e.Row.DataItem, "orderdept").ToString(), rebate);
                         break;
-                    case "1":
+                    case "10":
                         e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">占位</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         e.Row.Cells[10].Text = string.Format("<A class=\"order Doit\" href=\"javascript:void(0)\" tgs={0} dept={1} reb={2}>操作</A> ", DataBinder.Eval(e.Row.DataItem, "OrderId"), DataBinder.Eval(e.Row.DataItem, "orderdept").ToString(), rebate);
                         break;
-                    case "2":
+                    case "30":
                         e.Row.ForeColor = System.Drawing.Color.Blue;
                         e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">确认</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         e.Row.Cells[10].Text = string.Format("<A class=\"order Doit\" href=\"javascript:void(0)\" tgs={0} dept={1} reb={2}>操作</A> ", DataBinder.Eval(e.Row.DataItem, "OrderId"), DataBinder.Eval(e.Row.DataItem, "orderdept").ToString(), rebate);

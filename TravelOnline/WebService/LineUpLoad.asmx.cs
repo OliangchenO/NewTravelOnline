@@ -10,6 +10,9 @@ using TravelOnline.Class.Manage;
 using TravelOnline.Class.Travel;
 using System.Data;
 using TravelOnline.Class.Purchase;
+using System.Web.Services.Protocols;
+using System.IO;
+using Newtonsoft.Json.Linq;
 
 namespace TravelOnline.WebService
 {
@@ -21,6 +24,7 @@ namespace TravelOnline.WebService
     [System.ComponentModel.ToolboxItem(false)]
     // 若要允许使用 ASP.NET AJAX 从脚本中调用此 Web 服务，请取消对下行的注释。
     // [System.Web.Script.Services.ScriptService]
+    [SoapDocumentService(RoutingStyle = SoapServiceRoutingStyle.RequestElement)]
     public class LineUpLoad : System.Web.Services.WebService
     {
 
@@ -611,19 +615,19 @@ namespace TravelOnline.WebService
                 Stings.Append(" values ");
                 Stings.Append("('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}',',{9}','{10}',{11},'{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}')");
                 SqlQueryText = string.Format(Stings.ToString(),
-                    UpLoadInfo.Id,
-                    UpLoadInfo.MisId,
-                    UpLoadInfo.LineType,
-                    UpLoadInfo.LineName,
-                    UpLoadInfo.LineClass,
-                    UpLoadInfo.LineDays,
-                    UpLoadInfo.Standard,
-                    UpLoadInfo.Topic,
-                    UpLoadInfo.Price,
-                    UpLoadInfo.AreaId,
-                    UpLoadInfo.LineFeature,
-                    MyConvert.ConToDate(UpLoadInfo.PlanDate),
-                    UpLoadInfo.DeptId,
+                    UpLoadInfo.Id,//uid eg:FB3BD2E5-EF17-4331-B165-9F55010F2E15
+                    UpLoadInfo.MisId,//ccode:6765
+                    UpLoadInfo.LineType,//clinetype? eg:OutBound
+                    UpLoadInfo.LineName,//cname eg:【自组】日本东京富士山京都大阪6日（1晚温泉饭店+时令水果巴菲制作体验+御殿场OUTLET血拼）
+                    UpLoadInfo.LineClass,//ctype eg:231
+                    UpLoadInfo.LineDays,//idays eg:6
+                    UpLoadInfo.Standard,//      eg:500
+                    UpLoadInfo.Topic,//         eg:0
+                    UpLoadInfo.Price,//无 6599
+                    UpLoadInfo.AreaId,//cnation eg: 
+                    UpLoadInfo.LineFeature,//cfeature eg:【自组】日本东京富士山京都大阪6日（1晚温泉饭店+时令水果巴菲制作体验+御殿场OUTLET血拼）
+                    MyConvert.ConToDate(UpLoadInfo.PlanDate),//无 eg：2011-10-18 00:00:00.000
+                    UpLoadInfo.DeptId,//     eg:6599
                     UpLoadInfo.Pics,
                     DateTime.Now.ToString(),
                     PlanDates,
@@ -682,48 +686,54 @@ namespace TravelOnline.WebService
 
             if (UpLoadInfo.LineType == "FreeTour") HttpContext.Current.Cache.Insert("IndexFreeTour", "");
             if (UpLoadInfo.LineType == "Cruises") HttpContext.Current.Cache.Insert("IndexCruises", "");
-            
             Stings.Clear();
-            //行程Xml生成
-            Stings.Append("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
-            Stings.Append("<Route>");
-            Stings.Append(string.Format("<Feature>{0}</Feature>", UpLoadInfo.RouteServices.Feature));
-            Stings.Append(string.Format("<Attentions>{0}</Attentions>", UpLoadInfo.RouteServices.Attentions));
-            Stings.Append(string.Format("<PriceIn>{0}</PriceIn>", UpLoadInfo.RouteServices.PriceIn));
-            Stings.Append(string.Format("<PriceOut>{0}</PriceOut>", UpLoadInfo.RouteServices.PriceOut));
-            Stings.Append(string.Format("<OwnExpense>{0}</OwnExpense>", UpLoadInfo.RouteServices.OwnExpense));
-            Stings.Append(string.Format("<Shopping>{0}</Shopping>", UpLoadInfo.RouteServices.Shopping));
-            Stings.Append(string.Format("<TravelAgency>{0}</TravelAgency>", UpLoadInfo.RouteServices.TravelAgency));
-            Stings.Append(string.Format("<Scenery>{0}</Scenery>", UpLoadInfo.RouteServices.Scenery));
-            Stings.Append(string.Format("<Traffic>{0}</Traffic>", UpLoadInfo.RouteServices.Traffic));
-            Stings.Append(string.Format("<Hotel>{0}</Hotel>", UpLoadInfo.RouteServices.Hotel));
-            Stings.Append(string.Format("<Foods>{0}</Foods>", UpLoadInfo.RouteServices.Foods));
-            Stings.Append(string.Format("<Guide>{0}</Guide>", UpLoadInfo.RouteServices.Guide));
-            Stings.Append(string.Format("<Insure>{0}</Insure>", UpLoadInfo.RouteServices.Insure));
-            Stings.Append(string.Format("<Others>{0}</Others>", UpLoadInfo.RouteServices.Others));
-            Stings.Append("<RouteDetail>");
-
-            if (UpLoadInfo.RouteDetail != null)
+            try
             {
-                for (int i = 0; i < UpLoadInfo.RouteDetail.Length; i++)
-                {
-                    Stings.Append("<RouteInfos>");
-                    Stings.Append(string.Format("<daterank>{0}</daterank>", UpLoadInfo.RouteDetail[i].daterank));
-                    Stings.Append(string.Format("<rname>{0}</rname>", UpLoadInfo.RouteDetail[i].rname));
-                    Stings.Append(string.Format("<route>{0}</route>", UpLoadInfo.RouteDetail[i].route));
-                    Stings.Append(string.Format("<dinner>{0}</dinner>", UpLoadInfo.RouteDetail[i].dinner));
-                    Stings.Append(string.Format("<bus>{0}</bus>", UpLoadInfo.RouteDetail[i].bus));
-                    Stings.Append(string.Format("<room>{0}</room>", UpLoadInfo.RouteDetail[i].room));
-                    Stings.Append(string.Format("<Pics>{0}</Pics>", UpLoadInfo.RouteDetail[i].Pics));
-                    Stings.Append("</RouteInfos>");
-                }
-                Stings.Append("</RouteDetail>");
-                Stings.Append("</Route>");
-                Stings.Append("");
-                SaveScriptToFile.SaveXml(Stings.ToString(), "Route", UpLoadInfo.MisId);
-            }
+                //行程Xml生成
+                Stings.Append("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+                Stings.Append("<Route>");
+                Stings.Append(string.Format("<Feature>{0}</Feature>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Feature)));//推荐理由 cadtitle
+                Stings.Append(string.Format("<Attentions>{0}</Attentions>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Attentions)));//注意事项 
+                Stings.Append(string.Format("<PriceIn>{0}</PriceIn>", ConvertSpecialLetter(UpLoadInfo.RouteServices.PriceIn)));//费用包含 cpriceincude
+                Stings.Append(string.Format("<PriceOut>{0}</PriceOut>", ConvertSpecialLetter(UpLoadInfo.RouteServices.PriceOut)));//费用不含 cpricenotincude
+                Stings.Append(string.Format("<OwnExpense>{0}</OwnExpense>", ConvertSpecialLetter(UpLoadInfo.RouteServices.OwnExpense)));//自费项目 
+                Stings.Append(string.Format("<Shopping>{0}</Shopping>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Shopping)));//购物商店
+                Stings.Append(string.Format("<TravelAgency>{0}</TravelAgency>", ConvertSpecialLetter(UpLoadInfo.RouteServices.TravelAgency)));//
+                Stings.Append(string.Format("<Scenery>{0}</Scenery>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Scenery)));//
+                Stings.Append(string.Format("<Traffic>{0}</Traffic>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Traffic)));//交通
+                Stings.Append(string.Format("<Hotel>{0}</Hotel>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Hotel)));
+                Stings.Append(string.Format("<Foods>{0}</Foods>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Foods)));
+                Stings.Append(string.Format("<Guide>{0}</Guide>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Guide)));
+                Stings.Append(string.Format("<Insure>{0}</Insure>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Insure)));
+                Stings.Append(string.Format("<Others>{0}</Others>", ConvertSpecialLetter(UpLoadInfo.RouteServices.Others)));
+                Stings.Append("<RouteDetail>");
 
-            Stings.Clear();
+                if (UpLoadInfo.RouteDetail != null)
+                {
+                    for (int i = 0; i < UpLoadInfo.RouteDetail.Length; i++)
+                    {
+                        Stings.Append("<RouteInfos>");
+                        Stings.Append(string.Format("<daterank>{0}</daterank>", "第" + ConvertSpecialLetter(UpLoadInfo.RouteDetail[i].daterank) + "天"));//第几天 iday
+                        Stings.Append(string.Format("<rname>{0}</rname>", ConvertSpecialLetter(UpLoadInfo.RouteDetail[i].rname)));//ctitle
+                        Stings.Append(string.Format("<route>{0}</route>", ConvertSpecialLetter(UpLoadInfo.RouteDetail[i].route)));//
+                        Stings.Append(string.Format("<dinner>{0}</dinner>", ConvertSpecialLetter(UpLoadInfo.RouteDetail[i].dinner)));
+                        Stings.Append(string.Format("<bus>{0}</bus>", ConvertSpecialLetter(UpLoadInfo.RouteDetail[i].bus)));
+                        Stings.Append(string.Format("<room>{0}</room>", ConvertSpecialLetter(UpLoadInfo.RouteDetail[i].room)));
+                        Stings.Append(string.Format("<Pics>{0}</Pics>", ConvertSpecialLetter(UpLoadInfo.RouteDetail[i].Pics)));
+                        Stings.Append("</RouteInfos>");
+                    }
+                    Stings.Append("</RouteDetail>");
+                    Stings.Append("</Route>");
+                    Stings.Append("");
+                    SaveScriptToFile.SaveXml(Stings.ToString(), "Route", UpLoadInfo.MisId);
+                    Stings.Clear();
+                }
+            }
+            catch(Exception e)
+            {
+                SaveErrorToLog(e.ToString());
+                return "XML生成失败！";
+            }
 
             if (UpLoadInfo.PlanDetail != null)
             {
@@ -1210,6 +1220,31 @@ namespace TravelOnline.WebService
             return infos;
         }
 
+        private string ConvertSpecialLetter(string objString)
+        {
+            if (objString != null)
+            {
+                objString = objString.Replace("&nbsp;", " ");
+                objString = objString.Replace("&", "");
+            }
+            return objString;
+        }
 
+        private static void SaveErrorToLog(string infos)
+        {
+            string path = AppDomain.CurrentDomain.BaseDirectory + @"\TransformLog.txt";
+
+            try
+            {
+                StreamWriter writer = new StreamWriter(path, true, Encoding.GetEncoding("UTF-8"));
+                writer.WriteLine(infos);
+                writer.WriteLine();
+                writer.Close();
+            }
+            catch (Exception exception)
+            {
+                string message = exception.Message;
+            }
+        }
     }
 }

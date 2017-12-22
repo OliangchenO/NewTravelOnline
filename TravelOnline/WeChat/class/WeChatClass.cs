@@ -15,6 +15,7 @@ using System.Text.RegularExpressions;
 using Belinda.Jasp;
 using TravelOnline.BLL;
 using TravelOnline.Models;
+using TravelOnline.NewPage.erp;
 
 namespace TravelOnline.WeChat
 {
@@ -60,7 +61,6 @@ namespace TravelOnline.WeChat
                     string LineFlag = "1";
                     if (MyConvert.ConToInt(DS.Tables[0].Rows[0]["Shipid"].ToString()) > 0) LineFlag = "2";
                     if (DS.Tables[0].Rows[0]["LineType"].ToString() == "Visa") LineFlag = "3";
-
                     Strings.Append("<div id=\"inputs_detail\" style=\"DISPLAY:none\">");
                     Strings.Append(string.Format("<input id=\"s_lineflag\" type=\"hidden\" value=\"{0}\"/>", LineFlag));
                     //Strings.Append(string.Format("<script type=\"text/javascript\">{0}</script>", CreatePlanDateJason(lineid)));
@@ -785,14 +785,15 @@ namespace TravelOnline.WeChat
         //创建出发日期的jason
         public static string CreatePlanDateJason(string lineid)
         {
-            string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
-            TravelOnlineService rsp = new TravelOnlineService();
-            rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
+            //string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
+            //TravelOnlineService rsp = new TravelOnlineService();
+            //rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
             string ss = "";
             try
             {
-                string[] ListInfo = Regex.Split(rsp.WeChatPlanDateCreate(UpPassWord, lineid), @"\@\@", RegexOptions.IgnoreCase);
-                ss = ListInfo[0];
+                //string[] ListInfo = Regex.Split(rsp.WeChatPlanDateCreate(UpPassWord, lineid), @"\@\@", RegexOptions.IgnoreCase);
+                string ListInfo = ErpUtil.getWechatTeamInfo(string.Format("{0:yyyy-MM-dd}", DateTime.Now), string.Format("{0:yyyy-MM-dd}", DateTime.Now.AddMonths(4)), lineid);
+                ss = ListInfo;
                 if(null!=HttpContext.Current.Session["Group_Date_"+ lineid])
                 {
                     ss = ss + " var Group_Date ='" + HttpContext.Current.Session["Group_Date_" + lineid] + "'; var Group_Discount = " + HttpContext.Current.Session["Group_Discount_" + lineid] +";";　　　　　　　　　　　　　　　

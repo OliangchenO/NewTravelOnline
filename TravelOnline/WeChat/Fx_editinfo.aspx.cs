@@ -13,7 +13,7 @@ namespace TravelOnline.WeChat
         public LoginUser.RegistUser user;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (null != Session["Fx_Login"] && Session["Fx_Login"]!="Y")
+            if (null != Session["Fx_Login"] && Session["Fx_Login"].ToString()!="Y" && Session["Fx_UserId"].ToString()!="")
             {
                 user = LoginUser.LoginFxUser("Id='" + Session["Fx_UserId"].ToString() + "'");
             }

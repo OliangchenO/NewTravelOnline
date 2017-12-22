@@ -85,7 +85,8 @@ namespace TravelOnline.Models
 
         public int? Shipid { get; set; }
 
-        public int? Planid { get; set; }
+        [StringLength(50)]
+        public string Planid { get; set; }
 
         [StringLength(100)]
         public string dinner { get; set; }

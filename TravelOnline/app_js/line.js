@@ -445,7 +445,7 @@ function LoadDestination() {
 }
 
 function LoadLineInfo() {
-    var url = "../../WeChat/AjaxService.aspx?action=LoadLineInfo&lineid=" + $("#s_lineid").val();
+    var url = "../../WeChat/AjaxService.aspx?action=LoadLineInfo&lineid=" + $("#s_lineid").val() + "&planDate=" + $("#s_wechatplandate").val();
     $.get(url, function (data) {
         App.unblockUI();
         $("#linedetail").html(data);

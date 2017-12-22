@@ -156,7 +156,7 @@ href="/Management/ManageHome.aspx">管理中心首页</A>&nbsp;&gt;&nbsp;<SPAN>�
                             </ItemTemplate>
                             <HeaderStyle Width="5%" />
                         </asp:TemplateField>
-                        <asp:BoundField DataField="TypeName" HeaderText="类型" SortExpression="LineClass">
+                        <asp:BoundField DataField="LineClass" HeaderText="类型" SortExpression="LineClass">
 		                    <HeaderStyle Width="8%" />
                         </asp:BoundField>
                         <asp:TemplateField HeaderText="旅游线路名称" SortExpression="LineName">

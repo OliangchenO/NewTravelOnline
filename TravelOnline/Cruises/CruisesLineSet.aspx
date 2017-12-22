@@ -39,7 +39,11 @@
     <div class=line_input>
         <div class=firstinput>出发日期：</div>
         <input class="ipt iconDate" id="PlanDate" name="PlanDate" type="PlanDate" value="<%=PlanDate %>" style="width: 120px" readonly="readonly" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        计划id：<input id="planid" name="planid" type="text" class="ipt easyui-numberbox" precision="0" max="9999999999" style="width: 120px;text-align:center;" maxlength="10" value="<%=planid %>"/>
+        
+    </div>
+    <div class=line_input>
+        <div class=firstinput>计划id：</div>
+        <input id="planid" name="planid" type="text" class="ipt"  style="width: 300px;text-align:center;" value="<%=planid %>"/>
     </div>
     <div class=line_input>
         <div class=firstinput>儿童年龄：</div>

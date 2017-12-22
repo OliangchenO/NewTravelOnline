@@ -76,17 +76,17 @@ namespace TravelOnline.Management
                 e.Row.Cells[0].Text = string.Format("<a class=order href=\"/OrderView/{0}.html\" target=_blank>{1}</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"), DataBinder.Eval(e.Row.DataItem, "AutoId")); //"<a href=\"javascript:void(0);\" onclick=\"EditInfo({0})\">修改</a>";
                 //e.Row.Cells[2].Text = string.Format("/{0}/{1}/{2}.html", DS.Tables[0].Rows[0]["ProductType"], DS.Tables[0].Rows[0]["ProductClass"], DS.Tables[0].Rows[0]["LineID"]);
                 e.Row.Cells[4].Text = string.Format("<a href=\"/line/{2}.html\" target=_blank>{3}</a>", DataBinder.Eval(e.Row.DataItem, "ProductType"), DataBinder.Eval(e.Row.DataItem, "ProductClass"), DataBinder.Eval(e.Row.DataItem, "LineID"), DataBinder.Eval(e.Row.DataItem, "LineName"));
-
+                
                 //<A href="/OrderView/.html" style="color: #159ce9"><%=AutoId %></A>
                 switch (DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString())
                 {
                     case "0":
                         e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">待确认</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         break;
-                    case "1":
+                    case "10":
                         e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">占位</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         break;
-                    case "2":
+                    case "30":
                         e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">确认</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         break;
                     case "3":
@@ -130,7 +130,7 @@ namespace TravelOnline.Management
                 //}
                 if (DataBinder.Eval(e.Row.DataItem, "ProductType").ToString() != "Coupon")
                 {
-                    if (DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "0" || DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "1")
+                    if (DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "0" || DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "10")
                     {
                         if (MyConvert.ConToInt(DataBinder.Eval(e.Row.DataItem, "shipid").ToString()) == 0)
                         {

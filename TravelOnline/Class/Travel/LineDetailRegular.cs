@@ -186,13 +186,13 @@ namespace TravelOnline.Class.Travel
             if (Convert.ToString(HttpContext.Current.Cache[string.Format("LineRecommendSort{0}", LineClass)]) == "")
             {
                 StringBuilder Strings = new StringBuilder();
-                string SqlQueryText = string.Format("select top 3 LineType,MisLineId,LineName,Price,Pics,(select top 1 ProductName from OL_ProductType where MisClassId=OL_Line.LineClass) as TypeName from OL_Line where Sale='0' and LineClass='{0}' and Recommend=1 and Price>0 and PlanDate>='{1}' order by EditTime desc", LineClass, DateTime.Today.ToString());
+                string SqlQueryText = string.Format("select top 3 LineType,MisLineId,LineName,Price,Pics,(select top 1 ProductName from OL_ProductType where ProductName=OL_Line.LineClass) as TypeName from OL_Line where Sale='0' and LineClass='{0}' and Recommend=1 and Price>0 and PlanDate>='{1}' order by EditTime desc", LineClass, DateTime.Today.ToString());
                 DataSet DS = new DataSet();
                 DS.Clear();
                 DS = MyDataBaseComm.getDataSet(SqlQueryText);
                 if (DS.Tables[0].Rows.Count == 0)
                 {
-                    SqlQueryText = string.Format("select top 3 LineType,MisLineId,LineName,Price,Pics,(select top 1 ProductName from OL_ProductType where MisClassId=OL_Line.LineClass) as TypeName from OL_Line where Sale='0' and LineClass='{0}' and Price>0 and PlanDate>='{1}' order by EditTime desc", LineClass, DateTime.Today.ToString());
+                    SqlQueryText = string.Format("select top 3 LineType,MisLineId,LineName,Price,Pics,(select top 1 ProductName from OL_ProductType where ProductName=OL_Line.LineClass) as TypeName from OL_Line where Sale='0' and LineClass='{0}' and Price>0 and PlanDate>='{1}' order by EditTime desc", LineClass, DateTime.Today.ToString());
                     DS.Clear();
                     DS = MyDataBaseComm.getDataSet(SqlQueryText);
                 }
@@ -230,7 +230,7 @@ namespace TravelOnline.Class.Travel
             if (Convert.ToString(HttpContext.Current.Cache[string.Format("LineRecommendSort{0}", LineClass)]) == "")
             {
                 StringBuilder Strings = new StringBuilder();
-                string SqlQueryText = string.Format("select top 3 LineType,MisLineId,LineName,Price,Pics,(select top 1 ProductName from OL_ProductType where MisClassId=OL_Line.LineClass) as TypeName from OL_Line where Sale='0' and LineType='{0}' and Recommend=1 and Price>0 and PlanDate>='{1}' order by EditTime desc", LineClass, DateTime.Today.ToString());
+                string SqlQueryText = string.Format("select top 3 LineType,MisLineId,LineName,Price,Pics,(select top 1 ProductName from OL_ProductType where ProductName=OL_Line.LineClass) as TypeName from OL_Line where Sale='0' and LineType='{0}' and Recommend=1 and Price>0 and PlanDate>='{1}' order by EditTime desc", LineClass, DateTime.Today.ToString());
                 DataSet DS = new DataSet();
                 DS.Clear();
                 DS = MyDataBaseComm.getDataSet(SqlQueryText);

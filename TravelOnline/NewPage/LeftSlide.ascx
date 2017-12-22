@@ -40,12 +40,12 @@
 							<i class="icon_side icon_hk"></i>
 							<h3>港澳台&nbsp;日本&nbsp;韩国</h3>
 							<p>
-								<a href="search/0-0-22-0-0-0-0-0.html" target="_blank">日本</a>
-								<a href="search/0-0-23-0-0-0-0-0.html" target="_blank">韩国</a>
-								<a href="search/0-0-110-0-0-0-0-0.html" target="_blank">香港</a>
-								<a href="search/0-0-22-185-0-0-0-0.html" target="_blank">大阪</a>
-								<a href="search/0-0-22-184-0-0-0-0.html" target="_blank">东京</a>
-								<a href="search/0-0-23-199-0-0-0-0.html" target="_blank">首尔</a>
+								<a href="search.html?key=日本" target="_blank">日本</a>
+								<a href="search.html?key=韩国" target="_blank">韩国</a>
+								<a href="search.html?key=香港" target="_blank">香港</a>
+								<a href="search.html?key=大阪" target="_blank">大阪</a>
+								<a href="search.html?key=东京" target="_blank">东京</a>
+								<a href="search.html?key=首尔" target="_blank">首尔</a>
 							</p>
 							<i class="icon_side icon_arrow"></i>
 						</div>
@@ -55,12 +55,12 @@
 							<i class="icon_side icon_asia"></i>
 							<h3>东南亚</h3>
 							<p style="height:40px;">	
-								<a href="search/0-0-26-219-0-0-0-0.html" target="_blank">巴厘岛</a>
-								<a href="search/0-0-82-0-0-0-0-0.html" target="_blank">斯里兰卡</a>
-								<a href="search/0-0-16-148-0-0-0-0.html" target="_blank">普吉岛</a>
-								<a href="search/0-0-24-0-0-0-0-0.html" target="_blank">马尔代夫</a>
-								<a href="search/0-0-18-0-0-0-0-0.html" target="_blank">新加坡</a>
-								<a href="search/0-0-17-0-0-0-0-0.html" target="_blank">马来西亚</a>
+								<a href="search.html?key=巴厘岛" target="_blank">巴厘岛</a>
+								<a href="search.html?key=斯里兰卡" target="_blank">斯里兰卡</a>
+								<a href="search.html?key=普吉岛" target="_blank">普吉岛</a>
+								<a href="search.html?key=马尔代夫" target="_blank">马尔代夫</a>
+								<a href="search.html?key=新加坡" target="_blank">新加坡</a>
+								<a href="search.html?key=马来西亚" target="_blank">马来西亚</a>
 							</p>
 							<i class="icon_side icon_arrow"></i>
 						</div>
@@ -70,11 +70,11 @@
 							<i class="icon_side icon_europe"></i>
 							<h3>欧洲</h3>
 							<p>
-								<a href="search/0-0-15-0-0-0-0-0.html" target="_blank">法国</a>
-								<a href="search/0-0-32-0-0-0-0-0.html" target="_blank">希腊</a>
-								<a href="search/0-0-27-0-0-0-0-0.html" target="_blank">意大利</a>
-								<a href="search/0-0-93-0-0-0-0-0.html" target="_blank">葡萄牙</a>
-                                <a href="search/0-0-34-0-0-0-0-0.html" target="_blank">瑞士</a>
+								<a href="search.html?key=法国" target="_blank">法国</a>
+								<a href="search.html?key=希腊" target="_blank">希腊</a>
+								<a href="search.html?key=意大利" target="_blank">意大利</a>
+								<a href="search.html?key=葡萄牙" target="_blank">葡萄牙</a>
+                                <a href="search.html?key=瑞士" target="_blank">瑞士</a>
 							</p>
 							<i class="icon_side icon_arrow"></i>
 						</div>
@@ -84,8 +84,8 @@
 							<i class="icon_side icon_usa"></i>
 							<h3>美洲</h3>
 							<p>
-								<a href="search/0-0-37-0-0-0-0-0.html" target="_blank">美国</a>
-								<a href="search/0-0-38-0-0-0-0-0.html" target="_blank">加拿大</a>
+								<a href="search.html?key=美国" target="_blank">美国</a>
+								<a href="search.html?key=加拿大" target="_blank">加拿大</a>
 							</p>
 							<i class="icon_side icon_arrow"></i>
 						</div>
@@ -95,9 +95,9 @@
 							<i class="icon_side icon_australia"></i>
 							<h3>澳新 &nbsp;中东非</h3>
 							<p>
-								<a href="search/0-0-55-0-0-0-0-0.html" target="_blank">澳大利亚</a>
-								<a href="search/0-0-62-0-0-0-0-0.html" target="_blank">埃及</a>
-								<a href="search/0-0-33-0-0-0-0-0.html" target="_blank">土耳其</a>
+								<a href="search.html?key=澳大利亚" target="_blank">澳大利亚</a>
+								<a href="search.html?key=埃及" target="_blank">埃及</a>
+								<a href="search.html?key=土耳其" target="_blank">土耳其</a>
 							</p>
 							<i class="icon_side icon_arrow"></i>
 						</div>
@@ -270,13 +270,13 @@
 						<dl class="detailother_list">
 							<dt>热门目的地</dt>
 							<dd>
-								<a href="search/0-0-110-0-0-0-0-0.html" target="_blank">香港</a>
-								<a href="search/0-0-111-0-0-0-0-0.html" target="_blank">澳门</a>
-								<a href="search/0-0-112-0-0-0-0-0.html" target="_blank">台湾</a>
-								<a href="search/0-0-112-712-0-0-0-0.html" target="_blank">台北</a>
-								<a href="search/0-0-112-714-0-0-0-0.html" target="_blank">高雄</a>
-								<a href="search/0-0-112-715-0-0-0-0.html" target="_blank">桃园</a>
-								<a href="search/0-0-112-713-0-0-0-0.html" target="_blank">垦丁</a>
+								<a href="search.html?key=香港" target="_blank">香港</a>
+								<a href="search.html?key=澳门" target="_blank">澳门</a>
+								<a href="search.html?key=台湾" target="_blank">台湾</a>
+								<a href="search.html?key=台北" target="_blank">台北</a>
+								<a href="search.html?key=高雄" target="_blank">高雄</a>
+								<a href="search.html?key=桃园" target="_blank">桃园</a>
+								<a href="search.html?key=垦丁" target="_blank">垦丁</a>
 							</dd>
 						</dl>
 						<!--<dl class="detailother_list">
@@ -301,10 +301,10 @@
 						<dl class="detailother_list">
 							<dt>热门目的地</dt>
 							<dd>
-								<a href="search/0-0-22-184-0-0-0-0.html" target="_blank">东京</a>
-								<a href="search/0-0-22-185-0-0-0-0.html" target="_blank">大阪</a>
-								<a href="search/0-0-23-199-0-0-0-0.html" target="_blank">首尔</a>
-								<a href="search/0-0-23-203-0-0-0-0.html" target="_blank">江原道</a>
+								<a href="search.html?key=东京" target="_blank">东京</a>
+								<a href="search.html?key=大阪" target="_blank">大阪</a>
+								<a href="search.html?key=首尔" target="_blank">首尔</a>
+								<a href="search.html?key=江原道" target="_blank">江原道</a>
 							</dd>
 						</dl>
 						<!--<dl class="detailother_list">
@@ -335,16 +335,16 @@
 						<dl class="detailother_list">
 							<dt>热门目的地</dt>
 							<dd>
-								<a href="search/0-0-26-219-0-0-0-0.html" target="_blank">巴厘岛</a>
-								<a href="search/0-0-25-212-0-0-0-0.html" target="_blank">长滩岛</a>
-								<a href="search/0-0-19-0-0-0-0-0.html" target="_blank">越南</a>
-								<a href="search/0-0-908-909-0-0-0-0.html" target="_blank">塞班岛</a>
-								<a href="search/0-0-20-0-0-0-0-0.html" target="_blank">柬埔寨</a>
-								<a href="search/0-0-82-0-0-0-0-0.html" target="_blank">斯里兰卡</a>
-								<a href="search/0-0-25-0-0-0-0-0.html" target="_blank">菲律宾</a>
-								<a href="search/0-0-83-0-0-0-0-0.html" target="_blank">印度</a>
-								<a href="search/0-0-18-0-0-0-0-0.html" target="_blank">新加坡</a>
-								<a href="search/0-0-17-0-0-0-0-0.html" target="_blank">马来西亚</a>
+								<a href="search.html?key=景福宫" target="_blank">巴厘岛</a>
+								<a href="search.html?key=景福宫" target="_blank">长滩岛</a>
+								<a href="search.html?key=景福宫" target="_blank">越南</a>
+								<a href="search.html?key=景福宫" target="_blank">塞班岛</a>
+								<a href="search.html?key=景福宫" target="_blank">柬埔寨</a>
+								<a href="search.html?key=景福宫" target="_blank">斯里兰卡</a>
+								<a href="search.html?key=景福宫" target="_blank">菲律宾</a>
+								<a href="search.html?key=景福宫" target="_blank">印度</a>
+								<a href="search.html?key=景福宫" target="_blank">新加坡</a>
+								<a href="search.html?key=景福宫" target="_blank">马来西亚</a>
 							</dd>
 						</dl>
 						<!--<dl class="detailother_list">
@@ -370,9 +370,9 @@
 						<dl class="detailother_list">
 							<dt>热门目的地</dt>
 							<dd>
-								<a href="search/0-0-16-151-0-0-0-0.html" target="_blank">清迈</a>
-								<a href="search/0-0-16-150-0-0-0-0.html" target="_blank">芭提雅</a>
-								<a href="search/0-0-16-148-0-0-0-0.html" target="_blank">普吉岛</a>
+								<a href="search.html?key=景福宫" target="_blank">清迈</a>
+								<a href="search.html?key=景福宫" target="_blank">芭提雅</a>
+								<a href="search.html?key=景福宫" target="_blank">普吉岛</a>
 							</dd>
 						</dl>
 						<!--<dl class="detailother_list">
@@ -400,24 +400,24 @@
 						<dl class="detailother_list">
 							<dt>热门目的地</dt>
 							<dd>
-								<a href="search/0-0-15-0-0-0-0-0.html" target="_blank">法国</a>
-								<a href="search/0-0-27-0-0-0-0-0.html" target="_blank">意大利</a>
-								<a href="search/0-0-34-0-0-0-0-0.html" target="_blank">瑞士</a>
-								<a href="search/0-0-28-0-0-0-0-0.html" target="_blank">德国</a>
-								<a href="search/0-0-29-0-0-0-0-0.html" target="_blank">西班牙</a>
-                                <a href="search/0-0-30-0-0-0-0-0.html" target="_blank">英国</a>
-								<a href="search/0-0-30-298-0-0-0-0.html" target="_blank">葡萄牙</a>
-								<a href="search/0-0-32-0-0-0-0-0.html" target="_blank">希腊</a>
-								<a href="search/0-0-15-71-0-0-0-0.html" target="_blank">巴黎</a>
-								<a href="search/0-0-30-298-0-0-0-0.html" target="_blank">伦敦</a>
-								<a href="search/0-0-95-0-0-0-0-0.html" target="_blank">奥地利</a>
-								<a href="search/0-0-96-0-0-0-0-0.html" target="_blank">捷克</a>
-								<a href="search/0-0-97-0-0-0-0-0.html" target="_blank">匈牙利</a>
-								<a href="search/0-0-99-0-0-0-0-0.html" target="_blank">丹麦</a>
-								<a href="search/0-0-30-298-0-0-0-0.html" target="_blank">芬兰</a>
-								<a href="search/0-0-32-317-0-0-0-0.html" target="_blank">雅典</a>
-								<a href="search/0-0-27-268-0-0-0-0.html" target="_blank">罗马</a>
-								<a href="search/0-0-36-0-0-0-0-0.html" target="_blank">俄罗斯</a>
+								<a href="search.html?key=景福宫" target="_blank">法国</a>
+								<a href="search.html?key=景福宫" target="_blank">意大利</a>
+								<a href="search.html?key=景福宫" target="_blank">瑞士</a>
+								<a href="search.html?key=景福宫" target="_blank">德国</a>
+								<a href="search.html?key=景福宫" target="_blank">西班牙</a>
+                                <a href="search.html?key=景福宫" target="_blank">英国</a>
+								<a href="search.html?key=景福宫" target="_blank">葡萄牙</a>
+								<a href="search.html?key=景福宫" target="_blank">希腊</a>
+								<a href="search.html?key=景福宫" target="_blank">巴黎</a>
+								<a href="search.html?key=景福宫" target="_blank">伦敦</a>
+								<a href="search.html?key=景福宫" target="_blank">奥地利</a>
+								<a href="search.html?key=景福宫" target="_blank">捷克</a>
+								<a href="search.html?key=景福宫" target="_blank">匈牙利</a>
+								<a href="search.html?key=景福宫" target="_blank">丹麦</a>
+								<a href="search.html?key=景福宫" target="_blank">芬兰</a>
+								<a href="search.html?key=景福宫" target="_blank">雅典</a>
+								<a href="search.html?key=景福宫" target="_blank">罗马</a>
+								<a href="search.html?key=景福宫" target="_blank">俄罗斯</a>
 							</dd>
 						</dl>
 						<!--<dl class="detailother_list">
@@ -448,13 +448,13 @@
 						<dl class="detailother_list">
 							<dt>热门目的地</dt>
 							<dd>
-								<a href="search/0-0-37-0-0-0-0-0.html" target="_blank">美国</a>
-								<a href="search/0-0-38-0-0-0-0-0.html" target="_blank">加拿大</a>
-								<a href="search/0-0-37-414-0-0-0-0.html" target="_blank">夏威夷</a>
-								<a href="search/0-0-37-415-0-0-0-0.html" target="_blank">关岛</a>
-								<a href="search/0-0-37-411-0-0-0-0.html" target="_blank">洛杉矶</a>
-								<a href="search/0-0-37-407-0-0-0-0.html" target="_blank">纽约</a>
-								<a href="search/0-0-37-412-0-0-0-0.html" target="_blank">华盛顿</a>
+								<a href="search.html?key=美国" target="_blank">美国</a>
+								<a href="search.html?key=加拿大" target="_blank">加拿大</a>
+								<a href="search.html?key=夏威夷" target="_blank">夏威夷</a>
+								<a href="search.html?key=关岛" target="_blank">关岛</a>
+								<a href="search.html?key=洛杉矶" target="_blank">洛杉矶</a>
+								<a href="search.html?key=纽约" target="_blank">纽约</a>
+								<a href="search.html?key=华盛顿" target="_blank">华盛顿</a>
 							</dd>
 						</dl>
 						<!--<dl class="detailother_list">
@@ -481,14 +481,14 @@
 						<dl class="detailother_list">
 							<dt>热门目的地</dt>
 							<dd>
-								<a href="search/0-0-55-0-0-0-0-0.html" target="_blank">澳大利亚</a>
-								<a href="search/0-0-56-0-0-0-0-0.html" target="_blank">新西兰</a>
-								<a href="search/0-0-57-0-0-0-0-0.html" target="_blank">斐济</a>
-								<a href="search/0-0-55-486-0-0-0-0.html" target="_blank">悉尼</a>
-								<a href="search/0-0-55-485-0-0-0-0.html" target="_blank">墨尔本</a>
-								<a href="search/0-0-55-911-0-0-0-0.html" target="_blank">黄金海岸</a>
-								<a href="search/0-0-56-503-0-0-0-0.html" target="_blank">奥克兰</a>
-								<a href="search/0-0-56-504-0-0-0-0.html" target="_blank">皇后镇</a>
+								<a href="search.html?key=澳大利亚" target="_blank">澳大利亚</a>
+								<a href="search.html?key=新西兰" target="_blank">新西兰</a>
+								<a href="search.html?key=斐济" target="_blank">斐济</a>
+								<a href="search.html?key=悉尼" target="_blank">悉尼</a>
+								<a href="search.html?key=墨尔本" target="_blank">墨尔本</a>
+								<a href="search.html?key=黄金海岸" target="_blank">黄金海岸</a>
+								<a href="search.html?key=奥克兰" target="_blank">奥克兰</a>
+								<a href="search.html?key=皇后镇" target="_blank">皇后镇</a>
 							</dd>
 						</dl>
 						<!--<dl class="detailother_list">
@@ -513,15 +513,15 @@
 						<dl class="detailother_list">
 							<dt>热门目的地</dt>
 							<dd>
-								<a href="search/0-0-66-0-0-0-0-0.html" target="_blank">毛里求斯</a>
-								<a href="search/0-0-33-0-0-0-0-0.html" target="_blank">土耳其</a>
-								<a href="search/0-0-87-251-0-0-0-0.html" target="_blank">迪拜</a>
-								<a href="search/0-0-64-0-0-0-0-0.html" target="_blank">南非</a>
-								<a href="search/0-0-62-0-0-0-0-0.html" target="_blank">埃及</a>
-								<a href="search/0-0-88-0-0-0-0-0.html" target="_blank">以色列</a>
-								<a href="search/0-0-90-0-0-0-0-0.html" target="_blank">约旦</a>
-								<a href="search/0-0-89-0-0-0-0-0.html" target="_blank">伊朗</a>
-								<a href="search/0-0-67-0-0-0-0-0.html" target="_blank">塞舌尔</a>
+								<a href="search.html?key=毛里求斯" target="_blank">毛里求斯</a>
+								<a href="search.html?key=土耳其" target="_blank">土耳其</a>
+								<a href="search.html?key=迪拜" target="_blank">迪拜</a>
+								<a href="search.html?key=南非" target="_blank">南非</a>
+								<a href="search.html?key=埃及" target="_blank">埃及</a>
+								<a href="search.html?key=以色列" target="_blank">以色列</a>
+								<a href="search.html?key=约旦" target="_blank">约旦</a>
+								<a href="search.html?key=伊朗" target="_blank">伊朗</a>
+								<a href="search.html?key=塞舌尔" target="_blank">塞舌尔</a>
 							</dd>
 						</dl>
 						<!--<dl class="detailother_list">

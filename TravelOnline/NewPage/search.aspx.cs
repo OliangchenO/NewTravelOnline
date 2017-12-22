@@ -476,7 +476,16 @@ namespace TravelOnline.NewPage
                         if (pdates.Length > 50) pdates = pdates.Substring(0, 35);
 
                         Pics = "/images/none.gif";
-                        if (DS.Tables[0].Rows[i]["Pics"].ToString().Length == 24) Pics = string.Format("/images/views/{0}/m_{1}", DS.Tables[0].Rows[i]["Pics"].ToString().Split("/".ToCharArray())[0], DS.Tables[0].Rows[i]["Pics"].ToString().Split("/".ToCharArray())[1]);
+                        if (DS.Tables[0].Rows[i]["Pics"].ToString().Length > 10) {
+                            if (DS.Tables[0].Rows[i]["Pics"].ToString().Contains(","))
+                            {
+                                string[] imgs = DS.Tables[0].Rows[i]["Pics"].ToString().Split(',');
+                                Pics = string.Format("http://shql.palmyou.com/file/picture/{0}", imgs[0]);
+                            }else
+                            {
+                                Pics = string.Format("http://shql.palmyou.com/file/picture/{0}", DS.Tables[0].Rows[i]["Pics"].ToString());
+                            }
+                        } 
                         if (DS.Tables[0].Rows[i]["LineType"].ToString() == "Visa") Pics = string.Format("/images/shadow/{0}", DS.Tables[0].Rows[i]["Pics"].ToString());
 
                         Strings.Append(string.Format(@"
@@ -589,7 +598,18 @@ namespace TravelOnline.NewPage
                         }
 
                         Pics = "/images/none.gif";
-                        if (DS.Tables[0].Rows[i]["Pics"].ToString().Length == 24) Pics = string.Format("/images/views/{0}/m_{1}", DS.Tables[0].Rows[i]["Pics"].ToString().Split("/".ToCharArray())[0], DS.Tables[0].Rows[i]["Pics"].ToString().Split("/".ToCharArray())[1]);
+                        if (DS.Tables[0].Rows[i]["Pics"].ToString().Length > 10)
+                        {
+                            if (DS.Tables[0].Rows[i]["Pics"].ToString().Contains(","))
+                            {
+                                string[] imgs = DS.Tables[0].Rows[i]["Pics"].ToString().Split(',');
+                                Pics = string.Format("http://shql.palmyou.com/file/picture/{0}", imgs[0]);
+                            }
+                            else
+                            {
+                                Pics = string.Format("http://shql.palmyou.com/file/picture/{0}", DS.Tables[0].Rows[i]["Pics"].ToString());
+                            }
+                        }
                         if (DS.Tables[0].Rows[i]["LineType"].ToString() == "Visa") Pics = string.Format("/images/shadow/{0}", DS.Tables[0].Rows[i]["Pics"].ToString());
 
                         Strings.Append(string.Format(@"

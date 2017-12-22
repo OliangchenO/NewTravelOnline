@@ -63,26 +63,18 @@ namespace TravelOnline.Users
                 //<A href="/OrderView/.html" style="color: #159ce9"><%=AutoId %></A>
                 switch (DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString())
                 {
-                    case "0":
-                        e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">待确认</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
+                    case "10":
+                        e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">新订单</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         break;
-                    case "1":
-                        e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">占位</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
-                        break;
-                    case "2":
-                        e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">确认</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
-                        break;
-                    case "3":
-                        e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">完成</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
-                        break;
-                    case "8":
-                        e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">取消</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
-                        break;                    
+                    case "30":
+                        e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">已确认</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
+                        break;          
                     default:
+                        e.Row.Cells[1].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">新订单</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         break;
                 }                
 
-                if (DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "1" || DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "2")
+                if (DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "10" || DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "30")
                 {
                     decimal Fee = MyConvert.ConToDec(DataBinder.Eval(e.Row.DataItem, "Price").ToString());
                     decimal Pay = MyConvert.ConToDec(DataBinder.Eval(e.Row.DataItem, "Pay").ToString());
@@ -90,7 +82,7 @@ namespace TravelOnline.Users
 
                     if (DataBinder.Eval(e.Row.DataItem, "PayType").ToString() == "2")
                     {
-                        if (DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "1")
+                        if (DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "10" || DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "30")
                         {
                             if (MyConvert.ConToInt(DataBinder.Eval(e.Row.DataItem, "shipid").ToString()) == 0)
                             {
@@ -113,7 +105,7 @@ namespace TravelOnline.Users
                             
                         }
 
-                        if (DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "1" && Pay == 0)
+                        if ((DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "10"|| DataBinder.Eval(e.Row.DataItem, "OrderFlag").ToString() == "30") && Pay == 0)
                         {
                             if (MyConvert.ConToInt(DataBinder.Eval(e.Row.DataItem, "shipid").ToString()) == 0)
                             {

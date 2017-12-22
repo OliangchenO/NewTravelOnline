@@ -36,7 +36,7 @@ namespace TravelOnline.NewPage
         protected void LoadLineInfo()
         {
 
-            string SqlQueryText = string.Format("select top 1 *,(SELECT top 1 ProductName FROM OL_ProductClass WHERE (MisClassId = OL_Line.LineClass)) AS ProductName from OL_Line where MisLineId='{0}'", LineId);
+            string SqlQueryText = string.Format("select top 1 * from OL_Line where MisLineId='{0}'", LineId);
             DataSet DS = new DataSet();
             DS.Clear();
             DS = MyDataBaseComm.getDataSet(SqlQueryText);
@@ -69,7 +69,7 @@ namespace TravelOnline.NewPage
                 BreadCrumb = "<a href=\"/cruise.html\">邮轮旅游</a><span>></span>";
                 BodyId = "cruises";
 
-                BreadCrumb += string.Format("<a href=\"/search.html?s={1}-0-0-0-0-0-0-0\">{0}</a><span>></span>", DS.Tables[0].Rows[0]["ProductName"].ToString(), lineclass);
+                BreadCrumb += string.Format("<a href=\"/search.html?s={1}-0-0-0-0-0-0-0\">{0}</a><span>></span>", DS.Tables[0].Rows[0]["LineClass"].ToString(), lineclass);
                 BreadCrumb += "<h1>" + LineName + "</h1>";
 
                 if (linetype == "outbound") ContractInfos = "<a target=\"_blank\" href=\"/Upload/上海市出境旅游合同示范文本.doc\">上海市出境旅游合同范本</a>";

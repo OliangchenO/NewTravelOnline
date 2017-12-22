@@ -170,11 +170,11 @@ namespace TravelOnline.CruisesOrder
                         e.Row.Cells[2].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">待确认</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         e.Row.Cells[12].Text = string.Format("<A class=\"order Doit\" href=\"javascript:void(0)\" tgs=\"{0}\" dept=\"{1}\" reb=\"{2}\" comb=\"{3}\" aut=\"{4}\">操作</A> ", DataBinder.Eval(e.Row.DataItem, "OrderId"), DataBinder.Eval(e.Row.DataItem, "orderdept").ToString(), rebate, DataBinder.Eval(e.Row.DataItem, "combineid").ToString(), DataBinder.Eval(e.Row.DataItem, "AutoId").ToString());
                         break;
-                    case "1":
+                    case "10":
                         e.Row.Cells[2].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">占位</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         e.Row.Cells[12].Text = string.Format("<A class=\"order Doit\" href=\"javascript:void(0)\" tgs=\"{0}\" dept=\"{1}\" reb=\"{2}\" comb=\"{3}\" aut=\"{4}\">操作</A> ", DataBinder.Eval(e.Row.DataItem, "OrderId"), DataBinder.Eval(e.Row.DataItem, "orderdept").ToString(), rebate, DataBinder.Eval(e.Row.DataItem, "combineid").ToString(), DataBinder.Eval(e.Row.DataItem, "AutoId").ToString());
                         break;
-                    case "2":
+                    case "30":
                         e.Row.ForeColor = System.Drawing.Color.Blue;
                         e.Row.Cells[2].Text = string.Format("<a class=tip tag={0} href=\"javascript:void(0);\">确认</a>", DataBinder.Eval(e.Row.DataItem, "OrderId"));
                         e.Row.Cells[12].Text = string.Format("<A class=\"order Doit\" href=\"javascript:void(0)\" tgs=\"{0}\" dept=\"{1}\" reb=\"{2}\" comb=\"{3}\" aut=\"{4}\">操作</A> ", DataBinder.Eval(e.Row.DataItem, "OrderId"), DataBinder.Eval(e.Row.DataItem, "orderdept").ToString(), rebate, DataBinder.Eval(e.Row.DataItem, "combineid").ToString(), DataBinder.Eval(e.Row.DataItem, "AutoId").ToString());

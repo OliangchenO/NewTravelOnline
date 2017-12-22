@@ -180,7 +180,7 @@
                     var ul = "/Order/OrderSave/" + $('#TempOrderId').val() + ".html"
                     location.replace(ul);
                 }
-                else if (date.success == 2) {
+                else if (date.success == 10 || date.success == 30) {
                     $("#islogin").hide();
                     $("#nextstep").show();
                     $("#upstep").show();

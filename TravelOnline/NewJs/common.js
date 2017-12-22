@@ -1038,12 +1038,14 @@ $(function(){
 
     $('#inData').delegate('a','click',function(){            //选择日期，将行程id添加到链接内
         $('#inData').hide();
-        $('#get-toggle').html($(this).html()).attr('tag',$(this).attr('tag'));
-        $('.sure').attr('href','../Purchase/ShowRoute.aspx?id=' + $(this).attr('tag'));
+        $('#get-toggle').html($(this).html()).attr('tag', $(this).attr('tag'));
+        //$('.sure').attr('href', '../Purchase/ShowRoute.aspx?id=' + $(this).attr('tag'));
+        $('.sure').attr('href', 'http://shql.palmyou.com/bpr/bprprintbackTeamDetail.action?uid=' + $(this).attr('tag'));
     })
 
     $(".print").click(function () {                //只有一个行程日期时，将行程id添加到链接内
-        $('.sure').attr('href','../Purchase/ShowRoute.aspx?id=' + $('#get-toggle').attr('tag'));
+        //$('.sure').attr('href', '../Purchase/ShowRoute.aspx?id=' + $('#get-toggle').attr('tag'));
+        $('.sure').attr('href', 'http://shql.palmyou.com/bpr/bprprintbackTeamDetail.action?uid=' + $('#get-toggle').attr('tag'));
     })
 
     $('.wx_pay02').hide();                        //打开二维码

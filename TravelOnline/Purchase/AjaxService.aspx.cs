@@ -16,6 +16,8 @@ using TravelOnline.GetCombineKeys;
 using System.Net;
 using System.IO;
 using TravelOnline.EncryptCode;
+using TravelOnline.NewPage.erp;
+using System.Xml;
 
 namespace TravelOnline.Purchase
 {
@@ -1233,7 +1235,6 @@ namespace TravelOnline.Purchase
                         System.IO.File.Copy(path, topath, true);
                     }
                 }
-
                 OrderInfos Sorder = new OrderInfos();
                 Sorder.adult = DS.Tables[0].Rows[0]["Adults"].ToString();
                 Sorder.begindate = string.Format("{0:yyyy-MM-dd}", DS.Tables[0].Rows[0]["BeginDate"]); //string.Format("{0:yyyy-MM-dd}", DS.Tables[0].Rows[0]["BeginDate"]);
@@ -1335,9 +1336,126 @@ namespace TravelOnline.Purchase
                 //string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
                 //TravelOnlineService rsp = new TravelOnlineService();
                 //rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
+
+                //金棕榈订单提交开始
+                RestSharp.RestClient client = new RestSharp.RestClient(ConfigurationManager.AppSettings["JINWebServiceUrl"].ToString());
+                //订单Xml生成
+                StringBuilder Strings = new StringBuilder();
+                Strings.Append("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+                Strings.Append("<JJTourcrsAddOrderRQ>");
+                Strings.Append("<Header>");
+                Strings.Append(string.Format("<Token>{0}</Token>", ErpUtil.getToken()));
+                Strings.Append(string.Format("<DateTime>{0}</DateTime>", string.Format("{0:yyyy-MM-dd}", DateTime.Now)));
+                Strings.Append("</Header>");
+                Strings.Append("<Body><OrderQuery><order><orderInfo>");
+                Strings.Append(string.Format("<iweboutid>{0}</iweboutid>", DS.Tables[0].Rows[0]["AutoId"].ToString()));//订单id
+                Strings.Append(string.Format("<cweboutno>{0}</cweboutno>", DS.Tables[0].Rows[0]["OrderId"].ToString()));//订单号
+                Strings.Append(string.Format("<teamID>{0}</teamID>", DS.Tables[0].Rows[0]["PlanId"].ToString()));//团号  TODO
+                Strings.Append(string.Format("<adults>{0}</adults>", DS.Tables[0].Rows[0]["Adults"].ToString()));//成人数
+                Strings.Append(string.Format("<childs>{0}</childs>", DS.Tables[0].Rows[0]["Childs"].ToString()));//儿童数
+                Strings.Append(string.Format("<olds>{0}</olds>", 0));//老人数
+                Strings.Append(string.Format("<babys>{0}</babys>", 0));//婴儿数
+                Strings.Append(string.Format("<doubleRoom>{0}</doubleRoom>", 0));//双人间
+                Strings.Append(string.Format("<singleRoom>{0}</singleRoom>", 0));//单人间
+                Strings.Append(string.Format("<contactName>{0}</contactName>", DS.Tables[0].Rows[0]["OrderName"].ToString()));//联系人姓名
+                Strings.Append(string.Format("<memberCardNo>{0}</memberCardNo>", DS.Tables[0].Rows[0]["orderuser"].ToString()));//联系人会员卡号
+                Strings.Append(string.Format("<mobile>{0}</mobile>", DS.Tables[0].Rows[0]["OrderMobile"].ToString()));//联系人手机
+                Strings.Append(string.Format("<cOrderSource>{0}</cOrderSource>", 11));//订单来源
+                Strings.Append(string.Format("<cSource>{0}</cSource>", "上海青旅"));//订单的具体渠道名称
+                Strings.Append(string.Format("<userflag>{0}</userflag>", "218C63D5-A0A6-4FFA-8B6B-0CE4B7739A9F"));//用户标示
+                Strings.Append("</orderInfo>");
+                Strings.Append("<orderAccounts>");
+                Strings.Append("<orderAccount>");
+                Strings.Append(string.Format("<singlePrice>{0}</singlePrice>", OrderGathering.ToString()));//单价Todo
+                Strings.Append(string.Format("<qty>1</qty>"));//人数
+                Strings.Append("</orderAccount>");
+                Strings.Append("</orderAccounts>");
+                string SqlQueryText2 = string.Format("select * from OL_GuestInfo where OrderId='{0}'", OrderId);
+                DataSet GuestDS = new DataSet();
+                GuestDS.Clear();
+                GuestDS = MyDataBaseComm.getDataSet(SqlQueryText2);
+                if (GuestDS.Tables[0].Rows.Count > 0)
+                {
+                    Strings.Append("<orderGuests>");
+                    for (int i = 0; i < GuestDS.Tables[0].Rows.Count; i++)
+                    {
+                        Strings.Append("<orderGuest>");
+                        Strings.Append(string.Format("<iweboutid>{0}</iweboutid>", GuestDS.Tables[0].Rows[i]["id"].ToString()));//
+                        Strings.Append(string.Format("<name>{0}</name>", GuestDS.Tables[0].Rows[i]["GuestName"].ToString()));//游客姓名
+                        Strings.Append(string.Format("<sex>{0}</sex>", GuestDS.Tables[0].Rows[i]["Sex"].ToString()=="M"?"男":"女"));//游客性别
+                        if (GuestDS.Tables[0].Rows[i]["birthDay"].ToString() != "")
+                        {
+                            Strings.Append(string.Format("<birthDate>{0}</birthDate>", string.Format("{0:yyyy-MM-dd}", GuestDS.Tables[0].Rows[i]["birthDay"])));
+                        }
+                        if (GuestDS.Tables[0].Rows[i]["IdNumber"].ToString() != "")
+                        {
+                            try
+                            {
+                                switch (GuestDS.Tables[0].Rows[i]["IdType"].ToString())
+                                {
+                                    case "1":
+                                        Strings.Append(string.Format("<idCard>{0}</idCard>", GuestDS.Tables[0].Rows[i]["IdNumber"].ToString()));//身份证号
+                                        break;
+                                    case "2":
+                                        Strings.Append(string.Format("<passCode>{0}</passCode>", GuestDS.Tables[0].Rows[i]["IdNumber"].ToString()));//护照
+                                        break;
+                                    case "3":
+                                        Strings.Append(string.Format("<gaPassCode>{0}</gaPassCode>", GuestDS.Tables[0].Rows[i]["IdNumber"].ToString()));//港澳通行证
+                                        break;
+                                    case "5":
+                                        Strings.Append(string.Format("<armyCode>{0}</armyCode>", GuestDS.Tables[0].Rows[i]["IdNumber"].ToString()));//士官证号
+                                        break;
+                                    case "6":
+                                        Strings.Append(string.Format("<otherType>{0}</otherType>", "回乡证"));//回乡证
+                                        Strings.Append(string.Format("<otherCode>{0}</otherCode>", GuestDS.Tables[0].Rows[i]["IdNumber"].ToString()));//回乡证号
+                                        break;
+                                    case "7":
+                                        Strings.Append(string.Format("<otherType>{0}</otherType>", "台胞证"));//台胞证
+                                        Strings.Append(string.Format("<otherCode>{0}</otherCode>", GuestDS.Tables[0].Rows[i]["IdNumber"].ToString()));//台胞证号
+                                        break;
+                                    default:
+                                        //Stings.Append(string.Format("<idCard>{0}</idCard>", IdNumber1[i]));//身份证号
+                                        break;
+                                }
+                            }
+                            catch
+                            {
+                            }
+                        }
+                        Strings.Append("</orderGuest>");
+                    }
+                    Strings.Append("</orderGuests>");
+                }
+                Strings.Append("</order></OrderQuery></Body>");
+                Strings.Append("</JJTourcrsAddOrderRQ>");
+                string ErpId = "";
+                //金棕榈订单提交结束
                 try
                 {
-                    OrderFlag = rsp.SaveOrder(UpPassWord, Sorder);
+                    //OrderFlag = rsp.SaveOrder(UpPassWord, Sorder);
+                    OrderFlag = "1";
+
+                    RestSharp.IRestRequest request = new RestSharp.RestRequest("jjapi-ws/api/JJTourcrsAddOrder", RestSharp.Method.POST);
+                    request.RequestFormat = RestSharp.DataFormat.Xml;
+                    request.AddHeader("Accept", "application/xml");
+                    request.AddParameter("application/xml", Strings, RestSharp.ParameterType.RequestBody);
+                    RestSharp.IRestResponse response = client.Execute(request);
+                    XmlDocument XmlDoc = new XmlDocument();
+                    XmlDoc.LoadXml(response.Content);
+                    XmlNode o = XmlDoc.SelectSingleNode("o");
+                    if (o != null)
+                    {
+                        string status = o.SelectSingleNode("status").InnerText;
+                        if (status == "0" || status == "2")
+                        {
+                            OrderFlag = o.SelectSingleNode("orderStatus").InnerText;
+                            ErpId = o.SelectSingleNode("orderNo").InnerText;
+                        }
+                        else
+                        {
+                            string Error = o.SelectSingleNode("message").InnerText;
+                        }
+                    }
                     //自由行和邮轮不占位方式取消 20111018
                     //switch (DS.Tables[0].Rows[0]["ProductType"].ToString())
                     //{
@@ -1405,10 +1523,10 @@ namespace TravelOnline.Purchase
                 }
                 else
                 {
-                    Sql.Add(string.Format("INSERT INTO OL_Order (OrderId, ProductType, ProductClass, LineID, PlanId, LineName, BeginDate, OrderNums, Adults, Childs, Price, OrderName, OrderEmail, OrderMobile, OrderTel,OrderFax, OrderMemo, OrderTime, OrderUser, DeptId, OrderFlag, Contract, Invoice, AutoId, LineDays, PayFlag, RouteFlag, PlanNo,PayType,BranchId,shipid,orderdept,ordercompany,ProductNum,rebate,UserName,ccid,RebateFlag,allmdjs,ota) SELECT * FROM OL_TempOrder WHERE OrderId='{0}'", OrderId));
+                    Sql.Add(string.Format("INSERT INTO OL_Order (OrderId, ProductType, ProductClass, LineID, PlanId, LineName, BeginDate, OrderNums, Adults, Childs, Price, OrderName, OrderEmail, OrderMobile, OrderTel,OrderFax, OrderMemo, OrderTime, OrderUser, DeptId, OrderFlag, Contract, Invoice, AutoId, LineDays, PayFlag, RouteFlag, PlanNo,PayType,BranchId,shipid,orderdept,ordercompany,ProductNum,rebate,UserName,ccid,RebateFlag,allmdjs,ota) SELECT OrderId, ProductType, ProductClass, LineID, PlanId, LineName, BeginDate, OrderNums, Adults, Childs, Price, OrderName, OrderEmail, OrderMobile, OrderTel,OrderFax, OrderMemo, OrderTime, OrderUser, DeptId, OrderFlag, Contract, Invoice, AutoId, LineDays, PayFlag, RouteFlag, PlanNo,PayType,BranchId,shipid,orderdept,ordercompany,ProductNum,rebate,UserName,ccid,RebateFlag,allmdjs,ota FROM OL_TempOrder WHERE OrderId='{0}'", OrderId));
                     Sql.Add(string.Format("insert into OL_OrderLog (OrderId,LogTime,LogContent) values ('{0}','{1}','{2}')", OrderId, DateTime.Now.ToString(), "您提交了预订单"));
                     Sql.Add(string.Format("delete from OL_TempOrder where OrderId='{0}'", OrderId));
-                    Sql.Add(string.Format("update OL_Order set PayFlag='0',OrderFlag='{0}',OrderTime='{2}',RebateFlag='{3}',Price=Price-{4}-{5} where OrderId='{1}'", OrderFlag, OrderId, DateTime.Now.ToString(), RebateFlag, Integral, PolicyGather));
+                    Sql.Add(string.Format("update OL_Order set PayFlag='0',OrderFlag='{0}',OrderTime='{2}',RebateFlag='{3}',Price=Price-{4}-{5},ErpId='{6}' where OrderId='{1}'", OrderFlag, OrderId, DateTime.Now.ToString(), RebateFlag, Integral, PolicyGather,ErpId));
                     if (CouponId > 0) Sql.Add(string.Format("update Pre_Ticket set flag='1',usedate='{2}',AutoId='{4}',OrderId='{5}' where pid='{0}' and userid='{1}' and flag='0' and id in ({3})", CouponId, Convert.ToString(Session["Online_UserId"]), DateTime.Now.ToString(), CouponTicketId, AutoId, OrderId));
                     if (Integral > 0)
                     {
@@ -1524,7 +1642,7 @@ namespace TravelOnline.Purchase
                                     cookie.Expires = DateTime.Now.AddDays(-10);
                                     Response.Cookies.Add(cookie);
 
-                                    cookie = new HttpCookie("XiRongUser", "");
+                                    cookie = new System.Web.HttpCookie("XiRongUser", "");
                                     cookie.Expires = DateTime.Now.AddDays(-10);
                                     Response.Cookies.Add(cookie);
 

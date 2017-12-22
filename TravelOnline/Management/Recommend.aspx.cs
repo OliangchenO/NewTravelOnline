@@ -70,7 +70,7 @@ namespace TravelOnline.Management
 
         protected override void GridView_DataBind()
         {
-            string sqlstr = "SELECT TopBegin,TopEnd,WeChat,BigPics,NewRecom,IndexRecom,famous,Destination,FirstDestination,Shipid,MisLineId,Sale,LineType,LineName,LineClass,Preferences,Recommend,EditTime,PlanDate,Price,(select top 1 ProductName from OL_ProductType where MisClassId=OL_Line.LineClass) as TypeName FROM OL_Line where 1=1 ";
+            string sqlstr = "SELECT TopBegin,TopEnd,WeChat,BigPics,NewRecom,IndexRecom,famous,Destination,FirstDestination,Shipid,MisLineId,Sale,LineType,LineName,LineClass,Preferences,Recommend,EditTime,PlanDate,Price FROM OL_Line where 1=1 ";
             if (tb_cname.Text.Trim().Length > 0) sqlstr = string.Format("{0} and LineName like '%{1}%' ", sqlstr, tb_cname.Text.Trim());
             if (tb_MisLineId.Text.Trim().Length > 0) sqlstr = string.Format("{0} and MisLineId = '{1}' ", sqlstr, tb_MisLineId.Text.Trim());
             if (DropDownList1.Text != "全部") sqlstr = string.Format("{0} and LineType = '{1}' ", sqlstr, DropDownList1.Text);

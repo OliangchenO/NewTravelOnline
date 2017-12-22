@@ -17,6 +17,7 @@ using System.IO;
 using TravelOnline.TravelMisWebService;
 using System.Configuration;
 using TravelOnline.Class.Purchase;
+using TravelOnline.NewPage.erp;
 
 namespace TravelOnline.PayMent
 {
@@ -100,26 +101,26 @@ namespace TravelOnline.PayMent
                             string[] SqlQuery = Sql.ToArray();
                             if (MyDataBaseComm.Transaction(SqlQuery) == true)
                             {
-                                string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
-                                TravelOnlineService rsp = new TravelOnlineService();
-                                rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
-                                PayInfo Pays = new PayInfo();
-                                Pays.OrderId = order_no;
-                                Pays.TradeNo = trade_no;
-                                Pays.PayPrice = total_fee;
-                                Pays.PayTime = DateTime.Now.ToString();
-                                Pays.PayContent = Contents;
+                                
+                                //string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
+                                //TravelOnlineService rsp = new TravelOnlineService();
+                                //rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
+                                //PayInfo Pays = new PayInfo();
+                                //Pays.OrderId = order_no;
+                                //Pays.TradeNo = trade_no;
+                                //Pays.PayPrice = total_fee;
+                                //Pays.PayTime = DateTime.Now.ToString();
+                                //Pays.PayContent = Contents;
 
                                 string Result;
                                 try
                                 {
-                                    Result = rsp.PayInfoSave(UpPassWord, Pays);
+                                    Result = ErpUtil.savePayInfo("在线支付", order_no, total_fee, Contents, trade_no, "支付宝", DateTime.Now.ToString());
+                                    //Result = rsp.PayInfoSave(UpPassWord, Pays);
                                 }
                                 catch
                                 {
                                 }
-                                //string url = string.Format("/Pay/Success/{0}.html", order_no);
-                                //string url = string.Format("/fourthstep.html?orderid={0}", order_no);
                                 string url = string.Format("/fifthstep.html?orderid={0}", order_no);
                                 Response.Redirect(url, true);
                                 //result

@@ -26,7 +26,7 @@ namespace TravelOnline.Class.Manage
                 JsScript = exception.Message;
             }
         }
-
+        
         public static void SaveXml(string JsScript, string Directory, string Flag)
         {
             //string path = AppDomain.CurrentDomain.BaseDirectory + @"Scripts\ProductDetail\" + Flag + ".js";

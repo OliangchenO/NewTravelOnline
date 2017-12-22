@@ -15,6 +15,7 @@ using TravelOnline.GetCombineKeys;
 using TravelOnline.EncryptCode;
 using TravelOnline.Class.Common;
 using TravelOnline.Class.Purchase;
+using TravelOnline.NewPage.erp;
 
 namespace TravelOnline.CruisesOrder
 {
@@ -724,8 +725,18 @@ namespace TravelOnline.CruisesOrder
             DS = MyDataBaseComm.getDataSet(SqlQueryText);
             if (DS.Tables[0].Rows.Count > 0)
             {
-                string result = PurchaseClass.MisCruisesPlanNoChange(Request.QueryString["LineId"], Request.QueryString["GuestId"], DS.Tables[0].Rows[0]["id"].ToString(), DS.Tables[0].Rows[0]["PlanNo"].ToString());
-                if (result != "OK")
+                string result = "0";
+                //result = PurchaseClass.MisCruisesPlanNoChange(Request.QueryString["LineId"], Request.QueryString["GuestId"], DS.Tables[0].Rows[0]["id"].ToString(), DS.Tables[0].Rows[0]["PlanNo"].ToString());
+                try
+                {
+                    result = ErpUtil.SubGroup(Request.QueryString["LineId"], Request.QueryString["GuestId"], DS.Tables[0].Rows[0]["PlanNo"].ToString());
+                }catch(Exception e)
+                {
+                    Response.Write("{\"success\":\"" + e.Message + "\"}");
+                    Response.End();
+                }
+                
+                if (result != "0")
                 {
                     Response.Write("{\"success\":\"畅游分团号同步失败，请稍后再试!\"}");
                     Response.End();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TravelOnline.NewPage.erp;
 using TravelOnline.TravelMisWebService;
 
 namespace TravelOnline.PayMent
@@ -31,7 +32,7 @@ namespace TravelOnline.PayMent
 
             DataSet DS = new DataSet();
             DS.Clear();
-            string SqlQueryText = string.Format("select orderid from OL_Order where AutoID='{0}'", merOrderNum);
+            string SqlQueryText = string.Format("select orderid,erpid from OL_Order where AutoID='{0}'", merOrderNum);
             DS = MyDataBaseComm.getDataSet(SqlQueryText);
             if (DS.Tables[0].Rows.Count == 0)
             {
@@ -39,7 +40,7 @@ namespace TravelOnline.PayMent
                 return;
             }
             string OrderID = DS.Tables[0].Rows[0]["OrderID"].ToString();
-
+            string ErpId = DS.Tables[0].Rows[0]["erpid"].ToString();
 
             if (tranResult.Equals("0"))
             {
@@ -73,20 +74,21 @@ namespace TravelOnline.PayMent
                     string[] SqlQuery = Sql.ToArray();
                     if (MyDataBaseComm.Transaction(SqlQuery) == true)
                     {
-                        string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
-                        TravelOnlineService rsp = new TravelOnlineService();
-                        rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
-                        PayInfo Pays = new PayInfo();
-                        Pays.OrderId = OrderID;
-                        Pays.TradeNo = tranSerialNo;
-                        Pays.PayPrice = merOrderAmt;
-                        Pays.PayTime = DateTime.Now.ToString();
-                        Pays.PayContent = "";
+                        //string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
+                        //TravelOnlineService rsp = new TravelOnlineService();
+                        //rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
+                        //PayInfo Pays = new PayInfo();
+                        //Pays.OrderId = OrderID;
+                        //Pays.TradeNo = tranSerialNo;
+                        //Pays.PayPrice = merOrderAmt;
+                        //Pays.PayTime = DateTime.Now.ToString();
+                        //Pays.PayContent = "";
 
                         string Result;
                         try
                         {
-                            Result = rsp.PayInfoSave(UpPassWord, Pays);
+                            Result = ErpUtil.savePayInfo("在线支付", ErpId, merOrderAmt, "", tranSerialNo, "上海银行", DateTime.Now.ToString());
+                            //Result = rsp.PayInfoSave(UpPassWord, Pays);
                         }
                         catch
                         {

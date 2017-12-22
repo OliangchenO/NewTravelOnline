@@ -178,9 +178,9 @@ namespace TravelOnline.Class.Travel
             {
                 StringBuilder Strings = new StringBuilder();
                 //MyDataBaseComm.getScalar(SqlQueryText) string.Format("LineDestination{0}", LineClass)
-                string classname = Convert.ToString(MyDataBaseComm.getScalar(string.Format("select top 1 ProductName from OL_ProductType where MisClassId='{0}'", LineClass)));
+                string classname = Convert.ToString(MyDataBaseComm.getScalar(string.Format("select top 1 ProductName from OL_ProductType where ProductName='{0}'", LineClass)));
                 Strings.Append(string.Format("<div class=p-list><div class=p-title>{0}目的地</div>", classname));
-                string SqlQueryText = string.Format("SELECT ProductName,MisClassId FROM OL_ProductClass where ParentId in (select id from OL_ProductClass where MisClassId='{0}') order by ParentId,ProductSort", LineClass);
+                string SqlQueryText = string.Format("SELECT ProductName,MisClassId FROM OL_ProductClass where ParentId in (select id from OL_ProductClass where ProductName='{0}') order by ParentId,ProductSort", LineClass);
                 DataSet DS = new DataSet();
                 DS.Clear();
                 DS = MyDataBaseComm.getDataSet(SqlQueryText);

@@ -50,7 +50,7 @@ href="/Management/ManageHome.aspx">管理中心首页</A>&nbsp;&gt;&nbsp;<SPAN>�
         <H1></H1><STRONG>出境及国内旅游线路管理</STRONG>
     </DIV>
     <div class="serchbar">
-        类型：<asp:DropDownList ID="DropDownList1" runat="server" DataTextField="ProductName" DataValueField="MisClassId">
+        类型：<asp:DropDownList ID="DropDownList1" runat="server" DataTextField="ProductName" DataValueField="ProductName">
               </asp:DropDownList> <asp:DropDownList ID="DropDownList2" runat="server">
             <asp:ListItem Value="0">销售</asp:ListItem>
             <asp:ListItem Value="1">暂停</asp:ListItem>
@@ -98,7 +98,7 @@ href="/Management/ManageHome.aspx">管理中心首页</A>&nbsp;&gt;&nbsp;<SPAN>�
                             </ItemTemplate>
                             <HeaderStyle Width="5%" />
                         </asp:TemplateField>
-                        <asp:BoundField DataField="TypeName" HeaderText="类型" SortExpression="LineClass">
+                        <asp:BoundField DataField="LineClass" HeaderText="类型" SortExpression="LineClass">
 		                    <HeaderStyle Width="10%" />
                         </asp:BoundField>
                         <asp:TemplateField HeaderText="旅游线路名称" SortExpression="LineName">
@@ -162,7 +162,7 @@ href="/Management/ManageHome.aspx">管理中心首页</A>&nbsp;&gt;&nbsp;<SPAN>�
     <script type="text/javascript">
         $(function () {
             var objSelect = document.getElementById("DropDownList1");
-            checkUserRight(objSelect);
+            //checkUserRight(objSelect);
             $('#DropDownList1').change(function () {
                 $('#GridView_Serch_Button').click()
             });
@@ -183,6 +183,7 @@ href="/Management/ManageHome.aspx">管理中心首页</A>&nbsp;&gt;&nbsp;<SPAN>�
         function checkUserRight(objSelect) {
             var LineType = getQueryString("LineType");
             var userRight = '<%=Session["Manager_UserRight"] %>';
+            
             if (LineType == 'OutBound') {
                 if (userRight.indexOf('$1$0') < 0) {
                     jsRemoveItemFromSelect(objSelect, "全部类型");

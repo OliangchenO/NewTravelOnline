@@ -12,6 +12,7 @@ using TravelOnline.Class.Purchase;
 using TravelOnline.Class.Common;
 using TravelOnline.GetCombineKeys;
 using TravelOnline.LoginUsers;
+using TravelOnline.NewPage.erp;
 
 namespace TravelOnline.Users
 {
@@ -66,7 +67,7 @@ namespace TravelOnline.Users
 
             if (DS.Tables[0].Rows.Count > 0)
             {
-                if (DS.Tables[0].Rows[0]["OrderFlag"].ToString() != "1")
+                if (DS.Tables[0].Rows[0]["OrderFlag"].ToString() != "10" && DS.Tables[0].Rows[0]["OrderFlag"].ToString() != "30")
                 {
                     Strings.Append("只有占位订单才可以取消！");
                     Response.Write("{\"success\":\"" + Strings.ToString() + "\"}");
@@ -80,12 +81,13 @@ namespace TravelOnline.Users
                     Response.End();
                 }
                 string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
-                TravelOnlineService rsp = new TravelOnlineService();
-                rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
+                //TravelOnlineService rsp = new TravelOnlineService();
+                //rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
                 try
                 {
-                    string Result = rsp.OnlineOrderAdjust(UpPassWord, DS.Tables[0].Rows[0]["OrderId"].ToString());
-                    if (Result == "OK")
+                    //string Result = rsp.OnlineOrderAdjust(UpPassWord, DS.Tables[0].Rows[0]["OrderId"].ToString());
+                    string Result = ErpUtil.cancelOrder(DS.Tables[0].Rows[0]["ErpId"].ToString(),"");
+                    if (Result == "0")
                     {
                         List<string> Sql = new List<string>();
                         Sql.Add(string.Format("insert into OL_OrderLog (OrderId,LogTime,LogContent) values ('{0}','{1}','{2}')", DS.Tables[0].Rows[0]["OrderId"].ToString(), DateTime.Now.ToString(), "您取消了订单！"));

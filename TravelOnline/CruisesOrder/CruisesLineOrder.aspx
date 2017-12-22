@@ -93,10 +93,10 @@
                 联系人: <asp:TextBox class=text ID="tb_cname" runat="server" Width="80px" MaxLength="50"></asp:TextBox>
                 单号: <asp:TextBox class=text ID="AutoId" runat="server" Width="60px" MaxLength="10"></asp:TextBox>&nbsp;
                 &nbsp;状态: <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem Value="0,1,2,3">有效</asp:ListItem>
+                    <asp:ListItem Value="0,10,30">有效</asp:ListItem>
                     <asp:ListItem Value="0">待确认</asp:ListItem>
-                    <asp:ListItem Value="1">占位</asp:ListItem>
-                    <asp:ListItem Value="2">确认</asp:ListItem>
+                    <asp:ListItem Value="10">占位</asp:ListItem>
+                    <asp:ListItem Value="30">确认</asp:ListItem>
                     <asp:ListItem Value="3">完成</asp:ListItem>
                     <asp:ListItem Value="8">取消</asp:ListItem>
                     <asp:ListItem Value="all">全部</asp:ListItem>

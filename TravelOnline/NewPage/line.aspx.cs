@@ -12,13 +12,14 @@ using System.IO;
 using System.Configuration;
 using TravelOnline.TravelMisWebService;
 using System.Text.RegularExpressions;
+using TravelOnline.NewPage.erp;
 
 namespace TravelOnline.NewPage
 {
     public partial class line : System.Web.UI.Page
     {
         public string BodyId = "outbound", tag = "tg", Pics, Tags, Preference;
-        public string LineId, BreadCrumb, linetype, LineName, LineFeature, Price="0", begindate, LineDays, PlanId, Sale, isPreBook, isSeckill="0", canSale="1";
+        public string LineId, BreadCrumb, linetype, LineName, LineFeature, Price="0", begindate, LineDays, PlanId, Sale, isPreBook, isSeckill="0", canSale="1",planDate;
         public string PlanDateJason="", RouteFeature, LineViews, ContractInfos;
         public int province, lineclass;
         public string[] ViewsArray;
@@ -28,6 +29,7 @@ namespace TravelOnline.NewPage
         public string seckillNum;
         protected void Page_Load(object sender, EventArgs e)
         {
+            string token = ErpUtil.getToken();
             LineId = Request.QueryString["id"];
             if (MyConvert.ConToInt(LineId) == 0) Response.Redirect("~/index.html", true);
             //Response.Write(LineId);
@@ -69,10 +71,11 @@ namespace TravelOnline.NewPage
                 PlanId = DS.Tables[0].Rows[0]["Planid"].ToString();
                 Sale = DS.Tables[0].Rows[0]["sale"].ToString();
                 Price = DS.Tables[0].Rows[0]["Price"].ToString().Replace(".00", "");
+                planDate = string.Format("{0:yyyy-MM-dd}", MyConvert.ConToDateTime(DS.Tables[0].Rows[0]["PlanDate"].ToString()));
                 begindate = string.Format("{0:yyyy-MM-dd}", MyConvert.ConToDateTime(DS.Tables[0].Rows[0]["PlanDate"].ToString()));
                 LineDays = DS.Tables[0].Rows[0]["LineDays"].ToString();
                 //优惠促销信息
-                if (MyConvert.ConToInt(DS.Tables[0].Rows[0]["wwwyh"].ToString()) > 0) Preference = "在线预订立减 " + DS.Tables[0].Rows[0]["wwwyh"].ToString() + " 元/人";
+                //if (MyConvert.ConToInt(DS.Tables[0].Rows[0]["wwwyh"].ToString()) > 0) Preference = "在线预订立减 " + DS.Tables[0].Rows[0]["wwwyh"].ToString() + " 元/人";
 
 
                 if (DS.Tables[0].Rows[0]["PlanType"].ToString() == "2") tag = "tz";
@@ -85,8 +88,16 @@ namespace TravelOnline.NewPage
                 if (DS.Tables[0].Rows[0]["LineType"].ToString() == "Cruises") Tags = "<div class='trip-class yl'>邮轮</div>";
 
                 Pics = "/images/none.gif";
-                if (DS.Tables[0].Rows[0]["Pics"].ToString().Length == 24) Pics = string.Format("/images/views/{0}/{1}", DS.Tables[0].Rows[0]["Pics"].ToString().Split("/".ToCharArray())[0], DS.Tables[0].Rows[0]["Pics"].ToString().Split("/".ToCharArray())[1]);
-                        
+                if (DS.Tables[0].Rows[0]["Pics"].ToString().Length > 10)
+                {
+                    string[] imgs = DS.Tables[0].Rows[0]["Pics"].ToString().Split(',');
+                    foreach(string s in imgs)
+                    {
+                        Pics = string.Format("http://shql.palmyou.com/file/picture/{0}", s);
+                        RouteBigImg += string.Format("<li><a href=\"javascript:;\"><img src=\"{0}\" alt=\"\"/></a></li>", Pics);
+                        RouteSmallImg += string.Format("<li><img src=\"{0}\" alt=\"\" /></li>", Pics);
+                    }
+                }
 
                 //景点导览
                 //if (DS.Tables[0].Rows[0]["viewids"].ToString().Length > 2)
@@ -245,15 +256,16 @@ namespace TravelOnline.NewPage
         //创建出发日期的jason
         protected void CreatePlanDateJason()
         {
-            string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
-            TravelOnlineService rsp = new TravelOnlineService();
-            rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
+            //string UpPassWord = Convert.ToString(ConfigurationManager.AppSettings["UpLoadPassWord"]);
+            //TravelOnlineService rsp = new TravelOnlineService();
+            //rsp.Url = Convert.ToString(ConfigurationManager.AppSettings["TravelMisWebService"]) + "/WebService/TravelOnline.asmx";
             try
             {
                 //PlanDateJason, PlanDateString 提取两个数据，一个是开班日期jason，一个是已生成的少于4个计划的html
                 //LineId = "17222";
-                string[] ListInfo = Regex.Split(rsp.OnlinePlanDateCreate(UpPassWord, LineId), @"\@\@", RegexOptions.IgnoreCase);
-                PlanDateJason = ListInfo[0];
+                //string[] ListInfo = Regex.Split(rsp.OnlinePlanDateCreate(UpPassWord, LineId), @"\@\@", RegexOptions.IgnoreCase);
+                //PlanDateJason = ListInfo[0];
+                PlanDateJason = ErpUtil.getTeamInfo(string.Format("{0:yyyy-MM-dd}", DateTime.Now), string.Format("{0:yyyy-MM-dd}", planDate), LineId);
             }
             catch
             {
@@ -274,7 +286,7 @@ namespace TravelOnline.NewPage
                 XmlNode x = XmlDoc.SelectSingleNode("//Route");
                 if (x != null)
                 {
-                    RouteFeature = "<li>" + x.SelectSingleNode("Feature").InnerText.Replace("\n", "</li><li>")+ "</li>";
+                    RouteFeature = "<li>" + ConvertSpecialLetter(x.SelectSingleNode("Feature").InnerText).Replace("\n", "</li><li>")+ "</li>";
                     PriceIn = x.SelectSingleNode("PriceIn").InnerText.Replace("\n", "</li><li>");
                     PriceIn = "<li>" + PriceIn + "</li>";
                     if (PriceIn.Length < 10) PriceIn = "无";
@@ -428,6 +440,16 @@ namespace TravelOnline.NewPage
 
                 }
             }
+        }
+
+        private string ConvertSpecialLetter(string objString)
+        {
+            objString = objString.Replace("&", "&amp;");
+            objString = objString.Replace("<", "&lt;");
+            objString = objString.Replace(">", "&gt;");
+            objString = objString.Replace("\"", "&quot;");
+            objString = objString.Replace("\'", "&apos;");
+            return objString;
         }
     }
 }

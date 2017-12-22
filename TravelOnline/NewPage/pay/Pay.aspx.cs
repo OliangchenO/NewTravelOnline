@@ -243,7 +243,7 @@ namespace TravelOnline.NewPage
                     }
                 }
 
-                if (DS.Tables[0].Rows[0]["OrderFlag"].ToString() == "1" || DS.Tables[0].Rows[0]["OrderFlag"].ToString() == "2")
+                if (DS.Tables[0].Rows[0]["OrderFlag"].ToString() == "1" || DS.Tables[0].Rows[0]["OrderFlag"].ToString() == "30" || DS.Tables[0].Rows[0]["OrderFlag"].ToString() == "2")
                 {
 
                     if (DS.Tables[0].Rows[0]["LineID"].ToString() == ConfigurationManager.AppSettings["RuTaiZhengLineID"])

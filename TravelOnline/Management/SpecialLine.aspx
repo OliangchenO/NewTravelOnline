@@ -78,7 +78,7 @@
                             <asp:BoundField DataField="Lineid" HeaderText="ID" SortExpression="Lineid">
 		                        <HeaderStyle Width="5%" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="TypeName" HeaderText="类型" SortExpression="LineClass">
+                            <asp:BoundField DataField="LineClass" HeaderText="类型" SortExpression="LineClass">
 		                        <HeaderStyle Width="10%" />
                             </asp:BoundField>
                             <asp:BoundField DataField="LineName" HeaderText="旅游线路名称" SortExpression="LineName">

@@ -58,7 +58,7 @@ namespace TravelOnline.Purchase
                 if (Convert.ToInt32(Childs) > 0) NumsInfo = string.Format(" 预订人数：{0}成人 {1}儿童", Adults, Childs);
                 BeginDate = string.Format("出发日期：{0:yyyy年MM月dd日}", DS.Tables[0].Rows[0]["BeginDate"]);
 
-                if (DS.Tables[0].Rows[0]["OrderFlag"].ToString() == "1" && DS.Tables[0].Rows[0]["PayFlag"].ToString() == "0")
+                if (DS.Tables[0].Rows[0]["OrderFlag"].ToString() == "30" && DS.Tables[0].Rows[0]["PayFlag"].ToString() == "0")
                 {
                     hide2 = "hide";
                     PayUrl = string.Format("<A class=\"btn-link btn-personal\" href=\"/Pay/PayNow.aspx?OrderId={0}\" target=\"_blank\">立刻支付</A>",OrderId);
